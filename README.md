@@ -10,9 +10,9 @@
     - TailwindStyler
        - README
     - TilwindStylerScript
-      - README
-      - README2
-      - TailwindScriptGenerator5-продвинутый
+       - README
+       - README2
+       - TailwindScriptGenerator5-продвинутый
 - cssjs
     - README
     - Исправленный
@@ -53,16 +53,16 @@
 
 # CSS
 ## CSS-MVP
-CSS-MVP-шпаргалка
-MVP-to-TailWind
-README
+- CSS-MVP-шпаргалка
+- MVP-to-TailWind
+- README
 ## Tailwind
 - TailwindStyler
     - README
-## TilwindStylerScript
-- README
-- README2
-- TailwindScriptGenerator5-продвинутый
+- TilwindStylerScript
+  - README
+  - README2
+  - TailwindScriptGenerator5-продвинутый
 ## cssjs
 - README
 - Исправленный
