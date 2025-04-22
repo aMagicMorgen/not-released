@@ -31,7 +31,7 @@
       </script-->
 
 
-<script>
+<!--script>
     tailwind.config = {
       mode: 'jit',
       darkMode: 'class',
@@ -79,8 +79,70 @@
         })
       })
     })
+</script-->
+
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const elementsConfig = {
+    'h1': 'text-5xl font-bold mb-8 mt-12',
+    'h2': 'text-4xl font-bold mb-6',
+    'h3': 'text-3xl font-bold mb-4',
+    'h4': 'text-2xl font-semibold mb-4',
+    'p': 'text-lg mb-6 leading-relaxed text-gray-600',
+    'a': 'text-primary hover:opacity-80 transition',
+    'ul': 'list-disc pl-8 mb-6 space-y-2',
+    'ol': 'list-decimal pl-8 mb-6 space-y-2',
+    'li': 'mb-2',
+    'blockquote': 'border-l-4 border-accent pl-6 my-6 italic bg-gray-100 p-4 rounded-r',
+    'pre': 'bg-gray-800 text-gray-100 p-6 rounded-xl overflow-x-auto my-6',
+    'code': 'font-mono bg-gray-100 px-2 py-1 rounded text-sm',
+    'img': 'rounded-2xl shadow-lg my-6',
+    'table': 'w-full border-collapse my-6',
+    'th': 'bg-gray-100 text-left py-3 px-4 font-semibold border-b',
+    'td': 'py-3 px-4 border-b',
+    'hr': 'my-8 border-t border-gray-200'
+  };
+
+  // Находим целевой article-контейнер
+  const articleContainer = document.querySelector('article.prose');
+
+  // Функция для применения стилей
+  function applyStyles(element = articleContainer) {
+    Object.entries(elementsConfig).forEach(([tag, classes]) => {
+      element.querySelectorAll(tag).forEach(el => {
+        el.classList.add(...classes.split(' '));
+      });
+    });
+  }
+
+  // Применяем стили при загрузке
+  applyStyles();
+
+  // Отслеживаем изменения в article для динамического контента
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach(mutation => {
+      if (mutation.addedNodes.length) {
+        applyStyles(mutation.target);
+      }
+    });
+  });
+
+  // Начинаем наблюдение за article
+  observer.observe(articleContainer, {
+    childList: true,
+    subtree: true
+  });
+
+  // Дополнительные кастомные стили
+  document.querySelectorAll('blockquote p').forEach(el => {
+    el.classList.add('text-gray-700', 'mb-0');
+  });
+
+  document.querySelectorAll('a').forEach(link => {
+    link.classList.add('hover:underline', 'decoration-primary/50');
+  });
+});
 </script>
-  
 </head>
 
 <!--script src="md-page.js"></script><noscript-->
