@@ -89,9 +89,74 @@
   <!-- Преобразованный HTML -->
 <article class="prose prose-lg mx-auto">
 
+<h1 id="-amagic-md-page-js-">✨ <strong>aMAGIC md-page.js</strong></h1>
+<h3 id="-markdown-html-"><em>Превращаем Markdown в HTML — просто и элегантно!</em></h3>
+<hr>
+<h2 id="-">🔗 <strong>Источник скрипта</strong></h2>
+<p>Библиотека <strong><code>md-page.js</code></strong> взята из репозитория Oscar Morrison:  </p>
+<ul>
+<li><strong>CDN-ссылка</strong>: <a href="https://cdn.jsdelivr.net/gh/oscarmorrison/md-page@5833d6d1/">https://cdn.jsdelivr.net/gh/oscarmorrison/md-page@5833d6d1/</a>  </li>
+<li><strong>Прямая загрузка</strong>: <a href="https://cdn.rawgit.com/oscarmorrison/md-page/5833d6d1/md-page.js">md-page.js</a>  </li>
+</ul>
+<ul>
+<li><strong>ссылка GITHUB</strong>: <a href="https://github.com/oscarmorrison/md-page">https://github.com/oscarmorrison/md-page </a>  </li>
+</ul>
+<hr>
+<h2 id="-3-">🛠 <strong>Установка за 3 шага</strong></h2>
+<h3 id="-1-"><strong>1️⃣ Подготовка файлов</strong></h3>
+<p>Скопируйте в папку с вашими <code>.md</code>-документами:  </p>
+<ul>
+<li><code>md-page.js</code>  </li>
+<li><code>md-page.css</code>  </li>
+</ul>
+<h3 id="-2-html-"><strong>2️⃣ Добавьте HTML-шапку</strong></h3>
+<p>Вставьте этот код <strong>в начало</strong> вашего Markdown-файла:  </p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">"X-UA-Compatible"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"ie=edge"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"md-page.css"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"md-page.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">noscript</span>&gt;</span>
+</code></pre>
+<h3 id="-3-markdown-"><strong>3️⃣ Пишите Markdown как обычно!</strong></h3>
+<p>После шапки добавляйте ваш текст:  </p>
+<pre><code class="lang-markdown"><span class="hljs-meta"># Заголовок  </span>
+<span class="hljs-meta">## Подзаголовок  </span>
+Текст, списки, код — всё работает!
+</code></pre>
+<hr>
+<h2 id="-">🌐 <strong>Как открыть в браузере?</strong></h2>
+<ul>
+<li><strong>Локально</strong>: Просто переименуйте <code>.md</code> → <code>.html</code> и откройте файл.  </li>
+<li><strong>На хостинге</strong>: Можно оставить <code>.md</code>, переименовать в <code>.html</code> или убрать расширение вовсе.  </li>
+</ul>
+<hr>
+<h2 id="-">💡 <strong>Важные нюансы</strong></h2>
+<h3 id="-"><strong>📌 Альтернативная загрузка скрипта</strong></h3>
+<p>Если не хотите хранить <code>md-page.js</code> локально:  </p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.rawgit.com/oscarmorrison/md-page/5833d6d1/md-page.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">noscript</span>&gt;</span>
+</code></pre>
+<p>⚠️ <em>Но потребуется интернет-подключение.</em>  </p>
+<h3 id="-"><strong>🎨 Кастомизация стилей</strong></h3>
+<p>Файл <code>md-page.css</code> можно (и нужно!) редактировать под свой дизайн.  </p>
+<blockquote>
+<p>Сейчас он базовый — улучшайте смело!  </p>
+</blockquote>
+<hr>
+<h2 id="-">🚀 <strong>Пример использования</strong></h2>
+<pre><code class="lang-markdown"><span class="hljs-section"># Привет, мир!  </span>
+Это <span class="hljs-strong">**Markdown**</span> → <span class="hljs-strong">**HTML**</span> без лишних сложностей.
+</code></pre>
+<hr>
+<h3 id="-">🔥 <strong>Готово!</strong></h3>
+<p>Теперь ваши <code>.md</code>-файлы выглядят как полноценные веб-страницы. Просто, быстро, красиво!  </p>
+<p><strong>▶️ Попробуйте прямо сейчас!</strong>  </p>
+<hr>
 
-
-  
+</article>
+  </body>
+</html>
+ <!-- 
 # ✨ **aMAGIC md-page.js**  
 ### *Превращаем Markdown в HTML — просто и элегантно!*  
 
@@ -172,5 +237,5 @@
 
 --- 
 
-
+-->
   
