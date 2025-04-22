@@ -1,7 +1,7 @@
 # not-released
 Проекты и идеи которые пока в работе и могут не работать так как задумывалось. Это Репозиторий для экспериментов и идей.
 # СОДЕРЖАНИЕ
-https://github.com/aMagicMorgen/not-released/tree/2e2a691e42deba4e203f330596e3eada80eeabda/CSS
+Ссылка на [github.com/aMagicMorgen/not-released](https://github.com/aMagicMorgen/not-released/tree/2e2a691e42deba4e203f330596e3eada80eeabda/)
 
 # CSS
 
