@@ -34,21 +34,66 @@
     // Автоматическое применение стилей
     document.addEventListener('DOMContentLoaded', function() {
       const elements = {
-        'h1': 'text-5xl font-bold mb-8 mt-12',
-        'h2': 'text-4xl font-bold mb-6',
-        'h3': 'text-3xl font-bold mb-4',
-        'h4': 'text-2xl font-semibold mb-4',
-        'p': 'text-lg mb-6 leading-relaxed text-gray-600',
-        'a': 'text-primary hover:opacity-80 transition',
-        'button': 'bg-primary text-white px-8 py-4 rounded-2xl hover:bg-primary/90 transition-transform hover:scale-[0.98]',
-        'section': 'py-24',
-        'header': 'bg-white shadow-sm sticky top-0 z-50',
-        'footer': 'bg-dark text-white',
-        'input': 'border rounded-xl px-6 py-4 w-full text-lg focus:ring-2 focus:ring-primary',
-        'textarea': 'border rounded-xl px-6 py-4 w-full h-40 resize-none',
-        'img': 'rounded-3xl shadow-soft',
-        'blockquote': 'border-l-4 border-accent pl-8 my-8 text-2xl italic bg-gray-50 p-8 rounded-2xl',
-      }
+  // Заголовки
+  'h1': 'text-4xl font-bold mb-6',
+  'h2': 'text-3xl font-bold mb-5',
+  'h3': 'text-2xl font-bold mb-4',
+  'h4': 'text-xl font-bold mb-3',
+  'h5': 'text-lg font-bold mb-2',
+  'h6': 'text-base font-bold mb-2',
+
+  // Основной текст
+  'p': 'text-base mb-4 leading-relaxed',
+  'blockquote': 'border-l-4 border-gray-300 pl-4 my-4 italic',
+  'code': 'font-mono bg-gray-100 p-1 rounded text-sm',
+  'pre': 'font-mono bg-gray-100 p-4 rounded-lg overflow-x-auto my-4',
+
+  // Ссылки и интерактивные элементы
+  'a': 'text-primary hover:underline transition-colors',
+  'button': 'bg-primary text-white px-4 py-2 rounded hover:bg-primary/90 transition',
+
+  // Списки
+  'ul': 'list-disc pl-8 mb-4 space-y-2',
+  'ol': 'list-decimal pl-8 mb-4 space-y-2',
+  'li': 'mb-2',
+
+  // Изображения
+  'img': 'rounded-lg max-w-full h-auto',
+
+  // Таблицы
+  'table': 'w-full border-collapse my-6',
+  'thead': 'bg-gray-50',
+  'tbody': 'divide-y divide-gray-200',
+  'tr': 'hover:bg-gray-50',
+  'th': 'text-left py-3 px-4 font-semibold border-b',
+  'td': 'py-3 px-4 border-b',
+
+  // Формы
+  'input': 'border rounded px-4 py-2 w-full focus:ring-2 focus:ring-primary',
+  'textarea': 'border rounded px-4 py-2 w-full h-32 resize-y focus:ring-2 focus:ring-primary',
+  'label': 'block mb-2 font-medium',
+  'select': 'border rounded px-4 py-2 w-full bg-white',
+  'option': 'py-2',
+
+  // Разметка
+  'div': 'mb-4 last:mb-0',
+  'span': 'inline-block',
+  'hr': 'my-8 border-t border-gray-200',
+
+  // Семантические блоки
+  'header': 'bg-white shadow-sm py-4',
+  'footer': 'bg-dark text-white py-8',
+  'section': 'py-12',
+  'article': 'mb-8 p-6 bg-white rounded-lg shadow',
+  'nav': 'space-x-4',
+  'main': 'min-h-screen',
+  'aside': 'bg-gray-50 p-4 rounded-lg',
+
+  // Специальные элементы
+  'dialog': 'p-6 rounded-lg shadow-xl',
+  'details': 'bg-gray-50 p-4 rounded-lg',
+  'summary': 'font-medium cursor-pointer',
+};
       
       Object.entries(elements).forEach(([tag, classes]) => {
         document.querySelectorAll(tag).forEach(el => {
