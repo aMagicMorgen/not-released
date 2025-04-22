@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Tailwind Template</title>
+  
+  <!-- Подключаем шрифт Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Подключаем Tailwind через CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Настраиваем Tailwind -->
+  <script>
+    tailwind.config = {
+      mode: 'jit',
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#4F46E5',
+            secondary: '#10B981',
+            dark: '#1F2937',
+            accent: '#F59E0B',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          boxShadow: {
+            'soft': '0 8px 32px rgba(0,0,0,0.05)',
+            'border': 'inset 0 0 0 1px #E5E7EB'
+          }
+        }
+      }
+    }
+    
+    // Автоматическое применение стилей
+    document.addEventListener('DOMContentLoaded', function() {
+      const elements = {
+        'h1': 'text-5xl font-bold mb-8 mt-12',
+        'h2': 'text-4xl font-bold mb-6',
+        'h3': 'text-3xl font-bold mb-4',
+        'h4': 'text-2xl font-semibold mb-4',
+        'p': 'text-lg mb-6 leading-relaxed text-gray-600',
+        'a': 'text-primary hover:opacity-80 transition',
+        'button': 'bg-primary text-white px-8 py-4 rounded-2xl hover:bg-primary/90 transition-transform hover:scale-[0.98]',
+        'section': 'py-24',
+        'header': 'bg-white shadow-sm sticky top-0 z-50',
+        'footer': 'bg-dark text-white',
+        'input': 'border rounded-xl px-6 py-4 w-full text-lg focus:ring-2 focus:ring-primary',
+        'textarea': 'border rounded-xl px-6 py-4 w-full h-40 resize-none',
+        'img': 'rounded-3xl shadow-soft',
+        'blockquote': 'border-l-4 border-accent pl-8 my-8 text-2xl italic bg-gray-50 p-8 rounded-2xl',
+      }
+      
+      Object.entries(elements).forEach(([tag, classes]) => {
+        document.querySelectorAll(tag).forEach(el => {
+          el.classList.add(...classes.split(' '))
+        })
+      })
+    })
+  </script>
+</head>
+<body class="antialiased bg-gray-50">
+  <!-- Хедер -->
+  <header class="bg-white shadow-sm">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold text-primary">Logo</div>
+      <div class="space-x-8">
+        <a href="#features">Возможности</a>
+        <a href="#pricing">Цены</a>
+        <a href="#contact">Контакты</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Герой секция -->
+  <section class="bg-gradient-to-b from-white to-gray-50">
+    <div class="container mx-auto px-6 py-32 text-center">
+      <h1>Создавайте будущее</h1>
+      <p class="max-w-2xl mx-auto mt-6">Инновационное решение для вашего бизнеса</p>
+      <div class="mt-12 flex justify-center gap-6">
+        <button class="cta bg-primary">Начать сейчас</button>
+        <button class="cta bg-dark">Подробнее</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Особенности -->
+  <section id="features" class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <!-- Карточка 1 -->
+      <div class="card bg-white p-8 rounded-2xl shadow-soft">
+        <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <h3>Быстрая интеграция</h3>
+        <p>Легкое подключение к существующим системам</p>
+      </div>
+      
+      <!-- Карточка 2 -->
+      <div class="card bg-white p-8 rounded-2xl shadow-soft">
+        <div class="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+          </svg>
+        </div>
+        <h3>Безопасность</h3>
+        <p>Защита данных уровня enterprise</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Цены -->
+  <section id="pricing" class="bg-dark text-white">
+    <div class="container mx-auto px-6 py-24">
+      <h2 class="text-center mb-16">Выберите план</h2>
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="p-8 rounded-2xl bg-white/10 border border-white/10">
+          <h3 class="text-accent mb-4">Стартовый</h3>
+          <p class="text-4xl font-bold mb-6">$29<span class="text-lg text-gray-300">/мес</span></p>
+          <ul class="space-y-4">
+            <li class="flex items-center">
+              <svg class="w-5 h-5 mr-2 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+              </svg>
+              Базовые функции
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section id="contact" class="container mx-auto px-6">
+    <div class="max-w-2xl mx-auto bg-white p-12 rounded-2xl shadow-soft">
+      <h2 class="text-center mb-8">Свяжитесь с нами</h2>
+      <form class="space-y-6">
+        <div>
+          <label>Имя</label>
+          <input type="text">
+        </div>
+        <div>
+          <label>Email</label>
+          <input type="email">
+        </div>
+        <div>
+          <label>Сообщение</label>
+          <textarea></textarea>
+        </div>
+        <button class="w-full">Отправить</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="bg-dark text-white">
+    <div class="container mx-auto px-6 py-16">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Компания</h4>
+          <ul class="space-y-2">
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Карьера</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 mt-12 pt-8 text-center">
+        <p>© 2024 Все права защищены</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
