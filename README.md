@@ -1,336 +1,336 @@
 # not-released
 Проекты и идеи которые пока в работе и могут не работать так как задумывалось. Это Репозиторий для экспериментов и идей.
 # СОДЕРЖАНИЕ
+  <!-- /\* Font Definitions \*/ @font-face {font-family:Wingdings; panose-1:5 0 0 0 0 0 0 0 0 0;} @font-face {font-family:"Cambria Math"; panose-1:2 4 5 3 5 4 6 3 2 4;} @font-face {font-family:Calibri; panose-1:2 15 5 2 2 2 4 3 2 4;} @font-face {font-family:"Segoe UI"; panose-1:2 11 5 2 4 2 4 2 2 3;} /\* Style Definitions \*/ p.MsoNormal, li.MsoNormal, div.MsoNormal {margin-top:0cm; margin-right:0cm; margin-bottom:10.0pt; margin-left:0cm; line-height:115%; font-size:11.0pt; font-family:"Calibri","sans-serif";} a:link, span.MsoHyperlink {color:blue; text-decoration:underline;} a:visited, span.MsoHyperlinkFollowed {color:purple; text-decoration:underline;} span.folder-name {mso-style-name:folder-name;} .MsoPapDefault {margin-bottom:10.0pt; line-height:115%;} @page Section1 {size:595.3pt 841.9pt; margin:2.0cm 42.5pt 2.0cm 3.0cm;} div.Section1 {page:Section1;} /\* List Definitions \*/ ol {margin-bottom:0cm;} ul {margin-bottom:0cm;} -->
 
-      CSS
+·         **CSS**
 
-# CSS-MVP
+o    **CSS-MVP**
 
-§  [CSS-MVP-шпаргалка](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "CSS/CSS-MVP/CSS-MVP-шпаргалка.md")
+§  [CSS-MVP-шпаргалка](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "CSS/CSS-MVP/CSS-MVP-шпаргалка.md")
 
-§  [MVP-to-TailWind](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "CSS/CSS-MVP/MVP-to-TailWind.md")
+§  [MVP-to-TailWind](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "CSS/CSS-MVP/MVP-to-TailWind.md")
 
-#  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "CSS/README.md")
+o    [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "CSS/README.md")
 
-#  Tailwind
+o    **Tailwind**
 
-§  TailwindStyler
+§  **TailwindStyler**
 
-§  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "CSS/Tailwind/TailwindStyler/README.md")
+§  [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "CSS/Tailwind/TailwindStyler/README.md")
 
-§  TilwindStylerScript
+§  **TilwindStylerScript**
 
-§  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "CSS/Tailwind/TilwindStylerScript/README.md")
+§  [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "CSS/Tailwind/TilwindStylerScript/README.md")
 
-§  [README2](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "CSS/Tailwind/TilwindStylerScript/README2.md")
+§  [README2](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "CSS/Tailwind/TilwindStylerScript/README2.md")
 
-§  [TailwindScriptGenerator5-продвинутый](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "CSS/Tailwind/TilwindStylerScript/TailwindScriptGenerator5-продвинутый.md")
+§  [TailwindScriptGenerator5-продвинутый](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "CSS/Tailwind/TilwindStylerScript/TailwindScriptGenerator5-продвинутый.md")
 
-#  cssjs
+o    **cssjs**
 
-§  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "CSS/cssjs/README.md")
+§  [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "CSS/cssjs/README.md")
 
-§  [Исправленный](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "CSS/cssjs/Исправленный.md")
+§  [Исправленный](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "CSS/cssjs/Исправленный.md")
 
-·         DataBase
+·         **DataBase**
 
-#  DatabaseManager-extends-aMagicDBH
+o    **DatabaseManager-extends-aMagicDBH**
 
-§  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/DatabaseManager-extends-aMagicDBH/README.md")
+§  [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/DatabaseManager-extends-aMagicDBH/README.md")
 
-§  php-7.4
+§  **php-7.4**
 
-§  [DatabaseManager-PHP7.4](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/DatabaseManager-extends-aMagicDBH/php-7.4/DatabaseManager-PHP7.4.md")
+§  [DatabaseManager-PHP7.4](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/DatabaseManager-extends-aMagicDBH/php-7.4/DatabaseManager-PHP7.4.md")
 
-§  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/DatabaseManager-extends-aMagicDBH/php-7.4/README.md")
+§  [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/DatabaseManager-extends-aMagicDBH/php-7.4/README.md")
 
-§  [aMagicDBH](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/DatabaseManager-extends-aMagicDBH/php-7.4/aMagicDBH.md")
+§  [aMagicDBH](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/DatabaseManager-extends-aMagicDBH/php-7.4/aMagicDBH.md")
 
-§  php-8.0
+§  **php-8.0**
 
-§  [DatabaseManager-php-8.0](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/DatabaseManager-extends-aMagicDBH/php-8.0/DatabaseManager-php-8.0.md")
+§  [DatabaseManager-php-8.0](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/DatabaseManager-extends-aMagicDBH/php-8.0/DatabaseManager-php-8.0.md")
 
-§  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/DatabaseManager-extends-aMagicDBH/php-8.0/README.md")
+§  [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/DatabaseManager-extends-aMagicDBH/php-8.0/README.md")
 
-§  [Адаптация-для-php-7.4](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/DatabaseManager-extends-aMagicDBH/php-8.0/Адаптация-для-php-7.4.md")
+§  [Адаптация-для-php-7.4](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/DatabaseManager-extends-aMagicDBH/php-8.0/Адаптация-для-php-7.4.md")
 
-§  [КОНЦЕПЦИЯ-DatabaseManager](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/DatabaseManager-extends-aMagicDBH/КОНЦЕПЦИЯ-DatabaseManager.md")
+§  [КОНЦЕПЦИЯ-DatabaseManager](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/DatabaseManager-extends-aMagicDBH/КОНЦЕПЦИЯ-DatabaseManager.md")
 
-#  SQLite
+o    **SQLite**
 
-§  CsvToSQLite
+§  **CsvToSQLite**
 
-§  [csv-to-sqlite](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/SQLite/CsvToSQLite/csv-to-sqlite.md")
+§  [csv-to-sqlite](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/SQLite/CsvToSQLite/csv-to-sqlite.md")
 
-§  SQLiteToCSV
+§  **SQLiteToCSV**
 
-§  [sqlite-to-csv](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/SQLite/SQLiteToCSV/sqlite-to-csv.md")
+§  [sqlite-to-csv](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/SQLite/SQLiteToCSV/sqlite-to-csv.md")
 
-#  aMagic-DataBaseHelper-DBH
+o    **aMagic-DataBaseHelper-DBH**
 
-§  [Clas-DBH-Документация](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/Clas-DBH-Документация.md")
+§  [Clas-DBH-Документация](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/Clas-DBH-Документация.md")
 
-§  [DBH-DataBaseHelper](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/DBH-DataBaseHelper.md")
+§  [DBH-DataBaseHelper](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/DBH-DataBaseHelper.md")
 
-§  DBH-MariaDB
+§  **DBH-MariaDB**
 
-§  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/DBH-MariaDB/README.md")
+§  [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/DBH-MariaDB/README.md")
 
-§  DBH-MySql
+§  **DBH-MySql**
 
-§  [Clas-DBH-ВЕРСИЯ](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/DBH-MySql/Clas-DBH-ВЕРСИЯ.md")
+§  [Clas-DBH-ВЕРСИЯ](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/DBH-MySql/Clas-DBH-ВЕРСИЯ.md")
 
-§  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/DBH-MySql/README.md")
+§  [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/DBH-MySql/README.md")
 
-§  DBH-SQLite
+§  **DBH-SQLite**
 
-§  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/DBH-SQLite/README.md")
+§  [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/DBH-SQLite/README.md")
 
-§  [DBHmariaDB-Документация](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/DBHmariaDB-Документация.md")
+§  [DBHmariaDB-Документация](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/DBHmariaDB-Документация.md")
 
-§  [DBHmariaDB](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/DBHmariaDB.md")
+§  [DBHmariaDB](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/DBHmariaDB.md")
 
-§  [DBHsqlite-Документация](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/DBHsqlite-Документация.md")
+§  [DBHsqlite-Документация](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/DBHsqlite-Документация.md")
 
-§  [DBHsqlite](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/DBHsqlite.md")
+§  [DBHsqlite](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/DBHsqlite.md")
 
-§  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/README.md")
+§  [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/README.md")
 
-§  aMagicDBH
+§  **aMagicDBH**
 
-§  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/aMagicDBH/README.md")
+§  [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/aMagicDBH/README.md")
 
-§  [aMagicDBH-ПОЛНАЯ-РЕАЛИЗАЦИЯ](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/aMagicDBH-ПОЛНАЯ-РЕАЛИЗАЦИЯ.md")
+§  [aMagicDBH-ПОЛНАЯ-РЕАЛИЗАЦИЯ](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/aMagicDBH-ПОЛНАЯ-РЕАЛИЗАЦИЯ.md")
 
-§  [aMagicDBH-Примеры-ипользования](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/aMagicDBH-Примеры-ипользования.md")
+§  [aMagicDBH-Примеры-ипользования](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/aMagicDBH-Примеры-ипользования.md")
 
-§  [aMagicDBH-Универсальный класс](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/aMagicDBH-Универсальный класс.md")
+§  [aMagicDBH-Универсальный класс](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/aMagicDBH-Универсальный класс.md")
 
-§  [Модификация для SqLite и MySql](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/Модификация для SqLite и MySql.md")
+§  [Модификация для SqLite и MySql](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DataBaseHelper-DBH/Модификация для SqLite и MySql.md")
 
-#  aMagic-DatabaseManager
+o    **aMagic-DatabaseManager**
 
-§  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DatabaseManager/README.md")
+§  [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DatabaseManager/README.md")
 
-§  php-7.4
+§  **php-7.4**
 
-§  [DatabaseManager-PHP7.4](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DatabaseManager/php-7.4/DatabaseManager-PHP7.4.md")
+§  [DatabaseManager-PHP7.4](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DatabaseManager/php-7.4/DatabaseManager-PHP7.4.md")
 
-§  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DatabaseManager/php-7.4/README.md")
+§  [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DatabaseManager/php-7.4/README.md")
 
-§  [aMagicDBH](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DatabaseManager/php-7.4/aMagicDBH.md")
+§  [aMagicDBH](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DatabaseManager/php-7.4/aMagicDBH.md")
 
-§  php-8.0
+§  **php-8.0**
 
-§  [DatabaseManager-php-8.0](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DatabaseManager/php-8.0/DatabaseManager-php-8.0.md")
+§  [DatabaseManager-php-8.0](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DatabaseManager/php-8.0/DatabaseManager-php-8.0.md")
 
-§  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DatabaseManager/php-8.0/README.md")
+§  [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DatabaseManager/php-8.0/README.md")
 
-§  [Адаптация-для-php-7.4](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DatabaseManager/php-8.0/Адаптация-для-php-7.4.md")
+§  [Адаптация-для-php-7.4](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DatabaseManager/php-8.0/Адаптация-для-php-7.4.md")
 
-§  [КОНЦЕПЦИЯ-DatabaseManager](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DatabaseManager/КОНЦЕПЦИЯ-DatabaseManager.md")
+§  [КОНЦЕПЦИЯ-DatabaseManager](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "DataBase/aMagic-DatabaseManager/КОНЦЕПЦИЯ-DatabaseManager.md")
 
-·         MTHL
+·         **MTHL**
 
-#  MDS2-идея
+o    **MDS2-идея**
 
-§  [1-Итоги](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MDS2-идея/1-Итоги.md")
+§  [1-Итоги](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MDS2-идея/1-Итоги.md")
 
-§  [1-ПРОДОЛЖЕНИЕ](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MDS2-идея/1-ПРОДОЛЖЕНИЕ.md")
+§  [1-ПРОДОЛЖЕНИЕ](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MDS2-идея/1-ПРОДОЛЖЕНИЕ.md")
 
-§  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MDS2-идея/README.md")
+§  [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MDS2-идея/README.md")
 
-§  [mds-с-шаблоном-mdsl](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MDS2-идея/mds-с-шаблоном-mdsl.md")
+§  [mds-с-шаблоном-mdsl](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MDS2-идея/mds-с-шаблоном-mdsl.md")
 
-#  MarkdownStyle
+o    **MarkdownStyle**
 
-§  aMagic-MarkdownStyle-mds
+§  **aMagic-MarkdownStyle-mds**
 
-§  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/README.md")
+§  [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/README.md")
 
-§  mdsl
+§  **mdsl**
 
-§  [2-mds-с-шаблоном-mdsl](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/2-mds-с-шаблоном-mdsl.md")
+§  [2-mds-с-шаблоном-mdsl](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/2-mds-с-шаблоном-mdsl.md")
 
-§  [2-расширяем синтаксис](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/2-расширяем синтаксис.md")
+§  [2-расширяем синтаксис](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/2-расширяем синтаксис.md")
 
-§  [3-index-php](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/3-index-php.md")
+§  [3-index-php](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/3-index-php.md")
 
-§  [3-mds-vs-mdh-Концепция](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/3-mds-vs-mdh-Концепция.md")
+§  [3-mds-vs-mdh-Концепция](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/3-mds-vs-mdh-Концепция.md")
 
-§  [4-mdh-to-mthl-как HTML6](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/4-mdh-to-mthl-как HTML6.md")
+§  [4-mdh-to-mthl-как HTML6](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/4-mdh-to-mthl-как HTML6.md")
 
-§  [5-mthl-ЯДРО](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/5-mthl-ЯДРО.md")
+§  [5-mthl-ЯДРО](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/5-mthl-ЯДРО.md")
 
-§  [5-Как-выложить](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/5-Как-выложить.md")
+§  [5-Как-выложить](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/5-Как-выложить.md")
 
-§  [5-Примеры-тестов](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/5-Примеры-тестов.md")
+§  [5-Примеры-тестов](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/5-Примеры-тестов.md")
 
-§  [5-создание-репозитория](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/5-создание-репозитория.md")
+§  [5-создание-репозитория](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/5-создание-репозитория.md")
 
-§  [6-Продолжение](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/6-Продолжение.md")
+§  [6-Продолжение](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/6-Продолжение.md")
 
-§  [MDSLParser](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/MDSLParser.md")
+§  [MDSLParser](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/MDSLParser.md")
 
-§  [MDSParser](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/MDSParser.md")
+§  [MDSParser](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/MDSParser.md")
 
-§  [Сравнение-парсеров](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/Сравнение-парсеров.md")
+§  [Сравнение-парсеров](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/Сравнение-парсеров.md")
 
-§  [Сравнение-синтакиса-mds](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/Сравнение-синтакиса-mds.md")
+§  [Сравнение-синтакиса-mds](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/Сравнение-синтакиса-mds.md")
 
-§  [class-HtmlToMDS-PHP8](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/class-HtmlToMDS-PHP8.md")
+§  [class-HtmlToMDS-PHP8](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/class-HtmlToMDS-PHP8.md")
 
-§  [class-HtmlToMDS-обрамление](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/class-HtmlToMDS-обрамление.md")
+§  [class-HtmlToMDS-обрамление](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/class-HtmlToMDS-обрамление.md")
 
-§  [class-HtmlToMDS-разделитель-слева](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/class-HtmlToMDS-разделитель-слева.md")
+§  [class-HtmlToMDS-разделитель-слева](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/class-HtmlToMDS-разделитель-слева.md")
 
-§  [class-MDS-MarkdownStyle](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/class-MDS-MarkdownStyle.md")
+§  [class-MDS-MarkdownStyle](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/class-MDS-MarkdownStyle.md")
 
-§  [class-MDS-ДОКУМЕНТАЦИЯ](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/class-MDS-ДОКУМЕНТАЦИЯ.md")
+§  [class-MDS-ДОКУМЕНТАЦИЯ](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/class-MDS-ДОКУМЕНТАЦИЯ.md")
 
-§  [class-MDS-НАЧАЛЬНЫЙ](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/class-MDS-НАЧАЛЬНЫЙ.md")
+§  [class-MDS-НАЧАЛЬНЫЙ](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/class-MDS-НАЧАЛЬНЫЙ.md")
 
-§  [class-MDS-ОБЗОР](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/class-MDS-ОБЗОР.md")
+§  [class-MDS-ОБЗОР](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/class-MDS-ОБЗОР.md")
 
-§  [class-MDS-ПЕРЕРАБОТКА](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/class-MDS-ПЕРЕРАБОТКА.md")
+§  [class-MDS-ПЕРЕРАБОТКА](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/class-MDS-ПЕРЕРАБОТКА.md")
 
-§  [class-MDS-ПИШЕМ](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/class-MDS-ПИШЕМ.md")
+§  [class-MDS-ПИШЕМ](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/class-MDS-ПИШЕМ.md")
 
-§  [class-MDS-УНИКАЛЬНОСТЬ](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/class-MDS-УНИКАЛЬНОСТЬ.md")
+§  [class-MDS-УНИКАЛЬНОСТЬ](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/class-MDS-УНИКАЛЬНОСТЬ.md")
 
-§  [class-MarkdownStyleParser-МОДИФИКАЦИЯ](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/class-MarkdownStyleParser-МОДИФИКАЦИЯ.md")
+§  [class-MarkdownStyleParser-МОДИФИКАЦИЯ](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/class-MarkdownStyleParser-МОДИФИКАЦИЯ.md")
 
-§  [class-MarkdownStyleParser](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/class-MarkdownStyleParser.md")
+§  [class-MarkdownStyleParser](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/MarkdownStyle/class-MarkdownStyleParser.md")
 
-#  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/README.md")
+o    [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/README.md")
 
-#  aMagic-JSMCss
+o    **aMagic-JSMCss**
 
-§  [MCss](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-JSMCss/MCss.md")
+§  [MCss](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-JSMCss/MCss.md")
 
-§  [MCssJS](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-JSMCss/MCssJS.md")
+§  [MCssJS](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-JSMCss/MCssJS.md")
 
-§  [MCssStatic](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-JSMCss/MCssStatic.md")
+§  [MCssStatic](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-JSMCss/MCssStatic.md")
 
-§  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-JSMCss/README.md")
+§  [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-JSMCss/README.md")
 
-#  aMagic-MCss
+o    **aMagic-MCss**
 
-§  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-MCss/README.md")
+§  [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-MCss/README.md")
 
-§  [tailwind1](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-MCss/tailwind1.md")
+§  [tailwind1](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-MCss/tailwind1.md")
 
-§  [ПРИМЕР1](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-MCss/ПРИМЕР1.md")
+§  [ПРИМЕР1](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-MCss/ПРИМЕР1.md")
 
-#  aMagic-MarkupTextHybridLanguage-mthl
+o    **aMagic-MarkupTextHybridLanguage-mthl**
 
-§  [1-MTHL-Ядро-крнцепция](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-MarkupTextHybridLanguage-mthl/1-MTHL-Ядро-крнцепция.md")
+§  [1-MTHL-Ядро-крнцепция](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-MarkupTextHybridLanguage-mthl/1-MTHL-Ядро-крнцепция.md")
 
-§  [Архитектура-MarkdownStyle](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-MarkupTextHybridLanguage-mthl/Архитектура-MarkdownStyle.md")
+§  [Архитектура-MarkdownStyle](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-MarkupTextHybridLanguage-mthl/Архитектура-MarkdownStyle.md")
 
-§  [Архитектура-гибридного-синтаксиса](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-MarkupTextHybridLanguage-mthl/Архитектура-гибридного-синтаксиса.md")
+§  [Архитектура-гибридного-синтаксиса](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-MarkupTextHybridLanguage-mthl/Архитектура-гибридного-синтаксиса.md")
 
-§  [Модификация-Синтаксис-MarkdownStyle](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-MarkupTextHybridLanguage-mthl/Модификация-Синтаксис-MarkdownStyle.md")
+§  [Модификация-Синтаксис-MarkdownStyle](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-MarkupTextHybridLanguage-mthl/Модификация-Синтаксис-MarkdownStyle.md")
 
-§  [Пример-class-MTHL](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-MarkupTextHybridLanguage-mthl/Пример-class-MTHL.md")
+§  [Пример-class-MTHL](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-MarkupTextHybridLanguage-mthl/Пример-class-MTHL.md")
 
-§  [Расширяем-MarkdownExtra](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-MarkupTextHybridLanguage-mthl/Расширяем-MarkdownExtra.md")
+§  [Расширяем-MarkdownExtra](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-MarkupTextHybridLanguage-mthl/Расширяем-MarkdownExtra.md")
 
-§  [Секрктный-язык-разметки](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-MarkupTextHybridLanguage-mthl/Секрктный-язык-разметки.md")
+§  [Секрктный-язык-разметки](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-MarkupTextHybridLanguage-mthl/Секрктный-язык-разметки.md")
 
-§  [Спецификация-формата-mdh](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-MarkupTextHybridLanguage-mthl/Спецификация-формата-mdh.md")
+§  [Спецификация-формата-mdh](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-MarkupTextHybridLanguage-mthl/Спецификация-формата-mdh.md")
 
-§  [Фантазия-про-mthl](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-MarkupTextHybridLanguage-mthl/Фантазия-про-mthl.md")
+§  [Фантазия-про-mthl](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-MarkupTextHybridLanguage-mthl/Фантазия-про-mthl.md")
 
-#  aMagic-TagParser
+o    **aMagic-TagParser**
 
-§  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-TagParser/README.md")
+§  [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-TagParser/README.md")
 
-§  [tagparser](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-TagParser/tagparser.md")
+§  [tagparser](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/aMagic-TagParser/tagparser.md")
 
-#  pug-on-php
+o    **pug-on-php**
 
-§  pug-on-php-main
+§  **pug-on-php-main**
 
-§  [01-Использование-PUG-PHP](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/01-Использование-PUG-PHP.md")
+§  [01-Использование-PUG-PHP](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/01-Использование-PUG-PHP.md")
 
-§  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/README.md")
+§  [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/README.md")
 
-§  Использование-PUG-для-PHP-md
+§  **Использование-PUG-для-PHP-md**
 
-§  [01-Использование-PUG-PHP](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/Использование-PUG-для-PHP-md/01-Использование-PUG-PHP.md")
+§  [01-Использование-PUG-PHP](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/Использование-PUG-для-PHP-md/01-Использование-PUG-PHP.md")
 
-§  [02-PUG-PHP-без-фреймворков](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/Использование-PUG-для-PHP-md/02-PUG-PHP-без-фреймворков.md")
+§  [02-PUG-PHP-без-фреймворков](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/Использование-PUG-для-PHP-md/02-PUG-PHP-без-фреймворков.md")
 
-§  [03-Phug-renderFile](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/Использование-PUG-для-PHP-md/03-Phug-renderFile.md")
+§  [03-Phug-renderFile](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/Использование-PUG-для-PHP-md/03-Phug-renderFile.md")
 
-§  [04-PHP-генерация-PUG-вместо-HTML](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/Использование-PUG-для-PHP-md/04-PHP-генерация-PUG-вместо-HTML.md")
+§  [04-PHP-генерация-PUG-вместо-HTML](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/Использование-PUG-для-PHP-md/04-PHP-генерация-PUG-вместо-HTML.md")
 
-§  [05-запись-PUG-PHP](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/Использование-PUG-для-PHP-md/05-запись-PUG-PHP.md")
+§  [05-запись-PUG-PHP](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/Использование-PUG-для-PHP-md/05-запись-PUG-PHP.md")
 
-§  [06-ob\_get\_clean](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/Использование-PUG-для-PHP-md/06-ob_get_clean.md")
+§  [06-ob\_get\_clean](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/Использование-PUG-для-PHP-md/06-ob_get_clean.md")
 
-§  [07-HEREDOC-синтаксис](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/Использование-PUG-для-PHP-md/07-HEREDOC-синтаксис.md")
+§  [07-HEREDOC-синтаксис](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/Использование-PUG-для-PHP-md/07-HEREDOC-синтаксис.md")
 
-§  [08-PHUG-PHP-в-проекте](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/Использование-PUG-для-PHP-md/08-PHUG-PHP-в-проекте.md")
+§  [08-PHUG-PHP-в-проекте](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/Использование-PUG-для-PHP-md/08-PHUG-PHP-в-проекте.md")
 
-§  [09-PUG-шаблонизатор](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/Использование-PUG-для-PHP-md/09-PUG-шаблонизатор.md")
+§  [09-PUG-шаблонизатор](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/Использование-PUG-для-PHP-md/09-PUG-шаблонизатор.md")
 
-§  [10-HTML-в-PUG](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/Использование-PUG-для-PHP-md/10-HTML-в-PUG.md")
+§  [10-HTML-в-PUG](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/Использование-PUG-для-PHP-md/10-HTML-в-PUG.md")
 
-§  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/Использование-PUG-для-PHP-md/README.md")
+§  [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/Использование-PUG-для-PHP-md/README.md")
 
-§  [index1](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/Использование-PUG-для-PHP-md/index1.md")
+§  [index1](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "MTHL/pug-on-php/pug-on-php-main/Использование-PUG-для-PHP-md/index1.md")
 
-·         Markdown
+·         **Markdown**
 
-#  aMAGIC-md-page-js
+o    **aMAGIC-md-page-js**
 
-§  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "Markdown/aMAGIC-md-page-js/README.md")
+§  [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "Markdown/aMAGIC-md-page-js/README.md")
 
-§  md
+§  **md**
 
-§  [new-file](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "Markdown/aMAGIC-md-page-js/md/new-file.md")
+§  [new-file](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "Markdown/aMAGIC-md-page-js/md/new-file.md")
 
-§  [md-page-for-php](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "Markdown/aMAGIC-md-page-js/md-page-for-php.md")
+§  [md-page-for-php](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "Markdown/aMAGIC-md-page-js/md-page-for-php.md")
 
-§  php-md-reader
+§  **php-md-reader**
 
-§  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "Markdown/aMAGIC-md-page-js/php-md-reader/README.md")
+§  [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "Markdown/aMAGIC-md-page-js/php-md-reader/README.md")
 
-§  [md-page-for-php](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "Markdown/aMAGIC-md-page-js/php-md-reader/md-page-for-php.md")
+§  [md-page-for-php](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "Markdown/aMAGIC-md-page-js/php-md-reader/md-page-for-php.md")
 
-#  aMagic-MDreader-AMMDr
+o    **aMagic-MDreader-AMMDr**
 
-§  AMMDr
+§  **AMMDr**
 
-§  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "Markdown/aMagic-MDreader-AMMDr/AMMDr/README.md")
+§  [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "Markdown/aMagic-MDreader-AMMDr/AMMDr/README.md")
 
-§  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "Markdown/aMagic-MDreader-AMMDr/README.md")
+§  [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "Markdown/aMagic-MDreader-AMMDr/README.md")
 
-§  ammdr-4.0
+§  **ammdr-4.0**
 
-§  [AMMDr-4.0-aMagic-MDreader](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/AMMDr-4.0-aMagic-MDreader.md")
+§  [AMMDr-4.0-aMagic-MDreader](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/AMMDr-4.0-aMagic-MDreader.md")
 
-§  [MarkdownMenu](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/MarkdownMenu.md")
+§  [MarkdownMenu](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/MarkdownMenu.md")
 
-§  [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/README.md")
+§  [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/README.md")
 
-§  [ammdr.css](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/ammdr.css.md")
+§  [ammdr.css](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/ammdr.css.md")
 
-§  [ammdr.js](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/ammdr.js.md")
+§  [ammdr.js](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/ammdr.js.md")
 
-*   aMagicOK
+*   **aMagicOK**
 
-*   [CSS-MVP-шпаргалка](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "aMagicOK/CSS-MVP-шпаргалка.md")
-*   [HTML-editor-ВИЗУАЛЬНЫЙ](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "aMagicOK/HTML-editor-ВИЗУАЛЬНЫЙ.md")
-*   [Marcdown-editor-ВИЗУАЛЬНЫЙ](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "aMagicOK/Marcdown-editor-ВИЗУАЛЬНЫЙ.md")
-*   [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "aMagicOK/README.md")
-*   aMagic-TagParser
+*   [CSS-MVP-шпаргалка](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "aMagicOK/CSS-MVP-шпаргалка.md")
+*   [HTML-editor-ВИЗУАЛЬНЫЙ](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "aMagicOK/HTML-editor-ВИЗУАЛЬНЫЙ.md")
+*   [Marcdown-editor-ВИЗУАЛЬНЫЙ](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "aMagicOK/Marcdown-editor-ВИЗУАЛЬНЫЙ.md")
+*   [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "aMagicOK/README.md")
+*   **aMagic-TagParser**
 
-*   [README](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "aMagicOK/aMagic-TagParser/README.md")
-*   [tagparser](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "aMagicOK/aMagic-TagParser/tagparser.md")
+*   [README](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "aMagicOK/aMagic-TagParser/README.md")
+*   [tagparser](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "aMagicOK/aMagic-TagParser/tagparser.md")
 
-*   [css-для-адаптивной-таблицы](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "aMagicOK/css-для-адаптивной-таблицы.md")
-*   [css-для-голого-html](./aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "aMagicOK/css-для-голого-html.md")
-    
+*   [css-для-адаптивной-таблицы](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "aMagicOK/css-для-адаптивной-таблицы.md")
+*   [css-для-голого-html](http://localhost/aMagic-not-released/ammdr.php?md=MTHL%2Fpug-on-php%2Fpug-on-php-main%2F%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-PUG-%D0%B4%D0%BB%D1%8F-PHP-md%2F02-PUG-PHP-%D0%B1%D0%B5%D0%B7-%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA%D0%BE%D0%B2.md "aMagicOK/css-для-голого-html.md")
