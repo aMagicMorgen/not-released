@@ -1,0 +1,31 @@
+/*mcss
+h1, h2, h3 {
+  font-bold
+  text-wrap:balance
+}
+
+.title, #header {
+  text-lg
+  text-primary
+}
+
+.btn {
+  bg-blue-500
+  hover:bg-blue-700
+  text-white
+  font-bold
+  py-2
+  px-4
+  rounded
+}
+
+input[type=submit] {
+  btn-submit
+  cursor-pointer
+}
+mcss*/
+
+/* обычный CSS дальше */
+body {
+  background: white;
+}
