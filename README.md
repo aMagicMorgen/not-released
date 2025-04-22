@@ -1,7 +1,7 @@
 # not-released
 Проекты и идеи которые пока в работе и могут не работать так как задумывалось. Это Репозиторий для экспериментов и идей.
 # СОДЕРЖАНИЕ
-  <!-- /\* Font Definitions \*/ @font-face {font-family:Wingdings; panose-1:5 0 0 0 0 0 0 0 0 0;} @font-face {font-family:"Cambria Math"; panose-1:2 4 5 3 5 4 6 3 2 4;} @font-face {font-family:Calibri; panose-1:2 15 5 2 2 2 4 3 2 4;} @font-face {font-family:"Segoe UI"; panose-1:2 11 5 2 4 2 4 2 2 3;} /\* Style Definitions \*/ p.MsoNormal, li.MsoNormal, div.MsoNormal {margin-top:0cm; margin-right:0cm; margin-bottom:10.0pt; margin-left:0cm; line-height:115%; font-size:11.0pt; font-family:"Calibri","sans-serif";} a:link, span.MsoHyperlink {color:blue; text-decoration:underline;} a:visited, span.MsoHyperlinkFollowed {color:purple; text-decoration:underline;} span.folder-name {mso-style-name:folder-name;} .MsoPapDefault {margin-bottom:10.0pt; line-height:115%;} @page Section1 {size:595.3pt 841.9pt; margin:2.0cm 42.5pt 2.0cm 3.0cm;} div.Section1 {page:Section1;} /\* List Definitions \*/ ol {margin-bottom:0cm;} ul {margin-bottom:0cm;} -->
+
 
 ·         **CSS**
 
