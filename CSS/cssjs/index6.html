@@ -6,30 +6,7 @@
   <title>Markdown + Tailwind Typography</title>
   
   <!-- Подключаем Tailwind с плагином Typography через CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          typography: {
-            DEFAULT: {
-              css: {
-                maxWidth: '75ch',
-                color: '#374151',
-                a: {
-                  color: '#3B82F6',
-                  '&:hover': { color: '#2563eb' }
-                },
-                'code::before': { content: '' },
-                'code::after': { content: '' }
-              }
-            }
-          }
-        }
-      },
-      plugins: [tailwindcss.typography]
-    }
-  </script>
+  
   <!-- Настраиваем Tailwind -->
   <script>
     tailwind.config = {
