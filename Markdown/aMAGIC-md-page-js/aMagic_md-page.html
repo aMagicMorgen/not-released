@@ -6,6 +6,89 @@
 <!--script src="https://cdn.rawgit.com/oscarmorrison/md-page/5833d6d1/md-page.js"></script><noscript-->
 <script src="md-page.js"></script><noscript>
 
+  <!-- Подключаем Tailwind с плагином Typography через CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!--script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          typography: {
+            DEFAULT: {
+              css: {
+                maxWidth: '75ch',
+                color: '#374151',
+                a: {
+                  color: '#3B82F6',
+                  '&:hover': { color: '#2563eb' }
+                },
+                'code::before': { content: '' },
+                'code::after': { content: '' }
+              }
+            }
+          }
+        }
+      },
+      plugins: [tailwindcss.typography]
+    }
+</script-->
+
+
+<script>
+    tailwind.config = {
+      mode: 'jit',
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#4F46E5',
+            secondary: '#10B981',
+            dark: '#1F2937',
+            accent: '#F59E0B',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          boxShadow: {
+            'soft': '0 8px 32px rgba(0,0,0,0.05)',
+            'border': 'inset 0 0 0 1px #E5E7EB'
+          }
+        }
+      }
+    }
+    
+    // Автоматическое применение стилей
+    document.addEventListener('DOMContentLoaded', function() {
+      const elements = {
+        'h1': 'text-5xl font-bold mb-8 mt-12',
+        'h2': 'text-4xl font-bold mb-6',
+        'h3': 'text-3xl font-bold mb-4',
+        'h4': 'text-2xl font-semibold mb-4',
+        'p': 'text-lg mb-6 leading-relaxed text-gray-600',
+        'a': 'text-primary hover:opacity-80 transition',
+        'button': 'bg-primary text-white px-8 py-4 rounded-2xl hover:bg-primary/90 transition-transform hover:scale-[0.98]',
+        'section': 'py-24',
+        'header': 'bg-white shadow-sm sticky top-0 z-50',
+        'footer': 'bg-dark text-white',
+        'input': 'border rounded-xl px-6 py-4 w-full text-lg focus:ring-2 focus:ring-primary',
+        'textarea': 'border rounded-xl px-6 py-4 w-full h-40 resize-none',
+        'img': 'rounded-3xl shadow-soft',
+        'blockquote': 'border-l-4 border-accent pl-8 my-8 text-2xl italic bg-gray-50 p-8 rounded-2xl',
+      }
+      
+      Object.entries(elements).forEach(([tag, classes]) => {
+        document.querySelectorAll(tag).forEach(el => {
+          el.classList.add(...classes.split(' '))
+        })
+      })
+    })
+  </script>
+  
+</head>
+<body class="bg-gray-50 p-8">
+
+<!-- Преобразованный HTML -->
+<article class="prose prose-lg mx-auto">
+  
 # ✨ **aMAGIC md-page.js**  
 ### *Превращаем Markdown в HTML — просто и элегантно!*  
 
