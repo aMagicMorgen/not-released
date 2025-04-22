@@ -2,20 +2,20 @@
 Проекты и идеи которые пока в работе и могут не работать так как задумывалось. Это Репозиторий для экспериментов и идей.
 
 # CSS
-- CSS-MVP
+  - CSS-MVP
    - CSS-MVP-шпаргалка
    - MVP-to-TailWind
-- README
-- Tailwind
-- TailwindStyler
-   - README
-- TilwindStylerScript
-   - README
- - README2
-   - TailwindScriptGenerator5-продвинутый
-- cssjs
-   - README
-   - Исправленный
+  - README
+  - Tailwind
+    - TailwindStyler
+      - README
+    - TilwindStylerScript
+      - README
+      - README2
+      - TailwindScriptGenerator5-продвинутый
+  - cssjs
+    - README
+    - Исправленный
 
 # CSS-MVP
 # CSS
