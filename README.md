@@ -2,39 +2,40 @@
 Проекты и идеи которые пока в работе и могут не работать так как задумывалось. Это Репозиторий для экспериментов и идей.
 # СОДЕРЖАНИЕ
 
-•	CSS  
-o	CSS-MVP  
-	CSS-MVP-шпаргалка  
-	MVP-to-TailWind  
-o	README  
-o	Tailwind  
-	TailwindStyler  
-	README  
-	TilwindStylerScript  
-	README  
-	README2  
-	TailwindScriptGenerator5-продвинутый  
-o	cssjs  
-	README  
-	Исправленный  
-•	DataBase  
-o	DatabaseManager-extends-aMagicDBH  
-	README  
-	php-7.4  
-	DatabaseManager-PHP7.4  
-	README  
-	aMagicDBH  
-	php-8.0  
-	DatabaseManager-php-8.0  
-	README  
-	Адаптация-для-php-7.4  
+•	
+o	CSS
+	CSS-MVP
+	CSS-MVP-шпаргалка
+	MVP-to-TailWind
+	README
+	Tailwind
+	TailwindStyler
+	README
+	TilwindStylerScript
+	README
+	README2
+	TailwindScriptGenerator5-продвинутый
+	cssjs
+	README
+	Исправленный
+o	DataBase
+	DatabaseManager-extends-aMagicDBH
+	README
+	php-7.4
+	DatabaseManager-PHP7.4
+	README
+	aMagicDBH
+	php-8.0
+	DatabaseManager-php-8.0
+	README
+	Адаптация-для-php-7.4
 	КОНЦЕПЦИЯ-DatabaseManager
-o	SQLite
+	SQLite
 	CsvToSQLite
 	csv-to-sqlite
 	SQLiteToCSV
 	sqlite-to-csv
-o	aMagic-DataBaseHelper-DBH
+	aMagic-DataBaseHelper-DBH
 	Clas-DBH-Документация
 	DBH-DataBaseHelper
 	DBH-MariaDB
@@ -55,7 +56,7 @@ o	aMagic-DataBaseHelper-DBH
 	aMagicDBH-Примеры-ипользования
 	aMagicDBH-Универсальный класс
 	Модификация для SqLite и MySql
-o	aMagic-DatabaseManager
+	aMagic-DatabaseManager
 	README
 	php-7.4
 	DatabaseManager-PHP7.4
@@ -66,13 +67,13 @@ o	aMagic-DatabaseManager
 	README
 	Адаптация-для-php-7.4
 	КОНЦЕПЦИЯ-DatabaseManager
-•	MTHL
-o	MDS2-идея
+o	MTHL
+	MDS2-идея
 	1-Итоги
 	1-ПРОДОЛЖЕНИЕ
 	README
 	mds-с-шаблоном-mdsl
-o	MarkdownStyle
+	MarkdownStyle
 	aMagic-MarkdownStyle-mds
 	README
 	mdsl
@@ -102,17 +103,17 @@ o	MarkdownStyle
 	class-MDS-УНИКАЛЬНОСТЬ
 	class-MarkdownStyleParser-МОДИФИКАЦИЯ
 	class-MarkdownStyleParser
-o	README
-o	aMagic-JSMCss
+	README
+	aMagic-JSMCss
 	MCss
 	MCssJS
 	MCssStatic
 	README
-o	aMagic-MCss
+	aMagic-MCss
 	README
 	tailwind1
 	ПРИМЕР1
-o	aMagic-MarkupTextHybridLanguage-mthl
+	aMagic-MarkupTextHybridLanguage-mthl
 	1-MTHL-Ядро-крнцепция
 	Архитектура-MarkdownStyle
 	Архитектура-гибридного-синтаксиса
@@ -122,10 +123,10 @@ o	aMagic-MarkupTextHybridLanguage-mthl
 	Секрктный-язык-разметки
 	Спецификация-формата-mdh
 	Фантазия-про-mthl
-o	aMagic-TagParser
+	aMagic-TagParser
 	README
 	tagparser
-o	pug-on-php
+	pug-on-php
 	pug-on-php-main
 	01-Использование-PUG-PHP
 	README
@@ -142,8 +143,8 @@ o	pug-on-php
 	10-HTML-в-PUG
 	README
 	index1
-•	Markdown
-o	aMAGIC-md-page-js
+o	Markdown
+	aMAGIC-md-page-js
 	README
 	md
 	new-file
@@ -151,7 +152,7 @@ o	aMAGIC-md-page-js
 	php-md-reader
 	README
 	md-page-for-php
-o	aMagic-MDreader-AMMDr
+	aMagic-MDreader-AMMDr
 	AMMDr
 	README
 	README
@@ -161,5 +162,13 @@ o	aMagic-MDreader-AMMDr
 	README
 	ammdr.css
 	ammdr.js
+o	aMagicOK
+	CSS-MVP-шпаргалка
+	HTML-editor-ВИЗУАЛЬНЫЙ
+	Marcdown-editor-ВИЗУАЛЬНЫЙ
+	README
+	
+
+
 
 
