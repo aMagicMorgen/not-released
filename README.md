@@ -3,19 +3,19 @@
 
 # CSS
 - CSS-MVP
- - CSS-MVP-шпаргалка
- - MVP-to-TailWind
+   - CSS-MVP-шпаргалка
+   - MVP-to-TailWind
 - README
 - Tailwind
 - TailwindStyler
- - README
+   - README
 - TilwindStylerScript
- - README
+   - README
  - README2
- - TailwindScriptGenerator5-продвинутый
+   - TailwindScriptGenerator5-продвинутый
 - cssjs
- - README
- - Исправленный
+   - README
+   - Исправленный
 
 # CSS-MVP
 # CSS
