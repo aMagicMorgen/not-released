@@ -1,0 +1,4 @@
+[
+    ".\\CsvToSQLite\\csv-to-sqlite.md",
+    ".\\SQLiteToCSV\\sqlite-to-csv.md"
+]
