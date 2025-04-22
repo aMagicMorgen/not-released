@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown + Tailwind Typography</title>
+  
+  <!-- Подключаем Tailwind с плагином Typography через CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          typography: {
+            DEFAULT: {
+              css: {
+                maxWidth: '75ch',
+                color: '#374151',
+                a: {
+                  color: '#3B82F6',
+                  '&:hover': { color: '#2563eb' }
+                },
+                'code::before': { content: '' },
+                'code::after': { content: '' }
+              }
+            }
+          }
+        }
+      },
+      plugins: [tailwindcss.typography]
+    }
+  </script>
+</head>
+<body class="bg-gray-50 p-8">
+
+Вот полный пример с преобразованием Markdown в HTML и применением Tailwind Typography:
+
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown + Tailwind Typography</title>
+  
+  <!-- Подключаем Tailwind с плагином Typography через CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          typography: {
+            DEFAULT: {
+              css: {
+                maxWidth: '75ch',
+                color: '#374151',
+                a: {
+                  color: '#3B82F6',
+                  '&:hover': { color: '#2563eb' }
+                },
+                'code::before': { content: '' },
+                'code::after': { content: '' }
+              }
+            }
+          }
+        }
+      },
+      plugins: [tailwindcss.typography]
+    }
+  </script>
+</head>
+<body class="bg-gray-50 p-8">
+
+<!-- Преобразованный HTML -->
+<article class="prose prose-lg mx-auto">
+  <h1>Заголовок статьи</h1>
+  
+  <p>Это пример статьи с <em>разметкой Markdown</em>:</p>
+  
+  <h2>Основные возможности</h2>
+  
+  <ul>
+    <li><strong>Списки</strong> элементов</li>
+    <li><a href="https://example.com">Ссылки</a></li>
+    <li><code>Встроенный код</code></li>
+  </ul>
+  
+  <p>Блоки кода:</p>
+  
+  <pre><code class="language-javascript">console.log('Hello World!');</code></pre>
+  
+  <blockquote>
+    <p>Цитата важной информации</p>
+  </blockquote>
+  
+  <figure>
+    <img 
+      src="https://via.placeholder.com/800x400" 
+      alt="Изображение"
+      class="rounded-xl shadow-lg"
+    >
+    <figcaption>Пример изображения из Markdown</figcaption>
+  </figure>
+</article>
+
+</body>
+</html>
