@@ -1,6 +1,7 @@
 # not-released
 Проекты и идеи которые пока в работе и могут не работать так как задумывалось. Это Репозиторий для экспериментов и идей.
 # СОДЕРЖАНИЕ
+
 •	CSS
 o	CSS-MVP
 	CSS-MVP-шпаргалка
@@ -160,14 +161,5 @@ o	aMagic-MDreader-AMMDr
 	README
 	ammdr.css
 	ammdr.js
-•	aMagicOK
-o	CSS-MVP-шпаргалка
-o	HTML-editor-ВИЗУАЛЬНЫЙ
-o	Marcdown-editor-ВИЗУАЛЬНЫЙ
-o	README
-o	aMagic-TagParser
-	README
-	tagparser
-o	css-для-адаптивной-таблицы
-o	css-для-голого-html
+
 
