@@ -2,173 +2,174 @@
 Проекты и идеи которые пока в работе и могут не работать так как задумывалось. Это Репозиторий для экспериментов и идей.
 # СОДЕРЖАНИЕ
 
-    •	
-    o	CSS
-    	CSS-MVP
-    	CSS-MVP-шпаргалка
-    	MVP-to-TailWind
-    	README
-    	Tailwind
-    	TailwindStyler
-    	README
-    	TilwindStylerScript
-    	README
-    	README2
-    	TailwindScriptGenerator5-продвинутый
-    	cssjs
-    	README
-    	Исправленный
-    o	DataBase
-    	DatabaseManager-extends-aMagicDBH
-    	README
-    	php-7.4
-    	DatabaseManager-PHP7.4
-    	README
-    	aMagicDBH
-    	php-8.0
-    	DatabaseManager-php-8.0
-    	README
-    	Адаптация-для-php-7.4
-    	КОНЦЕПЦИЯ-DatabaseManager
-    	SQLite
-    	CsvToSQLite
-    	csv-to-sqlite
-    	SQLiteToCSV
-    	sqlite-to-csv
-    	aMagic-DataBaseHelper-DBH
-    	Clas-DBH-Документация
-    	DBH-DataBaseHelper
-    	DBH-MariaDB
-    	README
-    	DBH-MySql
-    	Clas-DBH-ВЕРСИЯ
-    	README
-    	DBH-SQLite
-    	README
-    	DBHmariaDB-Документация
-    	DBHmariaDB
-    	DBHsqlite-Документация
-    	DBHsqlite
-    	README
-    	aMagicDBH
-    	README
-    	aMagicDBH-ПОЛНАЯ-РЕАЛИЗАЦИЯ
-    	aMagicDBH-Примеры-ипользования
-    	aMagicDBH-Универсальный класс
-    	Модификация для SqLite и MySql
-    	aMagic-DatabaseManager
-    	README
-    	php-7.4
-    	DatabaseManager-PHP7.4
-    	README
-    	aMagicDBH
-    	php-8.0
-    	DatabaseManager-php-8.0
-    	README
-    	Адаптация-для-php-7.4
-    	КОНЦЕПЦИЯ-DatabaseManager
-    o	MTHL
-    	MDS2-идея
-    	1-Итоги
-    	1-ПРОДОЛЖЕНИЕ
-    	README
-    	mds-с-шаблоном-mdsl
-    	MarkdownStyle
-    	aMagic-MarkdownStyle-mds
-    	README
-    	mdsl
-    	2-mds-с-шаблоном-mdsl
-    	2-расширяем синтаксис
-    	3-index-php
-    	3-mds-vs-mdh-Концепция
-    	4-mdh-to-mthl-как HTML6
-    	5-mthl-ЯДРО
-    	5-Как-выложить
-    	5-Примеры-тестов
-    	5-создание-репозитория
-    	6-Продолжение
-    	MDSLParser
-    	MDSParser
-    	Сравнение-парсеров
-    	Сравнение-синтакиса-mds
-    	class-HtmlToMDS-PHP8
-    	class-HtmlToMDS-обрамление
-    	class-HtmlToMDS-разделитель-слева
-    	class-MDS-MarkdownStyle
-    	class-MDS-ДОКУМЕНТАЦИЯ
-    	class-MDS-НАЧАЛЬНЫЙ
-    	class-MDS-ОБЗОР
-    	class-MDS-ПЕРЕРАБОТКА
-    	class-MDS-ПИШЕМ
-    	class-MDS-УНИКАЛЬНОСТЬ
-    	class-MarkdownStyleParser-МОДИФИКАЦИЯ
-    	class-MarkdownStyleParser
-    	README
-    	aMagic-JSMCss
-    	MCss
-    	MCssJS
-    	MCssStatic
-    	README
-    	aMagic-MCss
-    	README
-    	tailwind1
-    	ПРИМЕР1
-    	aMagic-MarkupTextHybridLanguage-mthl
-    	1-MTHL-Ядро-крнцепция
-    	Архитектура-MarkdownStyle
-    	Архитектура-гибридного-синтаксиса
-    	Модификация-Синтаксис-MarkdownStyle
-    	Пример-class-MTHL
-    	Расширяем-MarkdownExtra
-    	Секрктный-язык-разметки
-    	Спецификация-формата-mdh
-    	Фантазия-про-mthl
-    	aMagic-TagParser
-    	README
-    	tagparser
-    	pug-on-php
-    	pug-on-php-main
-    	01-Использование-PUG-PHP
-    	README
-    	Использование-PUG-для-PHP-md
-    	01-Использование-PUG-PHP
-    	02-PUG-PHP-без-фреймворков
-    	03-Phug-renderFile
-    	04-PHP-генерация-PUG-вместо-HTML
-    	05-запись-PUG-PHP
-    	06-ob_get_clean
-    	07-HEREDOC-синтаксис
-    	08-PHUG-PHP-в-проекте
-    	09-PUG-шаблонизатор
-    	10-HTML-в-PUG
-    	README
-    	index1
-    o	Markdown
-    	aMAGIC-md-page-js
-    	README
-    	md
-    	new-file
-    	md-page-for-php
-    	php-md-reader
-    	README
-    	md-page-for-php
-    	aMagic-MDreader-AMMDr
-    	AMMDr
-    	README
-    	README
-    	ammdr-4.0
-    	AMMDr-4.0-aMagic-MDreader
-    	MarkdownMenu
-    	README
-    	ammdr.css
-    	ammdr.js
-    o	aMagicOK
-    	CSS-MVP-шпаргалка
-    	HTML-editor-ВИЗУАЛЬНЫЙ
-    	Marcdown-editor-ВИЗУАЛЬНЫЙ
-    	README
-    	
-    
-    
-    
+•	CSS
+o	CSS-MVP
+	CSS-MVP-шпаргалка
+	MVP-to-TailWind
+o	README
+o	Tailwind
+	TailwindStyler
+	README
+	TilwindStylerScript
+	README
+	README2
+	TailwindScriptGenerator5-продвинутый
+o	cssjs
+	README
+	Исправленный
+•	DataBase
+o	DatabaseManager-extends-aMagicDBH
+	README
+	php-7.4
+	DatabaseManager-PHP7.4
+	README
+	aMagicDBH
+	php-8.0
+	DatabaseManager-php-8.0
+	README
+	Адаптация-для-php-7.4
+	КОНЦЕПЦИЯ-DatabaseManager
+o	SQLite
+	CsvToSQLite
+	csv-to-sqlite
+	SQLiteToCSV
+	sqlite-to-csv
+o	aMagic-DataBaseHelper-DBH
+	Clas-DBH-Документация
+	DBH-DataBaseHelper
+	DBH-MariaDB
+	README
+	DBH-MySql
+	Clas-DBH-ВЕРСИЯ
+	README
+	DBH-SQLite
+	README
+	DBHmariaDB-Документация
+	DBHmariaDB
+	DBHsqlite-Документация
+	DBHsqlite
+	README
+	aMagicDBH
+	README
+	aMagicDBH-ПОЛНАЯ-РЕАЛИЗАЦИЯ
+	aMagicDBH-Примеры-ипользования
+	aMagicDBH-Универсальный класс
+	Модификация для SqLite и MySql
+o	aMagic-DatabaseManager
+	README
+	php-7.4
+	DatabaseManager-PHP7.4
+	README
+	aMagicDBH
+	php-8.0
+	DatabaseManager-php-8.0
+	README
+	Адаптация-для-php-7.4
+	КОНЦЕПЦИЯ-DatabaseManager
+•	MTHL
+o	MDS2-идея
+	1-Итоги
+	1-ПРОДОЛЖЕНИЕ
+	README
+	mds-с-шаблоном-mdsl
+o	MarkdownStyle
+	aMagic-MarkdownStyle-mds
+	README
+	mdsl
+	2-mds-с-шаблоном-mdsl
+	2-расширяем синтаксис
+	3-index-php
+	3-mds-vs-mdh-Концепция
+	4-mdh-to-mthl-как HTML6
+	5-mthl-ЯДРО
+	5-Как-выложить
+	5-Примеры-тестов
+	5-создание-репозитория
+	6-Продолжение
+	MDSLParser
+	MDSParser
+	Сравнение-парсеров
+	Сравнение-синтакиса-mds
+	class-HtmlToMDS-PHP8
+	class-HtmlToMDS-обрамление
+	class-HtmlToMDS-разделитель-слева
+	class-MDS-MarkdownStyle
+	class-MDS-ДОКУМЕНТАЦИЯ
+	class-MDS-НАЧАЛЬНЫЙ
+	class-MDS-ОБЗОР
+	class-MDS-ПЕРЕРАБОТКА
+	class-MDS-ПИШЕМ
+	class-MDS-УНИКАЛЬНОСТЬ
+	class-MarkdownStyleParser-МОДИФИКАЦИЯ
+	class-MarkdownStyleParser
+o	README
+o	aMagic-JSMCss
+	MCss
+	MCssJS
+	MCssStatic
+	README
+o	aMagic-MCss
+	README
+	tailwind1
+	ПРИМЕР1
+o	aMagic-MarkupTextHybridLanguage-mthl
+	1-MTHL-Ядро-крнцепция
+	Архитектура-MarkdownStyle
+	Архитектура-гибридного-синтаксиса
+	Модификация-Синтаксис-MarkdownStyle
+	Пример-class-MTHL
+	Расширяем-MarkdownExtra
+	Секрктный-язык-разметки
+	Спецификация-формата-mdh
+	Фантазия-про-mthl
+o	aMagic-TagParser
+	README
+	tagparser
+o	pug-on-php
+	pug-on-php-main
+	01-Использование-PUG-PHP
+	README
+	Использование-PUG-для-PHP-md
+	01-Использование-PUG-PHP
+	02-PUG-PHP-без-фреймворков
+	03-Phug-renderFile
+	04-PHP-генерация-PUG-вместо-HTML
+	05-запись-PUG-PHP
+	06-ob_get_clean
+	07-HEREDOC-синтаксис
+	08-PHUG-PHP-в-проекте
+	09-PUG-шаблонизатор
+	10-HTML-в-PUG
+	README
+	index1
+•	Markdown
+o	aMAGIC-md-page-js
+	README
+	md
+	new-file
+	md-page-for-php
+	php-md-reader
+	README
+	md-page-for-php
+o	aMagic-MDreader-AMMDr
+	AMMDr
+	README
+	README
+	ammdr-4.0
+	AMMDr-4.0-aMagic-MDreader
+	MarkdownMenu
+	README
+	ammdr.css
+	ammdr.js
+•	aMagicOK
+o	CSS-MVP-шпаргалка
+o	HTML-editor-ВИЗУАЛЬНЫЙ
+o	Marcdown-editor-ВИЗУАЛЬНЫЙ
+o	README
+o	aMagic-TagParser
+	README
+	tagparser
+o	css-для-адаптивной-таблицы
+o	css-для-голого-html
+  
     
