@@ -78,7 +78,7 @@ $result = $processor->process();
 
 ## Будущие доработки
 
-1. **Интеграция с TailwindStyler**:
+1. **Интеграция с TailwindStyler**: CSS/Tailwind/TailwindStyler 
    - Подготовка данных для генерации `tailwind.config.js`
    - Автоматическое создание safelist для сокращенных классов
 
