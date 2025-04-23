@@ -32,8 +32,8 @@
 4. **Генерация маппинга**:
    ```css
    <!-- mcss
-   tw-0 bg-blue-500 text-white p-4 rounded-lg
-   tw-1 px-4 py-2 rounded hover:bg-gray-100
+   .tw-0 {bg-blue-500 text-white p-4 rounded-lg}
+   .tw-1 {px-4 py-2 rounded hover:bg-gray-100}
    /mcss -->
    ```
    - Сохраняет соответствие в комментарии HTML
