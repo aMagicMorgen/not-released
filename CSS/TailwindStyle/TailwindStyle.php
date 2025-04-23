@@ -73,7 +73,7 @@ class TailwindStyle {
         }
 
         $comment = $this->dom->createComment(
-            "mcss\n" . implode("\n", $mapping) . "\n/mcss"
+            "<!--mcss\n" . implode("\n.", $mapping) . "\n/mcss-->"
         );
 
         if ($body = $this->dom->getElementsByTagName('body')->item(0)) {
