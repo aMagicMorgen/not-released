@@ -37,7 +37,60 @@ echo $aMagic;//выводит html в строку
 
 ```
 После подключения его в index.php не в начале файла, а в конце он уже собирает все данные и только выводит html на экран.
+# Вот эталонный index.php
 
+```
+<?php
+//index.php
+$pageName = pathinfo(__FILE__, PATHINFO_FILENAME);//название этой страницы
+$meta[] = "
+<!--meta name='keywords' content='Ключевые слова' -->
+";
+$title = 'index';//Напишите как будет называться страница на закладке в браузере
+//СТРОКОЙ можно через запятую или с переносом строк
+$sections = 'section01';
+#$pageName = 'page01';//название страницы, которую нужно создать
+
+#$attributes_body = ''; //подключить и назначить если не назначено в config.php
+include 'config.php';
+#header('Location: '.$pageName);//Включить если нужна переадресация на новую страницу
+
+```
+
+
+# в папке pages
+находятся одноименные с главными файлами папки и head.php, header.php, footer.php
+Все файлы имеют свой стандарт записи и создаются автоматически.
+# section01.php
+```
+<?php
+//pages/index/section01.php
+$meta[] = "
+<!--meta name='keywords' content='ключевые слова' -->
+";
+$link[] = "
+<!--link rel='stylesheet' type='text/css' href=''-->
+";
+$my_style[]  = "
+<!--link rel='stylesheet' type='text/css' href=''-->
+";
+$script[] = "
+<!--script type='text/javascript' src=''></script-->
+";
+$style[] = "
+
+";
+$scriptdown[] = "
+<!--script type='text/javascript' src='static/js/js.js'></script-->
+<!--script >
+
+</script -->
+";
+?>
+<!--html код для pages/index/section01.php-->
+<p>Сюда вставьте html код для section01.php в файл pages/index/section01.php<p>
+
+```
 
 # Вот aMagic.php
 
