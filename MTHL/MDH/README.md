@@ -135,6 +135,7 @@ $content = <<<MDH
 <!--MDS
 # Отчет
 Ниже представлены данные:
+<0 table #tab1 tab1 .table1>
 /MDS-->
 
 <!--CSV
