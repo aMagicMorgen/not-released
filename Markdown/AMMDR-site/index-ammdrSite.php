@@ -1,18 +1,37 @@
 <?php
 /**
- * aMagic Markdown Reader - Main Site with Tailwind CSS
+ * aMagic Markdown Site - Main Site with Tailwind CSS
  */
+ /*
+// Настройка параметров
+ammdrSite::configure([
+    'contentDir' => __DIR__ . '/content',  // Папка с Markdown-файлами
+    'outputFile' => __DIR__ . '/data/site-index.json',  // Куда сохранить JSON
+    'excludedDirs' => ['.', '..', '.git', 'node_modules'],  // Исключаемые папки
+    'previewLines' => 5  // Сколько строк брать для превью
+]);
 
+// Запуск генерации
+ammdrSite::generate();
+*/
+$ammdrS = "aMagic Markdown Site";
+$ammdrS_short = "ammdrSite";
+$site_name = 'САЙТ из файлов *.md';
+$site_intro = 'ТЕМЫ СЛЕВА';
+$menu_name = 'ТЕМА: ';
+$files = 'МАТЕРИАЛЫ: ';
+
+ require_once 'ammdrSite.php';
+ if(!file_exists('ammdrSite.json')) ammdrSite:: generate();
 // Load the JSON index
 $jsonFile = __DIR__ . '/ammdrSite.json';
 if (!file_exists($jsonFile)) {
-    die("Error: ammdrSite.json not found. Please run ammdrSite.php first.");
+    die("Error: ammdrSite.json not found. Сделайте разрешение записи в Вашей дериктории");
 }
 
 $content = json_decode(file_get_contents($jsonFile), true);
 $menuItems = $content['content'] ?? [];
-$ammdr = "aMagic Markdown Site";
-$ammdr_short = "AMMDRsite";
+
 
 // Function to render Markdown (simplified)
 function renderMarkdown($text) {
@@ -33,7 +52,7 @@ function renderMarkdown($text) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= htmlspecialchars($ammdr) ?></title>
+    <title><?= htmlspecialchars($ammdrS) ?></title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss">
         @layer utilities {
@@ -90,8 +109,8 @@ function renderMarkdown($text) {
     <header class="bg-blue-600 text-white shadow-md">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <h1 class="text-xl font-bold">
-                <span class="full-title"><?= htmlspecialchars($ammdr) ?></span>
-                <span class="short-title"><?= htmlspecialchars($ammdr_short) ?></span>
+                <span class="full-title"><?= htmlspecialchars($ammdrS) ?></span>
+                <span class="short-title"><?= htmlspecialchars($ammdrS_short) ?></span>
             </h1>
             <div class="mobile-menu-btn md:hidden">
                 <span></span>
@@ -108,7 +127,7 @@ function renderMarkdown($text) {
         <nav id="main-nav" class="md:block"-->
             <div class="p-4 md:p-6">
                 <div id="nav-controls" class="mb-6">
-                    <h1 class="text-xl font-bold text-white md:text-gray-800">ТЕМЫ</h1>
+                    <h1 class="text-xl font-bold text-white md:text-gray-800"><?= $menu_name; ?></h1>
                 </div>
                 <div class="space-y-2">
                     <?php foreach ($menuItems as $name => $item): ?>
@@ -127,15 +146,15 @@ function renderMarkdown($text) {
 			<div class="mx-auto w-full  sm:px-6 md:px-8 lg:px-8 max-w-7xl">
 				<div class="container mx-auto sm:px-6 md:px-8 py-6 w-full">
                     <div class="bg-white rounded-lg shadow-md md:p-4 sm:py-4 sm:px-0">
-                        <h1 class="text-3xl font-bold text-gray-800 mb-4">САЙТ из файлов *.md</h1>
-                        <p class="text-gray-600 mb-6">ТЕМЫ СЛЕВА</p>
+                        <h1 class="text-3xl font-bold text-gray-800 mb-4"><?= $site_name; ?></h1>
+                        <p class="text-gray-600 mb-6"><?= $site_intro; ?></p>
                         
                         <?php foreach ($menuItems as $name => $item): ?>
     <section id="<?= htmlspecialchars($name) ?>" class="mb-12 p-6 rounded-xl shadow-lg bg-gradient-to-br from-white to-gray-50 border border-gray-100 hover:shadow-xl transition-shadow duration-300">
         <!-- Заголовок секции с градиентом -->
         <div class="mb-6 p-4 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600">
             <h1 class="text-3xl font-bold text-white">
-                ТЕМА: 
+                <?= $menu_name; ?>
                 <a href="<?= htmlspecialchars($name) ?>/ammdr.php" class="hover:text-blue-200 transition-colors duration-200">
                     <?= htmlspecialchars($name) ?>
                 </a>
@@ -175,7 +194,7 @@ function renderMarkdown($text) {
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                         </svg>
-                        <h3 class="text-xl font-semibold text-gray-800">ФАЙЛЫ В ДИРЕКТОРИИ:</h3>
+                        <h3 class="text-xl font-semibold text-gray-800"><?= $files; ?></h3>
                     </div>
                     
                     <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
