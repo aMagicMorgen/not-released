@@ -2,18 +2,17 @@
 /**
  * aMagic Markdown Site - Main Site with Tailwind CSS
  */
+  require_once 'ammdrSite.php';
+ $content = './';
+ $ammdrSite_json = 'ammdrSite.json';
  /*
 // Настройка параметров
 ammdrSite::configure([
-    'contentDir' => __DIR__ . '/content',  // Папка с Markdown-файлами
-    'outputFile' => __DIR__ . '/data/site-index.json',  // Куда сохранить JSON
+    'contentDir' => $content, //__DIR__ . '/content',  // Папка с Markdown-файлами
+    'outputFile' => $ammdrSite_json,  //__DIR__ . '/data/' . $ammdrSite_json,  // Куда сохранить JSON
     'excludedDirs' => ['.', '..', '.git', 'node_modules'],  // Исключаемые папки
     'previewLines' => 5  // Сколько строк брать для превью
 ]);
-
-// Запуск генерации
-ammdrSite::generate();
-*/
 $ammdrS = "aMagic Markdown Site";
 $ammdrS_short = "ammdrSite";
 $site_name = 'САЙТ из файлов *.md';
@@ -21,8 +20,19 @@ $site_intro = 'ТЕМЫ СЛЕВА';
 $menu_name = 'ТЕМА: ';
 $files = 'МАТЕРИАЛЫ: ';
 
- require_once 'ammdrSite.php';
- if(!file_exists('ammdrSite.json')) ammdrSite:: generate();
+// Запуск генерации
+#ammdrSite::generate();
+*/
+
+$ammdrS = "aMagic Markdown Site";
+$ammdrS_short = "ammdrSite";
+$site_name = 'САЙТ из файлов *.md';
+$site_intro = 'ТЕМЫ СЛЕВА';
+$menu_name = 'ТЕМА: ';
+$files = 'МАТЕРИАЛЫ: ';
+
+
+ if(!file_exists($ammdrSite_json)) ammdrSite:: generate();
 // Load the JSON index
 $jsonFile = __DIR__ . '/ammdrSite.json';
 if (!file_exists($jsonFile)) {
