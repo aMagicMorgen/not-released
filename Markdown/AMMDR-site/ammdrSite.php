@@ -5,78 +5,77 @@
  */
 class ammdrSite
 {
-    // Настройки по умолчанию (как в вашем примере)
-    private static $contentDir;
-    private static $outputFile;
+    // Настройки по умолчанию
+    private static $contentDir = null;
+    private static $outputFile = null;
     private static $excludedDirs = ['.', '..', '.git', 'node_modules'];
     private static $previewLines = 5;
 
-    // Инициализация настроек по умолчанию при первом вызове
+    // Инициализация настроек по умолчанию
     private static function initDefaults()
     {
         if (self::$contentDir === null) {
-            self::$contentDir = __DIR__ . '/content';
+            self::$contentDir = __DIR__;
         }
         if (self::$outputFile === null) {
-            self::$outputFile = __DIR__ . '/data/site-index.json';
+            self::$outputFile = __DIR__ . '/ammdrSite.json';
         }
     }
 
     /**
-     * Установка конфигурации (необязательно, если устраивают defaults)
-     * @param array $options Массив с настройками (contentDir, outputFile, excludedDirs, previewLines)
+     * Установка конфигурации
+     * @param array $options Массив с настройками
      */
     public static function configure(array $options = [])
     {
-        self::initDefaults(); // Инициализируем defaults перед применением настроек
+        self::initDefaults();
 
         if (isset($options['contentDir'])) {
-            self::$contentDir = $options['contentDir'];
+            self::$contentDir = rtrim($options['contentDir'], '/');
         }
         if (isset($options['outputFile'])) {
             self::$outputFile = $options['outputFile'];
         }
         if (isset($options['excludedDirs'])) {
-            self::$excludedDirs = $options['excludedDirs'];
+            self::$excludedDirs = array_merge(['.', '..'], $options['excludedDirs']);
         }
         if (isset($options['previewLines'])) {
-            self::$previewLines = (int)$options['previewLines'];
+            self::$previewLines = max(1, (int)$options['previewLines']);
         }
     }
 
     /**
      * Генерация JSON-индекса
+     * @throws Exception Если директория не найдена
      */
     public static function generate()
     {
-        self::initDefaults(); // На случай, если configure() не вызывали
+        self::initDefaults();
 
         if (!is_dir(self::$contentDir)) {
-            throw new Exception("Директория с контентом не найдена: " . self::$contentDir);
+            throw new Exception("Content directory not found: " . self::$contentDir);
         }
 
-        // Создаём папку для outputFile, если её нет
         $outputDir = dirname(self::$outputFile);
-        if (!is_dir($outputDir)) {
-            mkdir($outputDir, 0755, true);
+        if (!is_dir($outputDir) && !mkdir($outputDir, 0755, true)) {
+            throw new Exception("Failed to create output directory: " . $outputDir);
         }
 
         $structure = [
-            'generated' => date('Y-m-d H:i:s'),
+            'generated' => date('c'),
             'content' => self::scanDirectory(self::$contentDir, self::$contentDir)
         ];
 
-        file_put_contents(
+        if (file_put_contents(
             self::$outputFile,
             json_encode($structure, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)
-        );
+        ) === false) {
+            throw new Exception("Failed to write output file: " . self::$outputFile);
+        }
     }
-/**
-     * Recursively scan directory for markdown files
-     * 
-     * @param string $dir Directory to scan
-     * @param string $baseDir Base directory for relative paths
-     * @return array Directory structure
+
+    /**
+     * Рекурсивное сканирование директории
      */
     private static function scanDirectory($dir, $baseDir)
     {
@@ -89,22 +88,22 @@ class ammdrSite
             }
             
             $path = $dir . '/' . $item;
-            $relativePath = str_replace($baseDir . '/', '', $path);
+            $relativePath = ltrim(str_replace($baseDir, '', $path), '/');
             
             if (is_dir($path)) {
-                $structure[$item] = [
+                $node = [
                     'type' => 'directory',
                     'path' => $relativePath,
                     'children' => self::scanDirectory($path, $baseDir)
                 ];
                 
-                // Check for README.md in directory
-                $readmePath = $path . '/README.md';
-                if (file_exists($readmePath)) {
-                    $structure[$item]['readme'] = $relativePath . '/README.md';
-                    $structure[$item]['preview'] = self::getMarkdownPreview($readmePath);
+                if (file_exists($path . '/README.md')) {
+                    $node['readme'] = $relativePath . '/README.md';
+                    $node['preview'] = self::getMarkdownPreview($path . '/README.md');
                 }
-            } elseif (pathinfo($item, PATHINFO_EXTENSION) === 'md') {
+                
+                $structure[$item] = $node;
+            } elseif (pathinfo($path, PATHINFO_EXTENSION) === 'md') {
                 $structure[$item] = [
                     'type' => 'file',
                     'path' => $relativePath,
@@ -117,10 +116,7 @@ class ammdrSite
     }
 
     /**
-     * Get preview from markdown file
-     * 
-     * @param string $filePath Path to markdown file
-     * @return string Preview content
+     * Получение превью из Markdown-файла
      */
     private static function getMarkdownPreview($filePath)
     {
@@ -128,14 +124,11 @@ class ammdrSite
             return '';
         }
         
-        $content = file($filePath, FILE_IGNORE_NEW_LINES);
+        $content = file($filePath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
         $preview = array_slice($content, 0, self::$previewLines);
         return implode("\n", $preview);
     }
 }
-}
-
-
 // Example usage:
 // ammdrSite::configure([
 //     'contentDir' => '/path/to/content',
@@ -144,3 +137,4 @@ class ammdrSite
 //     'previewLines' => 5
 // ]);
 // ammdrSite::generate();
+// header("Location: index-ammdrSite.php");
