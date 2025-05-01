@@ -71,6 +71,76 @@ class ammdrSite
             json_encode($structure, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)
         );
     }
+/**
+     * Recursively scan directory for markdown files
+     * 
+     * @param string $dir Directory to scan
+     * @param string $baseDir Base directory for relative paths
+     * @return array Directory structure
+     */
+    private static function scanDirectory($dir, $baseDir)
+    {
+        $structure = [];
+        $items = scandir($dir);
+        
+        foreach ($items as $item) {
+            if (in_array($item, self::$excludedDirs)) {
+                continue;
+            }
+            
+            $path = $dir . '/' . $item;
+            $relativePath = str_replace($baseDir . '/', '', $path);
+            
+            if (is_dir($path)) {
+                $structure[$item] = [
+                    'type' => 'directory',
+                    'path' => $relativePath,
+                    'children' => self::scanDirectory($path, $baseDir)
+                ];
+                
+                // Check for README.md in directory
+                $readmePath = $path . '/README.md';
+                if (file_exists($readmePath)) {
+                    $structure[$item]['readme'] = $relativePath . '/README.md';
+                    $structure[$item]['preview'] = self::getMarkdownPreview($readmePath);
+                }
+            } elseif (pathinfo($item, PATHINFO_EXTENSION) === 'md') {
+                $structure[$item] = [
+                    'type' => 'file',
+                    'path' => $relativePath,
+                    'preview' => self::getMarkdownPreview($path)
+                ];
+            }
+        }
+        
+        return $structure;
+    }
 
-    // ... (остальные методы scanDirectory() и getMarkdownPreview() без изменений)
+    /**
+     * Get preview from markdown file
+     * 
+     * @param string $filePath Path to markdown file
+     * @return string Preview content
+     */
+    private static function getMarkdownPreview($filePath)
+    {
+        if (!file_exists($filePath)) {
+            return '';
+        }
+        
+        $content = file($filePath, FILE_IGNORE_NEW_LINES);
+        $preview = array_slice($content, 0, self::$previewLines);
+        return implode("\n", $preview);
+    }
 }
+}
+
+
+// Example usage:
+// ammdrSite::configure([
+//     'contentDir' => '/path/to/content',
+//     'outputFile' => '/path/to/output.json',
+//     'excludedDirs' => ['.', '..', '.git'],
+//     'previewLines' => 5
+// ]);
+// ammdrSite::generate();
