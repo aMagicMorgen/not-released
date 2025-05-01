@@ -2,7 +2,14 @@
 /**
  * aMagic Markdown Site - Main Site with Tailwind CSS
  */
-  require_once 'ammdrSite.php';
+ /////Для вывода ошибок на экран  ini_set('display_errors','on'); on || of
+#print_r(function_exists('mb_internal_encoding')); //проверка 1-подключено, 0 - не подключено
+error_reporting(E_ALL);
+ini_set('display_errors','on');
+mb_internal_encoding('UTF-8');
+
+
+ require_once 'ammdrSite.php';
  $content = './';
  $ammdrSite_json = 'ammdrSite.json';
  /*
@@ -34,7 +41,7 @@ $files = 'МАТЕРИАЛЫ: ';
 
  if(!file_exists($ammdrSite_json)) ammdrSite:: generate();
 // Load the JSON index
-$jsonFile = __DIR__ . '/ammdrSite.json';
+$jsonFile = $ammdrSite_json;
 if (!file_exists($jsonFile)) {
     die("Error: ammdrSite.json not found. Сделайте разрешение записи в Вашей дериктории");
 }
@@ -62,7 +69,7 @@ function renderMarkdown($text) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= htmlspecialchars($ammdrS) ?></title>
+    <title><?= $ammdrS_short ?></title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss">
         @layer utilities {
@@ -116,11 +123,11 @@ function renderMarkdown($text) {
     </style>
 </head>
 <body class="bg-gray-100 min-h-screen">
-    <header class="bg-blue-600 text-white shadow-md">
+    <header class="bg-red-600 text-white shadow-md bg-gradient-to-l from-red-400 to-blue-500">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <h1 class="text-xl font-bold">
-                <span class="full-title"><?= htmlspecialchars($ammdrS) ?></span>
-                <span class="short-title"><?= htmlspecialchars($ammdrS_short) ?></span>
+                <span class="full-title"><?= $ammdrS; ?></span>
+                <span class="short-title"><?= $ammdrS_short; ?></span>
             </h1>
             <div class="mobile-menu-btn md:hidden">
                 <span></span>
@@ -132,25 +139,98 @@ function renderMarkdown($text) {
 	
 	<div class="flex h-screen">
     <!-- Навигация - фиксированная -->
-    <nav id="main-nav" class="md:block fixed h-full overflow-y-auto w-64 bg-gray-800 text-white z-50">
-    <!--div class="flex">
-        <nav id="main-nav" class="md:block"-->
+    <!--nav id="main-nav" class="md:block fixed h-full overflow-y-auto w-64 bg-gray-800 text-white z-50">
             <div class="p-4 md:p-6">
                 <div id="nav-controls" class="mb-6">
-                    <h1 class="text-xl font-bold text-white md:text-gray-800"><?= $menu_name; ?></h1>
+                    <h1 class="text-xl font-bold text-white md:text-gray-800">< ?= $menu_name; ?></h1>
                 </div>
-                <div class="space-y-2">
-                    <?php foreach ($menuItems as $name => $item): ?>
+                <div class="space-y-2"-->
+                    <!--?php foreach ($menuItems as $name => $item): ?>
                         <div class="menu-item">
-                            <a href="#<?= htmlspecialchars($name) ?>" 
+                            <a href="#< ?= htmlspecialchars($name) ?>" 
                                class="block px-3 py-2 rounded hover:bg-blue-700 hover:text-white md:hover:bg-blue-100 md:hover:text-blue-800 transition">
-                                <?= htmlspecialchars($name) ?>
+                                < ?= htmlspecialchars($name) ?>
                             </a>
                         </div>
-                    <?php endforeach; ?>
+                    < ?php endforeach; ?>
                 </div>
             </div>
-        </nav>
+        </nav-->
+		<style>
+    #main-nav {
+        scrollbar-width: thin;
+        scrollbar-color: #3b82f6 #1f2937;
+    }
+    
+    #main-nav::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    #main-nav::-webkit-scrollbar-track {
+        background: #1f2937;
+    }
+    
+    #main-nav::-webkit-scrollbar-thumb {
+        background-color: #3b82f6;
+        border-radius: 3px;
+    }
+    
+    .menu-item a.active {
+        background-color: #1d4ed8;
+        color: white;
+        font-weight: 500;
+    }
+</style>
+		<!-- Навигация - фиксированная -->
+<nav id="main-nav" class="md:block fixed h-full overflow-y-auto w-64 bg-gradient-to-b from-white-800 to-gray-900 text-white z-50 shadow-xl">
+    <div class="p-4 md:p-6">
+        <div id="nav-controls" class="mb-6">
+            <h1 class="text-xl font-bold text-white md:text-gray-800 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <?= $menu_name; ?>
+            </h1>
+        </div>
+        <div class="space-y-1">
+            <?php foreach ($menuItems as $name => $item): ?>
+                <div class="menu-item group relative">
+                    <a href="#<?= htmlspecialchars($name) ?>" 
+                       class="flex items-center px-4 py-3 rounded-lg hover:bg-green-700 hover:text-white md:hover:bg-green-100 md:hover:text-green-800 transition-all duration-300 transform hover:translate-x-1 hover:shadow-md">
+                        <span class="w-2 h-2 bg-green-500 rounded-full mr-3 group-hover:bg-white transition"></span>
+                        <span><?= htmlspecialchars($name) ?></span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-auto opacity-0 group-hover:opacity-100 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            <?php endforeach; ?>
+        </div>
+        
+        <!-- Дополнительный раздел (пример) -->
+        <div class="mt-8 pt-4 border-t border-gray-700">
+            <div class="menu-item">
+                <a href="#" class="flex items-center px-4 py-3 rounded-lg hover:bg-blue-700 hover:text-white transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    Контакты
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+<script>
+    // Добавляем класс active для текущего пункта меню
+    document.querySelectorAll('.menu-item a').forEach(link => {
+        if(link.href === window.location.href.split('#')[0] + '#' + link.getAttribute('href').split('#')[1]) {
+            link.classList.add('active');
+        }
+    });
+</script>
 
 		<main class="flex-1 overflow-auto"> 
 			<div class="mx-auto w-full  sm:px-6 md:px-8 lg:px-8 max-w-7xl">
