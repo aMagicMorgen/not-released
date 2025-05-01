@@ -1,4 +1,4 @@
-# aMagic Markdown Reader (ammdr)
+# aMagic Markdown Site (ammdrSite)
 
 Вот полный код для создания простого сайта из папок с Markdown файлами:
 
