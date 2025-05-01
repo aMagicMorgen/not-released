@@ -2,12 +2,13 @@
 /**
  * aMagic Markdown Site - Main Site with Tailwind CSS
  */
+/*
  /////Для вывода ошибок на экран  ini_set('display_errors','on'); on || of
 #print_r(function_exists('mb_internal_encoding')); //проверка 1-подключено, 0 - не подключено
 error_reporting(E_ALL);
 ini_set('display_errors','on');
 mb_internal_encoding('UTF-8');
-
+*/
 
  require_once 'ammdrSite.php';
  $content = './';
