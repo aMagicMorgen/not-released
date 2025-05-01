@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алексей Нечаев: Разработка сайтов и инновационные решения</title>
+    <meta property="og:title" content="Алексей Нечаев: Разработка сайтов и инновационные решения">
+    <meta property="og:description" content="Специалист по разработке сайтов и инновационным решениям">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://static.tildacdn.info/tild3962-3433-4437-b432-646362336430/-/resize/504x/360_F_417823664_STp2.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#337ab7',
+                        secondary: '#f3f8fc',
+                        accent: '#536bf7',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(90deg, #3b82f6, #9333ea);
+        }
+        .shadow-soft {
+            box-shadow: 0 10px 20px rgba(0, 11, 48, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-900 bg-white">
+    <!-- Навигация -->
+    <header class="fixed w-full z-50 bg-accent shadow-soft transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-20">
+                <!-- Логотип -->
+                <div class="flex items-center">
+                    <span class="text-white font-bold text-xl">Нечаев Алексей</span>
+                </div>
+                
+                <!-- Навигация для десктопа -->
+                <nav class="hidden md:flex space-x-8">
+                    <div class="flex space-x-6">
+                        <a href="http://mthl.ru/ammdr.html" class="text-white font-semibold hover:text-blue-200 transition">Архив идей</a>
+                        <a href="http://mthl.ru/ammdr.html" class="text-white font-semibold hover:text-blue-200 transition">Проекты</a>
+                        <a href="#contacts" class="text-white font-semibold hover:text-blue-200 transition">Контакты</a>
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="http://mthl.ru/ammdr.html" class="text-white font-semibold hover:text-blue-200 transition">О себе</a>
+                        <a href="http://mthl.ru/ammdr.html" class="text-white font-semibold hover:text-blue-200 transition">Блог</a>
+                        <a href="http://mthl.ru/ammdr.html" class="text-white font-semibold hover:text-blue-200 transition">Услуги</a>
+                    </div>
+                </nav>
+                
+                <!-- Мобильное меню -->
+                <button class="md:hidden focus:outline-none" aria-label="Меню">
+                    <div class="w-6 flex flex-col space-y-1">
+                        <span class="h-0.5 w-full bg-white"></span>
+                        <span class="h-0.5 w-full bg-white"></span>
+                        <span class="h-0.5 w-full bg-white"></span>
+                        <span class="h-0.5 w-full bg-white"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Герой секция -->
+    <section class="pt-32 pb-12 md:pt-40 md:pb-20 bg-primary">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                    Спецификация формата MTHL (Markup Text Hybrid Language)
+                </h1>
+                <p class="text-xl text-white mb-8">
+                    <a href="https://github.com/aMagicMorgen" target="_blank" rel="noopener noreferrer" class="underline hover:text-blue-200">https://github.com/aMagicMorgen</a>
+                    <br><br>
+                    Этот сайт демонстрирует мой опыт работы с PHP, CSS и JS
+                    <br>
+                    ВНИМАНИЕ! Не все коды PHP рабочие
+                    <br>
+                    Это просто Архив идей которые требуют доработки
+                    <br>
+                    Пока работает одна кнопка ниже
+                </p>
+                <a href="http://mthl.ru/ammdr.html" class="inline-block px-8 py-3 bg-black text-white font-semibold rounded-full hover:bg-gray-800 transition transform hover:scale-105">
+                    МОЯ БИБЛИОТЕКА ИДЕЙ
+                </a>
+            </div>
+            <div class="mt-16 max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-xl">
+                <img src="https://static.tildacdn.info/tild3962-3433-4437-b432-646362336430/-/format/webp/360_F_417823664_STp2.jpg.webp" alt="Алексей Нечаев" class="w-full h-auto object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- Проекты -->
+    <section class="py-20 md:py-28 bg-primary">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Искра вдохновения</h2>
+                <p class="text-xl text-white max-w-3xl mx-auto">
+                    Погружайтесь в мир концепций разработки и узнайте, как использовать их силу для своих проектов.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Проект 1 -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 flex items-start hover:shadow-lg transition">
+                    <div class="flex-shrink-0 mr-4">
+                        <svg class="w-8 h-8 text-white" viewBox="0 0 100 100" fill="currentColor">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M65.24 22.32a1.5 1.5 0 1 0 2.51-1.64A21.61 21.61 0 0 0 49.5 11a1.5 1.5 0 0 0 0 3 18.62 18.62 0 0 1 15.74 8.32Z"/>
+                            <path d="M79 32.32C79 16.69 65.78 4 49.5 4S20 16.69 20 32.32a28.38 28.38 0 0 0 16 25.21V70h-2.5a1.5 1.5 0 0 0-1.5 1.5v14a1.5 1.5 0 0 0 1.5 1.5h4.06c.55 5.87 5.92 10.5 12.44 10.5S61.89 92.87 62.44 87h4.06a1.5 1.5 0 0 0 1.5-1.5v-14a1.5 1.5 0 0 0-1.5-1.5H63V57.53a28.38 28.38 0 0 0 16-25.21ZM50 94.5c-4.86 0-8.87-3.28-9.42-7.5h18.85c-.56 4.22-4.57 7.5-9.43 7.5ZM65 84H35V73h30ZM47.26 69.85l-3.57-35.16a10.41 10.41 0 0 0 11.59 0l-3.71 35.15a1.48 1.48 0 0 0 0 .16h-4.31a1.46 1.46 0 0 0 0-.15Zm7.31.15 4.28-40.49A7.58 7.58 0 0 0 59 28a1.5 1.5 0 0 0-1.42-1.5A1.48 1.48 0 0 0 56 27.84L55.88 29c-.58 2.52-3.22 4.42-6.38 4.42s-5.83-1.88-6.39-4.42L43 27.85a1.5 1.5 0 0 0-3 .15 7.6 7.6 0 0 0 .14 1.45L44.26 70H39V56.58a1.5 1.5 0 0 0-.88-1.37A25.42 25.42 0 0 1 23 32.32C23 18.35 34.88 7 49.5 7S76 18.35 76 32.32a25.42 25.42 0 0 1-15.12 22.9 1.5 1.5 0 0 0-.88 1.36V70Z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3">MTHL</h3>
+                        <p class="text-white text-opacity-90">
+                            <a href="http://mthl.ru/ammdr.html?md=MTHL%2FREADME.md" class="underline hover:text-blue-200">MTHL (Markup Text Hybrid Language)</a> — гибридный язык разметки, объединяющий различные синтаксисы (Markdown, HTML, CSS-селекторы, код) в одном файле.
+                            <strong>Цель:</strong> Упростить создание комплексных документов и веб-страниц без переключения между языками.
+                            <br><br>
+                            <a href="https://github.com/aMagicMorgen/not-released/tree/073390156a17a7643c0cec7d5db00d9a21c11a63/MTHL" target="_blank" rel="noopener noreferrer" class="underline hover:text-blue-200">MTHL</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Проект 2 -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 flex items-start hover:shadow-lg transition">
+                    <div class="flex-shrink-0 mr-4">
+                        <svg class="w-8 h-8 text-white" viewBox="0 0 100 100" fill="currentColor">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M84.5 14h-69a1.5 1.5 0 0 0-1.5 1.5v69a1.5 1.5 0 0 0 2.54 1.08 1.49 1.49 0 0 0 .9-.32l7.24-5.79 7.41 5.92a1.5 1.5 0 0 0 1.87 0l7.25-5.8 7.37 5.89a1.5 1.5 0 0 0 1.87 0l7.54-6 7.42 5.93a1.5 1.5 0 0 0 1.87 0l7.46-6 7.82 6.25a1.45 1.45 0 0 0 1.43.23 1.49 1.49 0 0 0 2-1.41v-69A1.5 1.5 0 0 0 84.5 14ZM83 41H24.24L83 17.32Zm-7.23-24L17 40.68V17Zm-.09 59.33a1.5 1.5 0 0 0-1.87 0l-7.46 6-7.42-5.93a1.5 1.5 0 0 0-1.87 0l-7.54 6-7.37-5.9a1.5 1.5 0 0 0-1.87 0L33 82.3l-7.41-5.92a1.5 1.5 0 0 0-1.87 0L17 81.76V44h66v38.18Z"/>
+                            <path d="M68.5 51h-37a1.5 1.5 0 0 0 0 3h37a1.5 1.5 0 0 0 0-3Zm0 7h-37a1.5 1.5 0 0 0 0 3h37a1.5 1.5 0 0 0 0-3Zm-18 7h-19a1.5 1.5 0 0 0 0 3h19a1.5 1.5 0 0 0 0-3Z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3">MARKDOWN</h3>
+                        <p class="text-white text-opacity-90">
+                            <strong>Хотите за 5 секунд превратить сои папки с *.md файлами в сайт?</strong>
+                            <br>
+                            <a href="https://github.com/aMagicMorgen/aMagic-MDreader-AMMDr" class="underline hover:text-blue-200">https://github.com/aMagicMorgen/aMagic-MDreader-AMMDr</a>
+                            <br>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>AMMDr ver. 3.0 06.04.2025 Алексей Нечаев, г. Москва, +7(999)003-90-23, <a href="mailto:nechaev72@list.ru" class="underline hover:text-blue-200">nechaev72@list.ru</a></li>
+                                <li>Вставьте файл ammdr.php в свою главную папку, где в подпапках есть файлы *.md или в корень сайта,</li>
+                                <li>переименуйте его как хотите или в index.php и запустите.</li>
+                                <li>Сайт работает. Ура!!!</li>
+                                <li>Адаптирован для смартфонов</li>
+                            </ul>
+                            <a href="https://github.com/aMagicMorgen/not-released/tree/073390156a17a7643c0cec7d5db00d9a21c11a63/Markdown" target="_blank" rel="noopener noreferrer" class="underline hover:text-blue-200">aMagic Markdown reader</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Проект 3 -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 flex items-start hover:shadow-lg transition">
+                    <div class="flex-shrink-0 mr-4">
+                        <svg class="w-8 h-8 text-white" viewBox="0 0 100 100" fill="currentColor">
+                            <path d="M50 100C77.6142 100 100 77.6142 100 50C100 22.3858 77.6142 0 50 0C22.3858 0 0 22.3858 0 50C0 77.6142 22.3858 100 50 100ZM69.7626 28.9928C64.6172 23.841 57.7739 21.0027 50.4832 21C35.4616 21 23.2346 33.2252 23.2292 48.2522C23.2274 53.0557 24.4823 57.7446 26.8668 61.8769L23 76L37.4477 72.2105C41.4282 74.3822 45.9107 75.5262 50.4714 75.528H50.4823C65.5029 75.528 77.7299 63.301 77.7363 48.2749C77.7408 40.9915 74.9089 34.1446 69.7626 28.9928ZM62.9086 53.9588C62.2274 53.6178 58.8799 51.9708 58.2551 51.7435C57.6313 51.5161 57.1766 51.4024 56.7228 52.0845C56.269 52.7666 54.964 54.2998 54.5666 54.7545C54.1692 55.2092 53.7718 55.2656 53.0915 54.9246C52.9802 54.8688 52.8283 54.803 52.6409 54.7217C51.6819 54.3057 49.7905 53.4855 47.6151 51.5443C45.5907 49.7382 44.2239 47.5084 43.8265 46.8272C43.4291 46.1452 43.7837 45.7769 44.1248 45.4376C44.3292 45.2338 44.564 44.9478 44.7987 44.662C44.9157 44.5194 45.0328 44.3768 45.146 44.2445C45.4345 43.9075 45.56 43.6516 45.7302 43.3049C45.7607 43.2427 45.7926 43.1776 45.8272 43.1087C46.0545 42.654 45.9409 42.2565 45.7708 41.9155C45.6572 41.6877 45.0118 40.1167 44.4265 38.6923C44.1355 37.984 43.8594 37.3119 43.671 36.8592C43.1828 35.687 42.6883 35.69 42.2913 35.6924C42.2386 35.6928 42.1876 35.6931 42.1386 35.6906C41.7421 35.6706 41.2874 35.667 40.8336 35.667C40.3798 35.667 39.6423 35.837 39.0175 36.5191C38.9773 36.5631 38.9323 36.6111 38.8834 36.6633C38.1738 37.4209 36.634 39.0648 36.634 42.2002C36.634 45.544 39.062 48.7748 39.4124 49.2411L39.415 49.2444C39.4371 49.274 39.4767 49.3309 39.5333 49.4121C40.3462 50.5782 44.6615 56.7691 51.0481 59.5271C52.6732 60.2291 53.9409 60.6475 54.9303 60.9612C56.5618 61.4796 58.046 61.4068 59.22 61.2313C60.5286 61.0358 63.2487 59.5844 63.8161 57.9938C64.3836 56.4033 64.3836 55.0392 64.2136 54.7554C64.0764 54.5258 63.7545 54.3701 63.2776 54.1395C63.1633 54.0843 63.0401 54.0247 62.9086 53.9588Z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3">DataBase</h3>
+                        <p class="text-white text-opacity-90">
+                            🌟 <strong>ТРИ СУПЕРГЕРОЯ ВАШЕГО КОДА!</strong> 🌟
+                            <br>
+                            <strong>DBH (MySQL/MariaDB) | DBHsqlite | DBHmariaDB</strong>
+                            <br>
+                            <em>Уничтожаем сложности CRUD-операций раз и навсегда!</em>
+                            <br>
+                            🚀 <strong>ЧТО ЭТО ЗА ЧУДО-КЛАССЫ?</strong>
+                            <br>
+                            <strong>Код-близнецы для 3 топовых СУБД!</strong>
+                            <br>
+                            Один стиль, одни методы — три разные базы! Пишите код один раз — запускайте где угодно!
+                            <br><br>
+                            <a href="https://github.com/aMagicMorgen/not-released/tree/073390156a17a7643c0cec7d5db00d9a21c11a63/DataBase" target="_blank" rel="noopener noreferrer" class="underline hover:text-blue-200">PHP Class DBH</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Проект 4 -->
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 flex items-start hover:shadow-lg transition">
+                    <div class="flex-shrink-0 mr-4">
+                        <svg class="w-8 h-8 text-white" viewBox="0 0 100 100" fill="currentColor">
+                            <path d="m37.23 32.37-2.45 14.3A1.5 1.5 0 0 0 37 48.24l12.8-6.75 12.84 6.75a1.5 1.5 0 0 0 2.18-1.58l-2.45-14.3 10.38-10.12a1.5 1.5 0 0 0-.83-2.56L57.56 17.6l-6.42-13a1.5 1.5 0 0 0-2.69 0L42 17.6l-14.32 2.08a1.5 1.5 0 0 0-.83 2.56Zm6-11.92a1.5 1.5 0 0 0 1.13-.82l5.42-11 5.42 11a1.5 1.5 0 0 0 1.13.82l12.13 1.76-8.76 8.56a1.5 1.5 0 0 0-.43 1.33l2.07 12.08-10.84-5.71a1.5 1.5 0 0 0-1.4 0l-10.85 5.7 2.07-12.07a1.5 1.5 0 0 0-.43-1.33l-8.78-8.55Z"/>
+                            <path d="M85 45a1.5 1.5 0 0 0 0-.34v-.07a1.5 1.5 0 0 0-.1-.25l-.05-.09a1.48 1.48 0 0 0-.15-.2l-.06-.07a1.49 1.49 0 0 0-.27-.22L71.6 35.85A1.5 1.5 0 1 0 70 38.4l10.41 6.46L40.74 64.7 19.18 45.39l10.29-4.89a1.5 1.5 0 0 0-1.29-2.71l-12.32 5.86a1.49 1.49 0 0 0-.3.2l-.07.06a1.48 1.48 0 0 0-.21.24v.06a1.5 1.5 0 0 0-.16.34v.08a1.49 1.49 0 0 0 0 .32V75.2a1.5 1.5 0 0 0 .53 1.15l24 21.3a1.49 1.49 0 0 0 .4.23h.06a1.48 1.48 0 0 0 .47.08 1.5 1.5 0 0 0 .32 0h.07l.23-.08 43-21.3a1.5 1.5 0 0 0 .8-1.38V45Zm-67 3.36 21 18.81v26.1L18 74.5Zm64 25.89L42 94.13v-26.7l40-20Z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3">CSS и TAILWIND</h3>
+                        <p class="text-white text-opacity-90">
+                            В ОФОРМЛЕНИИ ПОКА
+                            <br><br>
+                            <a href="https://github.com/aMagicMorgen/not-released/tree/073390156a17a7643c0cec7d5db00d9a21c11a63/CSS" target="_blank" rel="noopener noreferrer" class="underline hover:text-blue-200">CSS и TAILWIND</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contacts" class="py-20 md:py-28 bg-secondary">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Давайте свяжемся</h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    Если у вас есть вопросы или предложения по разработке, пожалуйста, свяжитесь со мной. Я всегда открыт для новых проектов и идей.
+                </p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <div class="space-y-6">
+                            <div class="text-2xl">
+                                📞 <strong>Телефон:</strong> +7 999 003-90-23
+                                <br>
+                                📧 <strong>E-mail:</strong> nechaev72@list.ru
+                            </div>
+                            <div class="text-gray-600">
+                                г. Москва
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="https://wa.me/79163068647" target="_blank" rel="noopener noreferrer" class="w-10 h-10 flex items-center justify-center rounded-full bg-green-500 text-white hover:bg-green-600 transition">
+                                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form class="bg-white rounded-2xl p-8 shadow-lg">
+                        <div class="space-y-6">
+                            <div>
+                                <button type="submit" class="w-full px-6 py-3 bg-primary text-white font-semibold rounded-full hover:bg-blue-700 transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                                    Написать сообщение
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="py-12 bg-primary">
+        <div class="container mx-auto px-4">
+            <div class="border-t border-white border-opacity-20 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-white text-sm mb-4 md:mb-0">
+                        © НЕЧАЕВ АЛЕКСЕЙ
+                    </div>
+                    <div class="text-white text-sm">
+                        2025
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Простая логика для мобильного меню
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('button[aria-label="Меню"]');
+            const mobileMenu = document.querySelector('nav.hidden.md\\:flex');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('block');
+                mobileMenu.classList.toggle('absolute');
+                mobileMenu.classList.toggle('top-20');
+                mobileMenu.classList.toggle('left-0');
+                mobileMenu.classList.toggle('right-0');
+                mobileMenu.classList.toggle('bg-accent');
+                mobileMenu.classList.toggle('p-4');
+                mobileMenu.classList.toggle('shadow-lg');
+            });
+            
+            // Плавная прокрутка для якорных ссылок
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Закрываем мобильное меню после клика
+                        mobileMenu.classList.add('hidden');
+                        mobileMenu.classList.remove('block');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
