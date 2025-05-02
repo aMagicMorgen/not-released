@@ -180,6 +180,7 @@
                 
                 // Проверяем, существует ли уже элемент zero-md
                 var zeroMdElement = $('zero-md');
+		var spanMd = $('#md');
                 
                 if (zeroMdElement.length === 0) {
                     // Если элемента нет, создаем его
@@ -188,6 +189,8 @@
                     // Если элемент уже есть, просто обновляем src
                     zeroMdElement.attr('src', mdFile);
                 }
+		    spanMd.text(mdFile);
+		
                 
                 // Обновляем URL без перезагрузки страницы
                 history.pushState(null, null, '?md=' + encodeURIComponent(mdFile));
