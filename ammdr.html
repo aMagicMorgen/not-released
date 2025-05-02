@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>aMagic Morgen</title>
+    <!--link rel="stylesheet" href="ammdr.css"-->
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+
+
+	
+	<style>
+/* ./assets/css/ammdr.css */
+ /* ==================== */
+/* БАЗОВЫЕ СТИЛИ */
+/* ==================== */
+
+/**
+ * Сброс стилей и базовые настройки
+ * Устанавливает box-model, шрифты и основные параметры документа
+ */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, 
+				sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* Основная структура документа */
+body {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	grid-template-columns: 300px 1fr;
+	grid-template-areas: 
+		"header header"
+		"nav main"
+		"footer footer";
+	min-height: 100vh;
+	color: #24292e;
+	line-height: 1.5;
+	overflow: hidden;
+}
+
+/* ==================== */
+/* КОМПОНЕНТЫ МАКЕТА */
+/* ==================== */
+
+/* Шапка документа */
+header {
+	grid-area: header;
+	background: #f8f9fa;
+	padding: 1rem;
+	border-bottom: 1px solid #e1e4e8;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Основная навигация (левая панель) */
+nav {
+	grid-area: nav;
+	background: #f8f9fa;
+	padding: 0.5rem;
+	border-right: 1px solid #e1e4e8;
+	#overflow-y: auto;
+	height: calc(100vh - 120px);
+	scrollbar-width: thin;
+	scrollbar-color: #c1c1c1 #f1f1f1;
+}
+/*	
+nav {
+	position: fixed;
+	top: 0;
+	left: -300px;
+	width: 280px;
+	height: 100vh;
+	z-index: 1000;
+	transition: left 0.3s ease;
+	box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+*/
+/* Основное содержимое */
+main {
+	grid-area: main;
+	padding: 2rem;
+	overflow-y: auto;
+	height: calc(100vh - 120px);
+	scrollbar-width: thin;
+	scrollbar-color: #0366d6 #f1f1f1;
+	background-color: #fff;
+}
+
+/* Контейнер для ограничения ширины контента */
+.content-wrapper {
+	max-width: 800px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+/* Подвал документа */
+footer {
+	grid-area: footer;
+	background: #f8f9fa;
+	padding: 1rem;
+	border-top: 1px solid #e1e4e8;
+	text-align: center;
+	font-size: 0.9rem;
+	color: #6c757d;
+}
+
+/* ==================== */
+/* ЭЛЕМЕНТЫ НАВИГАЦИИ */
+/* ==================== */
+
+/* Список в навигации */
+nav ul {
+	list-style: none;
+	padding-left: 1rem;
+}
+
+nav li {
+	margin: 0.1rem 0;
+}
+
+/* Стили для папок */
+.folder {
+	margin-left: -0.5rem; /* Уменьшенный отступ для компактности */
+	padding-left: 0;
+}
+
+.folder-name {
+	cursor: pointer;
+	font-weight: 600;
+	display: flex;
+	align-items: flex-start;
+	transition: all 0.2s ease;
+	color: #24292e;
+	border-radius: 4px;
+	padding-left: 0.5rem;
+	margin-left: -0.5rem;
+}
+
+.folder-name:hover {
+	background-color: #e1e4e8;
+}
+
+/* Иконка закрытой папки (зеленый) */
+.folder-name::before {
+	content: "📁 ";
+	color: #2ecc71;
+}
+
+/* Иконка открытой папки (желтый) */
+.folder.expanded > .folder-name::before {
+	content: "📂 ";
+	color: #f39c12;
+}
+
+/* Вложенный список в папке */
+.folder > ul {
+	display: none;
+	margin-left: 0.5rem;
+	padding-left: 0.5rem;
+}
+
+.folder.expanded > ul {
+	display: block;
+}
+
+/* Стили для файлов */
+.file {
+	margin-left: -1rem; /* Уменьшенный отступ для компактности */
+	padding-left: 0;
+}
+
+.file a {
+	position: relative;
+	padding-left: 1.2rem;
+	display: flex;
+	align-items: flex-start;
+	min-height: 1.5em;
+	transition: all 0.2s ease;
+	border-radius: 4px;
+	color: inherit;
+}
+
+/* Иконка файла (сиреневая) */
+.file a::before {
+	content: "📄";
+	position: absolute;
+	left: 0.2rem;
+	top: 0.4em;
+	font-size: 0.9em;
+	line-height: 1;
+	color: #ca2ecc;
+	transition: color 0.2s ease;
+}
+
+/* Состояния иконки файла */
+.file a:hover::before,
+.file a.active::before {
+	color: #ff0000; /* Ярко-красный при наведении/активном состоянии */
+}
+
+.file a:hover {
+	background-color: #e1e4e8;
+}
+
+/* Активный файл */
+.file a.active {
+	color: #0366d6;
+	font-weight: 500;
+	background-color: #e1e4e8;
+}
+
+/* ==================== */
+/* ССЫЛКИ */
+/* ==================== */
+
+a {
+	color: #0366d6;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* ==================== */
+/* СКРОЛЛБАРЫ */
+/* ==================== */
+
+/* Навигационная панель */
+nav::-webkit-scrollbar {
+	width: 8px;
+}
+nav::-webkit-scrollbar-track {
+	background: #f1f1f1;
+	border-radius: 4px;
+}
+nav::-webkit-scrollbar-thumb {
+	background: #c1c1c1;
+	border-radius: 4px;
+}
+nav::-webkit-scrollbar-thumb:hover {
+	background: #a8a8a8;
+}
+
+/* Основное содержимое */
+main::-webkit-scrollbar {
+	width: 10px;
+}
+main::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+main::-webkit-scrollbar-thumb {
+	background: #0366d6;
+	border-radius: 5px;
+}
+main::-webkit-scrollbar-thumb:hover {
+	background: #0252b3;
+}
+
+/* ==================== */
+/* КОМПОНЕНТЫ ИНТЕРФЕЙСА */
+/* ==================== */
+
+/* Индикатор загрузки */
+.loading {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: rgba(0, 0, 0, 0.8);
+	color: white;
+	padding: 12px 24px;
+	border-radius: 6px;
+	display: none;
+	z-index: 1000;
+	font-size: 0.9rem;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+	0% { opacity: 0.8; }
+	50% { opacity: 1; }
+	100% { opacity: 0.8; }
+}
+
+/* ==================== */
+/* СТИЛИ ДЛЯ MARKDOWN (zero-md) */
+/* ==================== */
+
+zero-md {
+	width: 100%;
+	min-height: 100%;
+	background: white;
+	border-radius: 6px;
+	padding: 1px; /* Необходимо для корректного отображения теней */
+}
+
+/* Заголовки */
+zero-md h1, 
+zero-md h2, 
+zero-md h3 {
+	scroll-margin-top: 20px; /* Отступ для якорных ссылок */
+}
+
+/* Блоки кода */
+zero-md pre {
+	border-radius: 6px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+zero-md code {
+	font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+	font-size: 0.9em;
+}
+/* Меню - иконка "гамбургер" */
+.menu-btn {
+	#display: none;
+	position: absolute;
+	right: 1rem;
+	top: 1rem;
+	width: 30px;
+	height: 24px;
+	cursor: pointer;
+	z-index: 1001;
+}
+
+/* Мобильное меню - иконка "гамбургер" */
+.mobile-menu-btn {
+	#display: none;
+	position: absolute;
+	right: 1rem;
+	top: 1rem;
+	width: 30px;
+	height: 24px;
+	cursor: pointer;
+	z-index: 1001;
+}
+
+.menu-btn span {
+	display: block;
+	width: 100%;
+	height: 3px;
+	background: #0366d6;
+	margin-bottom: 5px;
+	transition: all 0.3s ease;
+}
+.mobile-menu-btn span {
+	display: block;
+	width: 100%;
+	height: 3px;
+	background: #0366d6;
+	margin-bottom: 5px;
+	transition: all 0.3s ease;
+}
+
+.menu-btn.active span:nth-child(1) {
+	transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-btn.active span:nth-child(1) {
+	transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-btn.active span:nth-child(2) {
+	opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+	opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+	transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+	transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Адаптивные стили */
+@media (max-width: 600px) {
+body {
+	grid-template-columns: 1fr;
+	grid-template-areas: 
+		"header"
+		"main"
+		"footer";
+}
+
+.full-title { display: none; }
+.short-title { display: inline; }
+
+nav.active {
+	left: 0px;
+}
+
+.mobile-menu-btn {
+	display: block;
+}
+
+.menu-btn {
+	display: none;
+}
+
+main {
+	padding: 1rem;
+}
+}
+
+@media (min-width: 601px) {
+.full-title { display: inline; }
+.short-title { display: none; }
+}  
+/* Стили для контейнера элементов управления навигацией */
+#nav-controls {
+display: flex;
+flex-wrap: wrap;
+gap: 7px;
+margin-top: 0px; /* Поднимаем элемент вверх */
+margin-bottom: 5px;
+padding-bottom: 10px;
+border-bottom: 1px solid #e1e4e8;
+}
+
+#nav-controls {
+    #padding: 8px 12px;
+    #margin-bottom: 10px;
+    #width: 100%;
+    #box-sizing: border-box;
+}
+.nav-btn {
+	padding: 1px 16px;
+	background-color: #f0f0f0;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 24px;
+	transition: background-color 0.2s;
+}
+
+.nav-btn:hover {
+	background-color: #e0e0e0;
+}
+
+#menu-container {
+	overflow-y: auto;
+	height: calc(100% - 60px);
+}
+
+/* Анимация для панели навигации */
+
+#main-nav {
+	position: fixed;
+	top: 81px;
+	left: -280px;
+	width: 280px;
+	height: 100vh;
+	z-index: 1000;
+	transition: left 0.3s ease;
+	box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+#main-nav.active {
+	left: 0px;
+} 
+
+
+
+/* Стили для поля поиска */
+#search.form-control {
+    width: 80%;
+    padding: 10px 15px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 10px; /* Закругленные углы */
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+    height: 30px; /* Увеличенная высота */
+    box-sizing: border-box;
+}
+
+/* Стиль при фокусе */
+#search.form-control:focus {
+    border-color: #80bdff; /* Голубая рамка при фокусе */
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Стиль при наведении */
+#search.form-control:hover {
+    border-color: #b3b3b3;
+}
+
+/* Стиль для placeholder */
+#search.form-control::placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+
+/* Анимация изменения цвета рамки при вводе */
+#search.form-control:not(:placeholder-shown) {
+    border-color: #28a745; /* Зеленый цвет при вводе */
+}
+
+/* Дополнительные стили для темной темы (опционально) */
+@media (prefers-color-scheme: dark) {
+    #search.form-control {
+        background-color: #343a40;
+        border-color: #495057;
+        color: #f8f9fa;
+    }
+    #search.form-control::placeholder {
+        color: #adb5bd;
+    }
+}
+</style>
+<style type="text/css" id="operaUserStyle"></style><script src="https://cdn.jsdelivr.net/gh/markedjs/marked@4/marked.min.js"></script><script src="https://cdn.jsdelivr.net/gh/PrismJS/prism@1/prism.min.js" data-manual=""></script><script src="https://cdn.jsdelivr.net/gh/PrismJS/prism@1/plugins/autoloader/prism-autoloader.min.js"></script><style type="text/css">:root img[src*="top.mail.ru/counter?"], :root img[src*="//i.i.ua/r/"], :root img[src*="//counter.yadro.ru/"], :root img[onclick*="clustrmaps.com/counter/"], :root img[data-src="https://catalog.orbita.co.il/orbita.gif"], :root a[title="TopTracker.Ru - Рейтинг трекеров."], :root a[href^="http://click.hotlog.ru/"], :root [title="uWeb Counter"], :root body > div[class^="_"][class*=" _"][class$="_stBig"], :root body > iframe[style^="position"][style*="fixed"][id^="iFb"][src^="/?"], :root body > div[id^="dV"][style^="width"][style*="height"][style*="position"][style*="fixed"][style*="overflow"][style*="z-index"][style*="background"], :root .flex-promo-series > .right-col a[href][target="_blank"], :root .article-aside-promo a[href][target="_blank"], :root a[href*="://news.mirtesen.ru/newdata/"], :root .app.blog-post-page .secondary-header-ad-block, :root .app.blog-post-page #blog-post-item-video-ad, :root #root > .app > .sticky-button, :root #root > .app .sportrecs, :root #root > .app .brand-widget__right-cl, :root #root > .app .adfox-top, :root #root > .app .adfox, :root #root > .app #very-right-column, :root body.has-brand .b-content__main > div[id]:not([class]):empty, :root body.has-brand .b-content__main .b-player a[href*="aHR0c"], :root div[style="width: 252px; height: 450px; position: fixed; right: 0px; top: 0px; overflow: hidden; z-index: 10000;"], :root thetruestory-widget-top, :root body > div[style="background-color: #FFF;height: 100px;position: fixed;bottom: 0px;width: 100%;max-width: 1200px;left: 50%;transform: translateX(-50%);z-index:2147483647"], :root object[data*="ads.com/clk.swf"], :root img[width="120"][height="600"], :root img[src^="/stat/"][width="88"][height="31"], :root img[src*="://cp.beget.com/promo_data/"], :root iframe[title="mixAd"], :root iframe[src*="tureckiy-serial.ru/"][src$=".php"], :root iframe[src*="trafic-media.ru"], :root iframe[src*="litres.ru/static/widgets"], :root iframe[src*="laim.tv/rotator/"], :root iframe[src*="fwdcdn.com/frame/partners/"], :root iframe[src*="://promo-bc.com/"], :root iframe[src*="://goodgame.ru/html/embed-player/dist/index.html?partner="], :root iframe[src*="://ab.adpro.com.ua/"], :root iframe[src*="/carta.ua/ajax/widget."], :root iframe[src*="/3647.tech"], :root iframe[id^="republer"], :root iframe[id^="marketgid_"], :root iframe[src*="utraff.com"], :root div[style*="am15.net/img/player_skins"], :root div[id^="zcbclk"], :root a[href^="http://hitcounter.ru/top/stat.php"], :root div[id^="yandex_rtb"], :root div[id^="smi2adblock_"], :root div[id^="rtn4p"], :root div[id^="republer_"], :root div[id^="news_nest_net_ru"], :root div[id^="news_nest_msk_ru"], :root div[id^="itizergroup_"], :root div[id^="infox_"], :root div[id^="gnezdo_ru_"], :root div[id^="criteo-"][style], :root div[id^="cpa_rotator_block"], :root div[id^="advertur_"], :root div[id^="admixer-"], :root div[id^="DIV_DA_"], :root div[id*="Teaser_Block"], :root div[data-adv-type="dfp"], :root iframe[src*="hd.gg33.top/"], :root div[class^="da-ya-widget"], :root div[class^="cnt32_"][id^="cnt_rb_"], :root div[class^="bidvol-widget-"], :root div[id^="bidvol-widget-"], :root div[class^="adfinity_block_"], :root div[class*="td-a-rec-id-"], :root div[class*="relap"][class*="-rec-item"], :root a[onclick*="trtkp.ru"], :root div[id^="news_2xclick_ru_"], :root a[onclick*="offergate-amigo"], :root a[onclick*="n284adserv.com"], :root a[onclick*="https://dzen.ru/news/?favid="], :root a[href^="https://wcm-ru.frontend.weborama.fr/fcgi-bin/dispatch.fcgi?"], :root a[href^="https://msetup.pro"], :root a[href^="https://kshop"][href*=".com/"], :root a[href^="https://bongacams"][href*="com/track?"], :root a[href^="http://tds-2.ru"], :root a[href^="http://putanapartners.com/go."], :root a[href^="http://olivka.biz/"], :root a[href^="http://luckiestclick.com/goto."], :root a[href^="http://glprt.ru/affiliate/"], :root a[href^="http://datxxx.com"], :root a[href^="http://browserload.info/"], :root a[href^="http://amigodistr.ru/"], :root a[href^="/images/obmen/"][href$=".php"][target="_blank"], :root a[href^="/go/ufiler?"], :root a[href^="/go/ubar?"], :root a[href="http://advert.mirtesen.ru/"], :root a[href*="xxxrevpushclcdu.com"], :root a[href*="webdiana.ru/click"], :root a[href*="ultrabit.ws"], :root a[href*="twtn.ru/"], :root a[href*="tvks.ru"], :root a[href*="trtkp.ru"], :root a[href*="trklp.ru"], :root a[href*="trk-1.com"], :root a[href*="tptrk.ru"], :root a[href*="torrentum.ru"], :root div[id^="adpartner-jsunit-"], :root a[href*="sviruniversal.com/"], :root a[href*="shakespoint.com"], :root a[href*="shakescash.com"], :root iframe[src*="traffic-media.co"], :root a[href*="shakes.pro"], :root a[href*="sapmedia.ru"], :root a[href*="sandratand.ru"], :root a[href*="rexchange.begun.ru/rclick?"], :root a[href*="retagapp.com"], :root a[href*="tvroff.net"], :root a[href*="refpazus.top"], :root a[href*="re-directme.com"], :root a[href*="problogrus.ru"], :root a[href*="please-direct.com"], :root a[href*="octoclick.net"], :root a[href*="news"][href*="favid"], :root a[href*="netcrys.com"], :root a[href*="offhealth.ru"], :root a[href*="muz-loader.site"], :root a[href*="media-rotate.com"], :root a[href*="m1cpl.ru"], :root a[href*="litewebbusiness.com"], :root a[href*="lifenews24x7.ru"], :root a[href*="land-gooods.ru"], :root .min-width-normal > #popup_container ~ #fade, :root a[href*="kshop2.biz"], :root a[href*="kodielinktrust.ru"], :root a[href*="kma1.biz"], :root a[href*="://bubblevard.com/"], :root div[id^="ad-div-"], :root [onclick*="//sub"][onclick*="bubblesmedia."], :root a[href*="kinqon.ru"], :root a[href^="https://prime.rambler.ru/promo/"], :root a[href*="herrabjec.pro"], :root a[href*="gocdn.ru"], :root a[href*="flylinks.pw"], :root a[href^="https://a-ads.com/"], :root a[href*="feellights.ru"], :root a[href*="/kshop3.biz"], :root a[href*="cpl1.ru"], :root a[href*="cpagetti1.com"], :root a[href^="https://startgaming.net/tienda/" i], :root a[href^="http://handgripvegetationhols.com/"], :root hl-adsense, :root a[href*="bestforexplmdb.com"], :root a[href*="awesomeredirector"], :root a[href*="amigo-biz.ru/ads/click"], :root a[href^="https://get.surfshark.net/aff_c?"][href*="&aff_id="] > img, :root a[href*="://clickstats.online/"], :root a[href*="advertwebgid.ru"], :root a[href*="://ya-cdn.ru/r/"], :root a[href^="https://www.mrskin.com/account/"], :root a[href*="://ya-browser.ru/r/"], :root a[href*="://www.meendoru.net/?partner="], :root a[href*="://segodnia.club/"], :root a[href*="://ufiler-pro.ru/"], :root a[href*="news-sphere.com"], :root a[href*="://tracker.rioaffi.com/"], :root a[href*="://telamon"][href*="/tracker/?partner="], :root a[href*="lifebloggersz.ru"], :root a[href*="://tdsrotations.ru/"], :root .player-wrap > #kt_player ~ .spot-box, :root a[href*="://tatarkoresh.ru"], :root a[href*="://getfiletds.ru/"], :root a[href*="://takenewsoft.ru/"], :root [href^="https://www.brighteonstore.com/products/"] img, :root amp-connatix-player, :root a[href*="://sdertjnbv.xyz/"], :root a[href^="https://t.ajump1.com/"], :root a[href*="://ruprivate.club/"], :root a[href*="://r.advmusic.com/"], :root [href*="pigiuqproxy.com"], :root a[href*="://profiledbase.com/"], :root a[href*="://lapina.best/"], :root a[href*="://ourbrowser.net"], :root [data-link*="/sb/clk/"], :root a[href*="://offergate-apps-phkr.com/"], :root a[href*="://matchnow.info"], :root a[href*="://loderkkis.ru"], :root a[href*="://kinobud.site/"], :root a[href*="://hypmag.ru/search/pereh.php"], :root a[href*="://gridsiali.com/"], :root a[href*="makegreat.website"], :root a[href*="://gopremiumsoft.com/"], :root a[href*="://gonewfiles.ru/"], :root a[href*="://go.click2bit.net/"], :root a[href*="ex.24smi.info"], :root a[href*="://go.btraffic.net/"], :root a[href*="://search-cdn.ru/r/"], :root a[href*="://getyousoft.ru/"], :root a[target="_blank"][onmousedown="this.href^='http://paid.outbrain.com/network/redir?"], :root a[href*="://getbrauzer.ru/"], :root body.has-brand .b-content__main > div[style^="height: 250px; overflow: hidden;"], :root a[href*="://filetaker.ru/"], :root a[href*="//febrare.ru/"], :root a[href*="://filesmytop.ru/"], :root a[href*="//offergate.pro/"], :root a[href*="://etcodes.com/"], :root a[href*="://et-cod.com/"], :root a[href*="://clickbytes.ru/"], :root a[href*="://click2soft.ru/"], :root a[href*="://bs.serving-sys.ru/"], :root a[href*="/universallnk.net/"], :root a[href*="/universal-lnk.net/"], :root .flex-promo-series > .left-col > :not(#players):not(.serial-series-info), :root [href^="https://cpa.10kfreesilver.com/"], :root a[href*="://riaccaw.com/"], :root a[href*="/u-loads.ru/"], :root a[href*="/sb/clk/"], :root a[href*="/rlink/simptizer/"], :root a[href*="/myuniversalnk.com/"], :root a[href*="/mosday.ru/ad/"], :root a[href*="//softboxik1.ru/"], :root a[href*="/uloads.ru/"], :root a[href*="/go.1k3.net/"], :root a[href*="/get-torrent.ru"], :root a[href^="https://adclick.g.doubleclick.net/"], :root a[href*="/fastvk.com"], :root a[href^="https://engine.phn.doublepimp.com/"], :root a[href*="/ber-ter.com"], :root a[href*="/afftraf.co/"], :root a[href*="/onvix.co/promo/"][target=_blank], :root a[href*="/advjump.com"], :root a[href*="//viruniversal.com/"], :root a[href*="//universalut.info/"], :root a[href*="//universalse.info/"], :root a[href*="//universalin.info/"], :root .ob_container .item-container-obpd, :root a[href*="//givemysoft.ru/"], :root a[href*="//universalies.info/"], :root a[href*="//universalie.info/"], :root a[href*="https://relap.io/r?"], :root a[href*="//ubar-pro"], :root body > div[style="position: fixed; z-index: 999999; width: 400px; height: 308px; right: 5px; bottom: 5px;"], :root a[href*="//tranqvilius.com/"], :root a[href^="http://partners.etoro.com/"], :root a[href^="https://www.liquidfire.mobi/"], :root a[href*="//refpaewsbc.top/"], :root a[href*="//refpabjgth.top/"], :root a[href*="://landingtracker.com/"], :root a[href*="//partners.house/"], :root a[href*="://downloadcontent2.ru/"], :root a[href*="//parandeya.com/"], :root a[href*="://z.cdn.traffic"][href*="/load"], :root a[href*="//newbrowser.me/"], :root a[href^="https://italarizege.xyz/"], :root a[href^="https://www.adultempire.com/"][href*="?partner_id="], :root a[href*="//myblogshop.top/r/"], :root a[href*="://go.bundlebyte.net/r/"], :root a[href*="//loderla.online"], :root a[href^="https://gml-grp.com/"], :root a[href*="://softclicks.ru/"], :root a[href*="//historategory.com/"], :root a[href*="//go.webredir.net/r/"], :root [data-ez-name], :root a[href*="//gerocenius.com/"], :root a[href*="://lapina.xyz/"], :root a[href*="//loderna.ru"], :root a[href*="//ext-load.net"], :root a[href*="//dzen.ru"][href*="favid"], :root a[href*="//do-rod.com/"], :root a[href*="//dagamah.com/"], :root a[href*="//bestonewos.com/"], :root a[href*="//avertise.ru/"], :root div[id^="tizerws_"], :root a[href*="//advtise.ru/"], :root a[href*="://clickstats.fun/"], :root div[id^="ads_games_"], :root a[href*="//adretarget.net/"], :root a[href*="//adoffer.pro/"], :root [href^="https://www.targetingpartner.com/"], :root a[href*="/universalsrc.com/"], :root a[href*="//24smi."][href*="/top/"], :root a[href^="https://bodelen.com/"], :root a[href*="//12traffic.ru/"], :root a[href*=".braun634.com/"], :root a[href*="://dmtech05.com/"], :root a[href^="https://go.markets.com/visit/?bta="], :root [src*="mixadvert.com"], :root a[href*="://doxod24.online/"], :root [src*="://dynspt.com/"], :root img[title="bigmir)net TOP 100"], :root a[href^="https://lnkxt.bannerator.com/"], :root a[href*="://tlmnt"][href*="/tracker/?partner="], :root [onclick*="//msetup.pro/"], :root a[data-href^="http://ads.trafficjunky.net/"], :root [onclick*=".twkv.ru"], :root iframe[src*="://rstbtmd.com/"], :root a[style="width:100%;height:100%;z-index:10000000000000000;position:absolute;top:0;left:0;"], :root [id^="unit_"] > a[href*="://mirtesen.ru"], :root [id^="relap-custom-iframe-rec"], :root div[data-id^="div-gpt-ad-"], :root a[href*="/vkout.ru"], :root div[id^="ads300_100-widget-"], :root a[href^="https://a.medfoodsafety.com/"], :root [id^="newPortal_informer_"], :root [href^="https://download.cdn.yandex.net/yandex-tag/weboffer/"], :root [href*="postlnk.com"], :root img[src*="cycounter"][width="88"][height="31"], :root [href*="driverpack.io/"], :root a[href*="//ufiler-pro2.ru"], :root [href*="driftawayforfun.com"], :root div[id^="M"][id*="Composite"], :root [data-type="ad-vertical"], :root a[href*="://superiortds.ru/"], :root [href*="://shopblogger.top/"], :root [href*="://go.leadgid.ru/aff_c?"], :root [href*="://drp.su/"], :root a[href*="top.24smi.info"], :root [href*="://clickpzk.com/"], :root [onclick*="/sb/clk/"], :root [href*="://click.1k3pub.com/"], :root [href*="://browseit.ru/"], :root a[href*="://clickstats.pw/"], :root [href*="://track.leadbazaar.co/click?"], :root [href*="/uni-tds.com/"], :root a[href*="://newbrowserme.ru/"], :root [href*="//loadbrowser.ru/"], :root a[href*="/installpack.net"], :root [data-url*="://installpack.net"], :root [data-link*="://topclicks.club/"], :root div[class^="block_fortress"], :root [data-link*="//sub"][data-link*="bubblesmedia."], :root [data-la-show-block-id], :root [data-la-block], :root a[href*="//ubar.pro"], :root iframe[src*="//refpakglscpj."], :root a[href*="//go.leadassets.net/r/"], :root [data-href^="https://download.cdn.yandex.net/yandex-tag/weboffer/"], :root [class^="fpm_"][class*="_modal"], :root [class^="flat_"][class*="_out"], :root div[id^="beroll_rotator"], :root [class^="flat_"][class*="_modal"], :root a[href*="//universalini.info/"], :root DIV[id^="DIV_NNN_"], :root a[href*="//restofarian.com"], :root a[href*="://lobar.site/r/"], :root .pip-video-wrapper > .pip-video-label, :root .novelty-banner ~ .dle_b_help > a[target="_blank"], :root a[href*="adpool.bet/"], :root .fp-player > div[style*="position: absolute"][style*="inset: 0px"][style*="overflow: hidden"][style*="z-index:"][style*="background: transparent"][style*="display: block"], :root a[href*="://vpnbrowser.ru/"], :root [href^="https://wct.link/click?"], :root div[id^="optidigital-adslot"], :root .base-page_left-side > #left_ban, :root a[href^="https://ads.betfair.com/redirect.aspx?"], :root [href^="https://goldcometals.com/clk.trk"], :root .base-page_container > .banerRight, :root a[href*="beauty-list.ru"], :root #adv_unisound ~ #ad_module_cont > [id^="ad_module"], :root #adv_kod_frame ~ #gotimer, :root a[href^="https://www.sugarinstant.com/?partner_id="], :root #PopWin[onmousemove], :root a[href*="thor-media.ru/click/"], :root a[href*="goext.info"], :root #BlWrapper > .b-temp_rbc, :root span[id^="ezoic-pub-ad-placeholder-"], :root a[href*="://parandaya.com"], :root ins.adsbygoogle[data-ad-slot], :root a[href*="traflabs.xyz"], :root guj-ad, :root a[href*="shakesin.com"], :root a[href^="https://playnano.online/offerwalls/?ref="], :root div[id^="zergnet-widget"], :root img[src*="://r.i.ua/"], :root div[id^="yandex_ad"], :root a[href*="://101partners-stat2.com/"], :root a[href^="https://sexynearme.com/"], :root div[id^="taboola-stream-"], :root a[href*="tdstrk.ru"], :root div[id^="pa_sticky_ad_box_middle_"], :root div[id^="lazyad-"], :root div[id^="div-ads-"], :root div[id^="advads_ad_"], :root a[href*="//loderls.ru"], :root a[href*="/jump/next.php?r="], :root div[id^="adspot-"], :root [class^="s2nPlayer"], :root [class^="fpm_"][class*="_out"], :root div[id^="ads250_250-widget-"], :root div[id^="adngin-"], :root div[id^="ad_position_"], :root a[href*="filebase.me"], :root [href^="https://rapidgator.net/article/premium/ref/"], :root a[href^="https://fastestvpn.com/lifetime-special-deal?a_aid="], :root div[id*="ScriptRoot"], :root a[href^="https://juicyads.in/"], :root div[id*="MarketGid"], :root a[href*="/rapidtor.site"], :root div[data-native_ad], :root div[data-mini-ad-unit], :root div[id^="crt-"][style], :root div[data-insertion], :root a[href*="films.ws"], :root div[data-id-advertdfpconf], :root a[href*="://go.progfile.space/r/"], :root div[data-alias="300x250 Ad 2"], :root a[href*="fortedrow.pro"], :root a[href^="https://aweptjmp.com/"], :root div[data-adzone], :root a[href*=".ufiler.pro/"], :root [data-testid="ad_testID"], :root div[id^="gpt_ad_"], :root div[data-adunit], :root a[href^="https://s.optzsrv.com/"], :root div[data-adunit-path], :root a[href^="https://clickadilla.com/"], :root div[data-ad-wrapper], :root div[data-ad-targeting], :root a[href*="cpl11.ru"], :root div[data-ad-placeholder], :root a[href*="://refpamjeql.top/"], :root div[class^="Display_displayAd"], :root div[aria-label="Ads"], :root display-ads, :root citrus-ad-wrapper, :root a[href*="://getyoursoft.ru/"], :root a[href*="/loaderu.ru/"], :root bottomadblock, :root a[href*="://cozibaneco.com/"], :root a[href*="://searchlnk.ru/r/"], :root a[href^="https://join.sexworld3d.com/track/"], :root aside[id^="adrotate_widgets-"], :root a[href^="https://ak.hauchiwu.com/"], :root app-large-ad, :root a[href*="//reruniversal.com/"], :root img[style*="//counter.yadro.ru/"], :root app-advertisement, :root a[href*="://ruonline.bar/"], :root app-ad, :root amp-embed[type="taboola"], :root a[href*="//universalice.info/"], :root amp-ad-custom, :root [href*="://click.1k3web.net/"], :root amp-ad, :root a[href*="/rapidtor.ru"], :root a[href^="https://go.xlviirdr.com"], :root [href^="https://shiftnetwork.infusionsoft.com/go/"] > img, :root div[class^="Adstyled__AdWrapper-"], :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"], :root a[href^="https://www.mypornstarcams.com/landing/click/"], :root a[href*="gpclick.ru"], :root a[href^="https://www.highperformancecpmgate.com/"], :root a[href*="amgfile.ru"], :root noindex > .search_result[class*="search_result_"], :root a[href^="https://syndicate.contentsserved.com/"], :root a[href^="https://go.skinstrip.net"][href*="?campaignId="], :root [id^="n4p_"], :root a[href^="https://www.nudeidols.com/cams/"], :root a[href*="://dafeb.ru/"], :root a[href*="//spishi.vip/"], :root a[href*="nhebd.xyz"], :root a[href^="https://www.highcpmrevenuenetwork.com/"], :root a[href^="https://landing.brazzersnetwork.com/"], :root a[href^="https://www.goldenfrog.com/vyprvpn?offer_id="][href*="&aff_id="], :root #slashboxes > .deals-rail, :root [title="uCoz Counter"], :root a[href^="https://www.financeads.net/tc.php?"], :root ad-slot, :root a[href*="go.ad2up.com"], :root a[href*="//top.mail.ru/jump?"], :root [href^="https://mypatriotsupply.com/"] > img, :root a[href*="/rating/"] > img[width="88"][height="31"], :root [class^="fpm_"][class*="_crss"], :root a[href^="https://www.dating-finder.com/signup/?ai_d="], :root .base-page_center > .banerBottom, :root a[href^="https://www.bet365.com/"][href*="affiliate="], :root iframe[src*="://mark-media.com.ua"], :root div[data-adname], :root a[href^="https://activate-game.com/"], :root a[href^="https://go.etoro.com/"] > img, :root a[href^="https://www.adxsrve.com/"], :root a[href^="https://www.adskeeper.com"], :root a[href^="https://www.purevpn.com/"][href*="&utm_source=aff-"], :root a[href*="//yojlf.com"], :root a[href^="https://witnessjacket.com/"], :root .min-width-normal > #popup_container, :root a[href^="https://twinrdsrv.com/"], :root a[href^="https://turnstileunavailablesite.com/"], :root a[href^="https://www.mrskin.com/tour"], :root a[href^="https://kiksajex.com/"], :root a[href^="https://track.wg-aff.com"], :root a[href^="https://track.totalav.com/"], :root a[href^="https://track.afcpatrk.com/"], :root [data-src^="https://news.te.ua/widget/"], :root a[href^="https://www.bang.com/?aff="], :root a[href*="cosmolot.me/"][href*="banner"], :root a[href^="https://tm-offers.gamingadult.com/"], :root a[href^="https://tatrck.com/"], :root a[href^="https://t.hrtye.com/"], :root a[href^="https://www.infowarsstore.com/"] > img, :root a[href^="https://ngineet.cfd/"], :root a[href^="https://streamate.com/landing/click/"], :root a[href*="linkmyc.com"], :root a[href^="https://static.fleshlight.com/images/banners/"], :root a[href^="http://www.mrskin.com/tour"], :root a[href^="https://t.aslnk.link/"], :root a[href^="https://syndication.exoclick.com/"], :root a[href^="https://snowdayonline.xyz/"], :root [href^="https://join.playboyplus.com/track/"], :root [href^="https://affiliate.fastcomet.com/"] > img, :root a[href^="https://syndication.dynsrvtbg.com/"], :root [data-ad-manager-id], :root a[href*="turbotraf.com"], :root a[href*="://tracker.partnersmelbet.ru/"], :root a[href^="http://eaplay.ru/"], :root a[href^="https://dl-protect.net/"], :root .base-page_center > .banerTop, :root a[href^="https://safesurfingtoday.com/"][href*="?skip="], :root a[href^="https://a.medfoodhome.com/"], :root a[href*="/advertisesimple.info"], :root a[href^="https://prf.hn/click/"][href*="/creativeref:"] > img, :root a[href^="https://www.dql2clk.com/"], :root [data-ad-module], :root a[href^="https://pb-front.com/"], :root a[href^="https://paid.outbrain.com/network/redir?"], :root [href^="http://mypillow.com/"] > img, :root a[href^="https://financeads.net/tc.php?"], :root a[href^="https://ndt5.net/"], :root a[href^="https://natour.naughtyamerica.com/track/"], :root a[href*="/onvix.tv/promo/"][target=_blank], :root a[href^="https://myclick-2.com/"], :root a[href^="https://m.do.co/c/"] > img, :root a[href^="https://lobimax.com/"], :root [href^="https://mypillow.com/"] > img, :root a[href^="https://www.googleadservices.com/pagead/aclk?"], :root a[href*="//loderlx.ru"], :root a[href^="https://t.ajrkm1.com/"], :root a[href^="https://quotationfirearmrevision.com/"], :root [data-id^="div-gpt-ad"], :root a[href^="https://porntubemate.com/"], :root a[href^="https://play1ad.shop/"], :root div[class^="mixadvert"], :root a[href^="http://fly-shops.ru"], :root a[href^="https://linkboss.shop/"], :root div[class^="native-ad-"], :root a[href^="https://losingoldfry.com/"], :root a[href^="https://leg.xyz/?track="], :root a[href^="https://a2.adform.net/"], :root a[href*="://fast2click.ru/"], :root a[href*="/yfiles1.ru"], :root [alt="Rambler's Top100"], :root [data-adshim], :root [href^="https://join3.bannedsextapes.com"], :root a[href^="https://lead1.pl/"], :root a[href*="://yadistr.ru/"], :root a[href^="https://engine.flixtrial.com/"], :root a[href^="https://pubads.g.doubleclick.net/"], :root a[href*="://shusnarmuk.com/"], :root a[href^="https://landing1.brazzersnetwork.com"], :root a[href*="://topsofto.ru/"], :root a[href*="://techdmn.com/"], :root div[id^="vuukle-ad-"], :root a[href^="https://join.virtualtaboo.com/track/"], :root a[href^="https://join.virtuallust3d.com/"], :root [href*="://simpalsid.com/ad/click?id"], :root iframe[src*="://partner-widget.vsesdal.com/"], :root a[href^="https://jaxofuna.com/"], :root a[href*="//sub"][href*="bubblesmedia."], :root a[href^="https://prf.hn/click/"][href*="/camref:"] > img, :root [data-template-type="nativead"], :root a[href^="https://mmwebhandler.aff-online.com/"], :root a[href^="https://itubego.com/video-downloader/?affid="], :root iframe[src*="ads.exosrv.com"], :root [data-name="adaptiveConstructorAd"], :root a[href^="https://a.bestcontentweb.top/"], :root [href*="//takenewsofts.ru/"], :root a[href^="https://ismlks.com/"], :root [onclick*="msetup"][onclick*="partner"][onclick*="utm_"], :root a[href*=".g2afse.com/"], :root zeus-ad, :root a[href^="http://revolvemockerycopper.com/"], :root a[href^="https://syndication.optimizesrv.com/"], :root a#mobtop[title^="Рейтинг мобильных сайтов"], :root div[id^="Crt-"][style], :root a[href*="://adv-views.com"], :root a[href^="https://iqbroker.com/"][href*="?aff="], :root #root > .app .partner-block-wrapper, :root a[href*=".orgsales.ru"], :root body > div[style="position: fixed; z-index: 999999; width: 400px; height: 308px; left: 5px; bottom: 5px;"], :root a[href^="https://intenseaffiliates.com/redirect/"], :root img[src^="https://images.purevpnaffiliates.com"], :root a[href*="//webbrowser.club/"], :root a[href^="https://in.rabbtrk.com/"], :root a[href^="https://tracking.avapartner.com/"], :root a[href^="https://hot-growngames.life/"], :root a[href*="/sarimsolus.com/"], :root a[href*="//appt12mn.com/"], :root a[href^="https://golinks.work/"], :root a[href^="https://tc.tradetracker.net/"] > img, :root a[href^="https://ads.ad4game.com/"], :root a[href^="https://go.xxxjmp.com"], :root object[data^="blob"], :root a[href^="https://go.xxxijmp.com"], :root a[href^="https://go.xxxiijmp.com"], :root a[href^="https://serve.awmdelivery.com/"], :root a[href^="https://go.xtbaffiliates.com/"], :root #MT_overroll ~ div[class][style="left:0px;top:0px;height:480px;width:650px;"], :root a[href^="https://lijavaxa.com/"], :root div[id^="dfp-ad-"], :root a[href^="https://go.xlirdr.com"], :root a[href*="://topclicks.club/"], :root a[href*="browser-ru.site"], :root a[href^="https://go.trackitalltheway.com/"], :root div[id^="trafmag_"], :root a[href^="https://clickins.slixa.com/"], :root div[id^="_vdo_ads_player_ai_"], :root div[id^="admixer_"], :root a[href^="https://tracker.loropartners.com/"], :root a[href^="https://go.admjmp.com"], :root a[href^="https://disobediencecalculatormaiden.com/"], :root a[href^="https://go.tmrjmp.com"], :root a[href^="https://www.privateinternetaccess.com/"] > img, :root a[href^="https://go.nordvpn.net/aff"] > img, :root a[href^="//s.st1net.com/splash.php"], :root a[href^="https://go.mnaspm.com/"], :root div[id^="join_informer_"], :root div[data-server-rendered="true"] > div[id^="la-"], :root a[href*="//fofuvipibo.com/"], :root div[id^="div-gpt-"], :root ark-top-ad, :root div[class^="kiwi-ad-wrapper"], :root a[href^="https://track.adform.net/"], :root a[href^="https://pb-track.com/"], :root a[href^="https://go.dmzjmp.com"], :root a[href*="/myuniversalnk.net/"], :root a[href^="https://go.cmtaffiliates.com/"], :root [id^="div-gpt-ad"], :root a[href^="https://slkmis.com/"], :root a[href^="https://kshop"][href*=".pro/"], :root a[href*="://installpack.ru"], :root [class^="flat_"][class*="_crss"], :root a[href*="/api/redirect?offerid="], :root a[href^="https://fc.lc/ref/"], :root DFP-AD, :root a[href*="://downloadbrowsernew.com/"], :root [href^="https://go.xlrdr.com"], :root a[href^="https://maymooth-stopic.com/"], :root a[href^="https://eergortu.net/"], :root a[href^="https://www.friendlyduck.com/AF_"], :root amp-fx-flying-carpet, :root a[href^="https://ctjdwm.com/"], :root a[href^="https://gamingadlt.com/?offer="], :root .grid > .container > #aside-promotion, :root gpt-ad, :root a[href^="https://clixtrac.com/"], :root a[href^="http://www.h4trck.com/"], :root a[href*="joycasino.com/?partner="], :root a[href^="https://ad.kubiccomps.icu/"], :root a[href*="//tdsrotate.ru/"], :root a[href^="https://hotplaystime.life/"], :root a[href^="https://clicks.pipaffiliates.com/"], :root a[href^="https://go.xxxvjmp.com/"], :root a[href^="https://get-link.xyz/"], :root [onclick*="trklp.ru"], :root a[href*="://ufiler-download.ru/"], :root a[href^="https://click.linksynergy.com/fs-bin/"] > img, :root [id^="ad-wrap-"], :root a[href^="https://s.zlink3.com/"], :root .header-banner > #moneyback[target="_blank"], :root a[href^="https://claring-loccelkin.com/"], :root a[href*=".adsrv.eacdn.com/"], :root a[href^="https://chaturbate.com/in/?"], :root #leader-companion > a[href], :root a[href*="shakesclick.com"], :root a[href*="://elgrur.com/"], :root a[href^="http://cam4com.go2cloud.org/aff_c?"], :root a[href^="https://camfapr.com/landing/click/"], :root a[href^="https://join.dreamsexworld.com/"], :root a[href^="http://kshop.biz/"], :root a[href^="https://banners.livepartners.com/"], :root a[href*="ads2-adnow.com"], :root [data-link*="//ufiler-pro2.ru"], :root .content_rb[id^="content_rb_"], :root [id^="ad_sky"], :root div[data-google-query-id], :root a[href^="https://www.dating-finder.com/?ai_d="], :root .ob_dual_right > .ob_ads_header ~ .odb_div, :root a[href^="http://annulmentequitycereals.com/"], :root a[href*="navaxudoru.com"], :root a[href^="https://www.geekbuying.com/dynamic-ads/"], :root [data-la-show-id], :root a[href^="https://ausoafab.net/"], :root a[href^="https://auesk.cfd/"], :root a[href^="https://adultfriendfinder.com/go/"], :root a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root [data-testid="adBanner-wrapper"], :root [href^="https://track.aftrk1.com/"], :root .nya-slot[style], :root .vid-present > .van_vid_carousel__padding, :root [href="https://www.masstortfinancing.com/"] > img, :root a[href^="https://bngpt.com/"], :root a[href^="https://ad.zanox.com/ppc/"] > img, :root atf-ad-slot, :root a[href*="//clickdome.online/"], :root a[href*=".adsbid.ru"], :root a[href*="trafgid.xyz"], :root a[href^="http://com-1.pro/"], :root [data-freestar-ad][id], :root div[id^="ezoic-pub-ad-"], :root a[href*="://new.torrent-pack.ru/"], :root a[href^="https://go.strpjmp.com/"], :root a[href^="https://click.candyoffers.com/"], :root a[href*="://yourlnk.ru/r/"], :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"], :root a[href^="https://go.hpyjmp.com"], :root .base-page_center > .banerTopOver, :root [href="https://masstortfinancing.com"] img, :root a[href^="https://trk.sportsflix4k.club/"], :root a[href*="tvkw.ru"], :root a[href^="https://go.bushheel.com/"], :root [data-dynamic-ads], :root [href^="https://turtlebids.irauctions.com/"] img, :root a[href^="https://billing.purevpn.com/aff.php"] > img, :root [data-membrana-container], :root a[href^="https://a.adtng.com/"], :root #adv_unisound ~ #main > #slidercontentContainer, :root ps-connatix-module, :root a[href^="https://getvideoz.click/"], :root a-ad, :root [href^="https://v.investologic.co.uk/"], :root a[href^="https://81ac.xyz/"], :root a[href^="http://www.iyalc.com/"], :root a[href*="wow-partners.com/click.php"], :root [href^="https://join.girlsoutwest.com/"], :root a[href^="https://svb-analytics.trackerrr.com/"], :root div[id^="adfox_"], :root div[data-alias="300x250 Ad 1"], :root a[href^="https://relap.io/"][href*="promo_ad_link"], :root a[data-widget-outbrain-redirect^="http://paid.outbrain.com/network/redir?"], :root [href^="https://ilovemyfreedoms.com/landing-"], :root a[href^="https://ads.planetwin365affiliate.com/"], :root div[id^="adrotate_widgets-"], :root div[id^="CGCandy"], :root a[href*="&maxads="], :root a[href^="http://www.friendlyduck.com/AF_"], :root a[href^="https://datewhisper.life/"], :root a[href^="https://bngprm.com/"], :root a[href^="http://stickingrepute.com/"], :root a[href^="https://mediaserver.gvcaffiliates.com/renderBanner.do?"], :root a[href*="://bestnewsoft.ru/"], :root a[href^="https://vo2.qrlsx.com/"], :root [data-advadstrackid], :root [href^="https://routewebtk.com/"], :root a[href*="://womens-journal.ru/"], :root a[href^="http://troopsassistedstupidity.com/"], :root [href^="https://mylead.global/stl/"] > img, :root a[href*="://gertadv.ru/"], :root a[href^="http://naggingirresponsible.com/"], :root [href*="://click.1k3web.com/"], :root a[href^="https://torguard.net/aff.php"] > img, :root a[href^="https://black77854.com/"], :root a[href^="https://pb-imc.com/"], :root a[href^="http://eighteenderived.com/"], :root a[href^="https://ad.doubleclick.net/"], :root a[href*="://betahit.click/"], :root a[href^="http://li.blogtrottr.com/click?"], :root a[class*="button"][href^="//"][href*="yandex"][onclick*="dnl"][onclick*="knopka"], :root a[href^="http://traderstart.mirtesen.ru"], :root a[href*="://ref.studwork.ru/"], :root div[id^="sticky_ad_"], :root display-ad-component, :root a[href^="http://muzzlematrix.com/"], :root a[class*="button"][href^="/go/"][href*="visitid"][onclick*="dnl"], :root a[href^="http://dragnag.com/"], :root [href="https://ourgoldguy.com/contact/"] img, :root a[href^="http://avthelkp.net/"], :root a[href*="://analyticsq.com"], :root a[href*="/clubleads.ru"], :root div[class^="da-widget-"], :root a[href*=".foxqck.com/"], :root a[href*="//jjgirls.com/sex/Chaturbate"], :root a[href*="://r.advg.agency/"], :root a[href^="https://tour.mrskin.com/"], :root a[href^="https://go.xlviiirdr.com"], :root a[href^="https://www.brazzersnetwork.com/landing/"], :root [class^="tile-picker__CitrusBannerContainer-sc-"], :root div[data-content="Advertisement"], :root img[width="728"][height="90"], :root a[href^="http://premonitioninventdisagree.com/"], :root [href^="http://www.mypillow.com/"] > img, :root a[href*=".engine.adglare.net/"], :root a[href^="http://reals-story.ru/"], :root a[href^="https://ctosrd.com/"], :root a[href^="https://click.dtiserv2.com/"], :root a[href^=" https://www.friendlyduck.com/AF_"], :root a[href*=".cfm?domain="][href*="&fp="], :root a[href^="http://adultfriendfinder.com/go/"], :root [class^="flat_"][class*="_cross"], :root [href*=".drp.su/"], :root a[href^="https://6-partner.com/"], :root [href="https://jdrucker.com/gold"] > img, :root a[href*="//tekaners.com/"], :root a[href^="https://getmatchedlocally.com/"], :root a[href*="/ogclick.com/api/redirect"], :root a[href^="http://deskfrontfreely.com/"], :root a[href^="https://ads.leovegas.com/"], :root div[id^="smi_teaser_"], :root a[href^="http://www.adultdvdempire.com/?partner_id="][href*="&utm_"], :root [href^="https://pxl.leads.su/click/"], :root a[href^="https://www.nutaku.net/signup/landing/"], :root a[data-href*="recreativ.ru"], :root [href^="https://www.cloudways.com/en/?id"], :root a[href^="https://cams.imagetwist.com/in/?track="], :root a[data-url^="http://paid.outbrain.com/network/redir?"] + .author, :root a[href*="//tiruniversal.com/"], :root [href^="https://noqreport.com/"] > img, :root span[data-ez-ph-id], :root a[data-oburl^="https://paid.outbrain.com/network/redir?"], :root .\[\&_\.gdprAdTransparencyCogWheelButton\]\:\!pjra-z-\[5\], :root [onclick*="content.ad/"], :root a[href^="https://www.toprevenuegate.com/"], :root [href^="https://www.reimageplus.com/"], :root a[href*=".pokupkins.ru"], :root [data-rc-widget], :root iframe[src^="https://a.adtng.com/"], :root a[href^="http://guestblackmail.com/"], :root [id^="section-ad-banner"], :root #kt_player > div[style="position: absolute; inset: 0px; z-index: 170;"], :root a[href^="https://go.grinsbest.com/"], :root [href="//sexcams.plus/"], :root a[href*="/onvix.me/promo/"][target=_blank], :root a[href*="://yasearchcdn.ru/r/"], :root [id^="ad_slider"], :root a[href*="/eversaree.bid"], :root .mywidget__col > .mywidget__link_advert, :root [onclick*="traffic-media.co"], :root a[href^="http://trk.globwo.online/"], :root a[href^="https://land.brazzersnetwork.com/landing/"], :root [href^="https://trkleads.su/click/"], :root [href*="/vaigowoa.com"], :root a[onclick*="/link-fes.ru"], :root [href^="https://zone.gotrackier.com/"], :root a[href*="idealmedia.io"], :root a[href^="https://go.hpyrdr.com/"], :root [onclick^="location.href='https://1337x.vpnonly.site/"], :root a[href*="bgrndi.com"], :root [class^="div-gpt-ad"], :root ad-shield-ads, :root [href^="https://www.restoro.com/"], :root a[href^="https://cam4com.go2cloud.org/"], :root [onclick*="mixadvert.com"], :root [href^="https://antiagingbed.com/discount/"] > img, :root [href^="https://www.mypillow.com/"] > img, :root div[id^="traffim-widget"], :root [data-ad-name], :root div[id^="google_dfp_"], :root [href^="https://www.hostg.xyz/"] > img, :root div[class^="yandex_rtb"], :root [class^="fpm_"][class*="_cross"], :root a[href^="https://s.ma3ion.com/"], :root a[href^="https://click.hoolig.app/"], :root a[href*="please-direct.me"], :root a[href*="katuhus.com"], :root [data-ad-width], :root [href^="https://www.herbanomic.com/"] > img, :root a[href^="https://bc.game/"], :root a[href^="//startgaming.net/tienda/" i], :root [href^="http://clicks.totemcash.com/"], :root [data-d-ad-id], :root [data-adblockkey], :root a[href*="ftpglst.com"], :root [data-revive-zoneid] > iframe, :root [href^="https://www.profitablegatecpm.com/"], :root a[href^="https://homyanus.com"], :root .scroll-fixable.rail-right > .deals-rail, :root a[href^="https://mediaserver.entainpartners.com/renderBanner.do?"], :root [data-block-type="ad"], :root a[href*="//1xbetlk.site/"], :root [href^="https://freecourseweb.com/"] > .sitefriend, :root div[id^="rc-widget-"], :root a[href^="https://trk.softonixs.xyz/"], :root a[href*="://edugrampromo.com/"], :root [href^="https://optimizedelite.com/"] > img, :root a[href*="://viewfilesup.ru/"], :root a[href*="://mysoftrotate.ru/"], :root a[href^="https://bongacams10.com/track?"], :root a[href^="https://ak.psaltauw.net/"], :root [href*="://morelnk.ru/"], :root a[href^="//go.eabids.com/"], :root topadblock, :root a[data-obtrack^="http://paid.outbrain.com/network/redir?"], :root a[href^="http://dragfault.com/"], :root a[href^="https://ak.oalsauwy.net/"], :root #mgb-container > #mgb, :root a[href*="://folltiz.site/"], :root iframe[data-src*="fwdcdn.com/frame/partners/"], :root div[id^="ad-position-"], :root a[href^="https://trk.nfl-online-streams.club/"], :root a[data-redirect^="https://paid.outbrain.com/network/redir?"], :root a[href^="https://t.acam.link/"], :root a[href^="https://www.sheetmusicplus.com/"][href*="?aff_id="], :root a[href*="ads-provider.com"], :root a[href^="https://ab.advertiserurl.com/aff/"], :root a[href^="https://softwa.cfd/"], :root a[href*="://extlinka.ru/"], :root [href*="://edgrmtracking.com/"], :root [href^="https://glersakr.com/"], :root [data-la-custom-block], :root [data-la-block-show-id], :root div[class*="spklw"][data-type="ad"], :root div[data-native-ad], :root [class^="amp-ad-"], :root [data-mobile-ad-id], :root img[src*="://c.bigmir.net/"], :root a[href^="https://track.ultravpn.com/"], :root [href^="https://ad.admitad.com/"], :root a[href^="http://eslp34af.click/"], :root a[href*="://vse-sdal.com/promo/"], :root a[href*="://clickfrm.com/"], :root a[href^="https://zirdough.net/"], :root a[href*="zdravo-med.ru"], :root a[href*="//utimg.ru/"], :root a[href^="//s.zlinkd.com/"], :root a[href*="cmsmodnews.com"], :root a[href*="://clickrpk.com/"], :root [href^="https://www.avantlink.com/click.php"] img, :root [class^="adDisplay-module"], :root [href^="https://www.mypatriotsupply.com/"] > img, :root a[href^="https://postback1win.com/"], :root [href^="https://mystore.com/"] > img, :root a[href*="/uni-lnk.com/"], :root a[href^="https://t.adating.link/"], :root div[id^="b_tz_"], :root [data-role="tile-ads-module"], :root iframe[src*="/mixadv_"], :root a[href^="https://a.bestcontentfood.top/"], :root iframe[src*="://partner-widget.vse-sdal.com/"], :root a[href*="/universalsrc.net/"], :root AD-SLOT, :root AD-TRIPLE-BOX, :root a[href^="https://bs.serving-sys.com"], :root [id^="unit_"] > a[href*="smi2."], :root a[href*="://premiumredir.ru/"], :root img[width="160"][height="600"], :root [data-adbridg-ad-class], :root a[href^="https://l.hyenadata.com/"], :root a[href*="://ya-distrib.ru/r/"], :root a[href*=".twkv.ru"], :root a[href^="https://go.goaserv.com/"], :root [id^="unit_"] > a[href*="://vrf.ru"], :root .OUTBRAIN[data-widget-id^="FMS_REELD_"], :root a[href^="https://www.juicer.io?referrer="], :root a[href^="https://1betandgonow.com/"], :root [href^="https://clicks.affstrack.com/"] > img, :root a[href^="http://bongacams.com/track?"], :root a[href*="://sugisatomi.com/"], :root a[href^="https://bongacams2.com/track?"], :root [data-ad-cls], :root a[href^="https://www.onlineusershielder.com/"], :root [src^="//am15.net/?"], :root a[href*="mixadvert.com"], :root a[href^="https://www.endorico.com/Smartlink/"], :root a[href^="https://offhandpump.com/"], :root [data-wpas-zoneid], :root [data-link*="://ubar-pro"], :root a[href*="//portakamus.com/"], :root a[href^="https://go.xlvirdr.com"], :root a[href^="http://www.adultempire.com/unlimited/promo?"][href*="&partner_id="], :root iframe[src*="://vidroll.ru/"], :root a[href^="https://awptjmp.com/"], :root [name^="google_ads_iframe"], :root a[href*="goodtrack.ru"], :root [data-css-class="dfp-inarticle"], :root a[href^="https://www.kingsoffetish.com/tour?partner_id="], :root iframe[src*="zhitomir.info/price"], :root a[href*="/newbrowser.club/"], :root a[href^="https://go.xlivrdr.com"], :root a[href^="http://trafmaster.com"], :root a[href*="://chikidiki.ru"], :root a[href^="https://voluum.prom-xcams.com/"], :root AMP-AD, :root a[href*="clickscloud.net"], :root div[data-server-rendered="true"] > div[id^="block-"], :root a[href*="://tele.gg/"], :root [href^="https://zstacklife.com/"] img, :root a[href^="https://xbet-4.com/"], :root div[id^="ads300_250-widget-"], :root a[href^="https://combodef.com/"], :root a[href^="https://a.bestcontentoperation.top/"], :root a[href*="intovarro.ru"], :root a[href^="https://chaturbate.jjgirls.com/?track="], :root a[href*="slovosil.com"], :root a[href*="://reidancis.com/"], :root #kt_player > a[target="_blank"], :root a[href*="//getmybrowser.ru/"], :root .section-subheader > .section-hotel-prices-header, :root a[href^="https://engine.blueistheneworanges.com/"], :root a[href^="https://datingoffers30.info/"], :root [data-m-ad-id], :root a[href^="https://track.1234sd123.com/"], :root [href^="https://istlnkcl.com/"], :root a[href*="://manysoftlink.ru/"], :root div[data-dfp-id], :root div[data-contentexchange-widget] { display: none !important; }
+:root [data-desktop-ad-id], :root [href^="https://awbbjmp.com/"], :root a[href^="http://tc.tradetracker.net/"] > img, :root a[href^="https://www.get-express-vpn.com/offer/"], :root [href^="https://track.fiverr.com/visit/"] > img, :root [data-la-refresh-timeout], :root a[href^="http://apytrc.com/click/"], :root a[href^="https://prf.hn/click/"][href*="/adref:"] > img, :root a[href^="https://traffdaq.com/"], :root a[href*="homework.ru/?partnerId="], :root [href^="https://charmingdatings.life/"] { display: none !important; }</style></head>
+  
+  
+</head>
+<body class="bg-gray-50 p-8">
+
+
+    <header>
+        <h1><span class="full-title">Алексей НЕЧАЕВ - разработки и идеи в <a href='./'>PHP, CSS, JS</a></span><span class="short-title"> <a href='./'>PHP, CSS, JS</a></a></span></h1>
+	    <h3><span class="full-title">не всегда рабочие и нужна доработка</span><span class="short-title">архив идей (могут не работать)</span></h3>
+        <div class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+	<nav id="main-nav" class="active">
+	<div class="menu-btn active">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+	</div-->
+ 
+        <!-- Панель управления навигацией -->
+        
+        
+        <!-- Контейнер для меню -->
+        <!--div id="menu-container" class="md:block fixed mx-fixed overflow-y-auto z-50">
+            <ul class="nav-menu"><li class="folder"><span class="folder-name">CSS</span><ul class="nav-menu"><li class="folder"><span class="folder-name">CSS-MVP</span><ul class="nav-menu"><li class="file"><a href="#" data-md="CSS/CSS-MVP/CSS-MVP-шпаргалка.md" title="CSS/CSS-MVP/CSS-MVP-шпаргалка.md">CSS-MVP-шпаргалка</a></li><li class="file"><a href="#" data-md="CSS/CSS-MVP/MVP-to-TailWind.md" title="CSS/CSS-MVP/MVP-to-TailWind.md">MVP-to-TailWind</a></li></ul></li><li class="file"><a href="#" data-md="CSS/README.md" title="CSS/README.md">README</a></li><li class="folder"><span class="folder-name">Tailwind</span><ul class="nav-menu"><li class="file"><a href="#" data-md="CSS/Tailwind/README.md" title="CSS/Tailwind/README.md">README</a></li><li class="folder"><span class="folder-name">TailwindStyler</span><ul class="nav-menu"><li class="file"><a href="#" data-md="CSS/Tailwind/TailwindStyler/README.md" title="CSS/Tailwind/TailwindStyler/README.md">README</a></li></ul></li><li class="folder"><span class="folder-name">TilwindStylerScript</span><ul class="nav-menu"><li class="file"><a href="#" data-md="CSS/Tailwind/TilwindStylerScript/README.md" title="CSS/Tailwind/TilwindStylerScript/README.md">README</a></li><li class="file"><a href="#" data-md="CSS/Tailwind/TilwindStylerScript/README2.md" title="CSS/Tailwind/TilwindStylerScript/README2.md">README2</a></li><li class="file"><a href="#" data-md="CSS/Tailwind/TilwindStylerScript/TailwindScriptGenerator5-продвинутый.md" title="CSS/Tailwind/TilwindStylerScript/TailwindScriptGenerator5-продвинутый.md">TailwindScriptGenerator5-продвинутый</a></li></ul></li></ul></li><li class="folder"><span class="folder-name">aMagic-MCss</span><ul class="nav-menu"><li class="file"><a href="#" data-md="CSS/aMagic-MCss/README.md" title="CSS/aMagic-MCss/README.md">README</a></li><li class="file"><a href="#" data-md="CSS/aMagic-MCss/tailwind1.md" title="CSS/aMagic-MCss/tailwind1.md">tailwind1</a></li><li class="file"><a href="#" data-md="CSS/aMagic-MCss/ПРИМЕР1.md" title="CSS/aMagic-MCss/ПРИМЕР1.md">1</a></li></ul></li><li class="folder"><span class="folder-name">cssjs</span><ul class="nav-menu"><li class="file"><a href="#" data-md="CSS/cssjs/README.md" title="CSS/cssjs/README.md">README</a></li><li class="file"><a href="#" data-md="CSS/cssjs/Исправленный.md" title="CSS/cssjs/Исправленный.md"></a></li></ul></li></ul></li><li class="folder"><span class="folder-name">DataBase</span><ul class="nav-menu"><li class="folder"><span class="folder-name">DatabaseManager-extends-aMagicDBH</span><ul class="nav-menu"><li class="file"><a href="#" data-md="DataBase/DatabaseManager-extends-aMagicDBH/README.md" title="DataBase/DatabaseManager-extends-aMagicDBH/README.md">README</a></li><li class="folder"><span class="folder-name">php-7.4</span><ul class="nav-menu"><li class="file"><a href="#" data-md="DataBase/DatabaseManager-extends-aMagicDBH/php-7.4/DatabaseManager-PHP7.4.md" title="DataBase/DatabaseManager-extends-aMagicDBH/php-7.4/DatabaseManager-PHP7.4.md">DatabaseManager-PHP7.4</a></li><li class="file"><a href="#" data-md="DataBase/DatabaseManager-extends-aMagicDBH/php-7.4/README.md" title="DataBase/DatabaseManager-extends-aMagicDBH/php-7.4/README.md">README</a></li><li class="file"><a href="#" data-md="DataBase/DatabaseManager-extends-aMagicDBH/php-7.4/aMagicDBH.md" title="DataBase/DatabaseManager-extends-aMagicDBH/php-7.4/aMagicDBH.md">aMagicDBH</a></li></ul></li><li class="folder"><span class="folder-name">php-8.0</span><ul class="nav-menu"><li class="file"><a href="#" data-md="DataBase/DatabaseManager-extends-aMagicDBH/php-8.0/DatabaseManager-php-8.0.md" title="DataBase/DatabaseManager-extends-aMagicDBH/php-8.0/DatabaseManager-php-8.0.md">DatabaseManager-php-8.0</a></li><li class="file"><a href="#" data-md="DataBase/DatabaseManager-extends-aMagicDBH/php-8.0/README.md" title="DataBase/DatabaseManager-extends-aMagicDBH/php-8.0/README.md">README</a></li><li class="file"><a href="#" data-md="DataBase/DatabaseManager-extends-aMagicDBH/php-8.0/Адаптация-для-php-7.4.md" title="DataBase/DatabaseManager-extends-aMagicDBH/php-8.0/Адаптация-для-php-7.4.md">-для-php-7.4</a></li></ul></li><li class="file"><a href="#" data-md="DataBase/DatabaseManager-extends-aMagicDBH/КОНЦЕПЦИЯ-DatabaseManager.md" title="DataBase/DatabaseManager-extends-aMagicDBH/КОНЦЕПЦИЯ-DatabaseManager.md">-DatabaseManager</a></li></ul></li><li class="file"><a href="#" data-md="DataBase/README.md" title="DataBase/README.md">README</a></li><li class="folder"><span class="folder-name">SQLite</span><ul class="nav-menu"><li class="folder"><span class="folder-name">CsvToSQLite</span><ul class="nav-menu"><li class="file"><a href="#" data-md="DataBase/SQLite/CsvToSQLite/csv-to-sqlite.md" title="DataBase/SQLite/CsvToSQLite/csv-to-sqlite.md">csv-to-sqlite</a></li></ul></li><li class="folder"><span class="folder-name">SQLiteToCSV</span><ul class="nav-menu"><li class="file"><a href="#" data-md="DataBase/SQLite/SQLiteToCSV/sqlite-to-csv.md" title="DataBase/SQLite/SQLiteToCSV/sqlite-to-csv.md">sqlite-to-csv</a></li></ul></li></ul></li><li class="folder"><span class="folder-name">aMagic-DataBaseHelper-DBH</span><ul class="nav-menu"><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/Clas-DBH-Документация.md" title="DataBase/aMagic-DataBaseHelper-DBH/Clas-DBH-Документация.md">Clas-DBH-Документация</a></li><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/DBH-DataBaseHelper.md" title="DataBase/aMagic-DataBaseHelper-DBH/DBH-DataBaseHelper.md">DBH-DataBaseHelper</a></li><li class="folder"><span class="folder-name">DBH-MariaDB</span><ul class="nav-menu"><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/DBH-MariaDB/README.md" title="DataBase/aMagic-DataBaseHelper-DBH/DBH-MariaDB/README.md">README</a></li></ul></li><li class="folder expanded"><span class="folder-name">DBH-MySql</span><ul class="nav-menu"><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/DBH-MySql/Clas-DBH-ВЕРСИЯ.md" title="DataBase/aMagic-DataBaseHelper-DBH/DBH-MySql/Clas-DBH-ВЕРСИЯ.md">Clas-DBH-ВЕРСИЯ</a></li><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/DBH-MySql/README.md" title="DataBase/aMagic-DataBaseHelper-DBH/DBH-MySql/README.md">README</a></li></ul></li><li class="folder"><span class="folder-name">DBH-SQLite</span><ul class="nav-menu"><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/DBH-SQLite/README.md" title="DataBase/aMagic-DataBaseHelper-DBH/DBH-SQLite/README.md">README</a></li></ul></li><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/DBHmariaDB-Документация.md" title="DataBase/aMagic-DataBaseHelper-DBH/DBHmariaDB-Документация.md">DBHmariaDB-Документация</a></li><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/DBHmariaDB.md" title="DataBase/aMagic-DataBaseHelper-DBH/DBHmariaDB.md">DBHmariaDB</a></li><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/DBHsqlite-Документация.md" title="DataBase/aMagic-DataBaseHelper-DBH/DBHsqlite-Документация.md">DBHsqlite-Документация</a></li><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/DBHsqlite.md" title="DataBase/aMagic-DataBaseHelper-DBH/DBHsqlite.md">DBHsqlite</a></li><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/README.md" title="DataBase/aMagic-DataBaseHelper-DBH/README.md">README</a></li><li class="folder"><span class="folder-name">aMagicDBH</span><ul class="nav-menu"><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/aMagicDBH/README.md" title="DataBase/aMagic-DataBaseHelper-DBH/aMagicDBH/README.md">README</a></li></ul></li><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/aMagicDBH-ПОЛНАЯ-РЕАЛИЗАЦИЯ.md" title="DataBase/aMagic-DataBaseHelper-DBH/aMagicDBH-ПОЛНАЯ-РЕАЛИЗАЦИЯ.md">aMagicDBH-ПОЛНАЯ-РЕАЛИЗАЦИЯ</a></li><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/aMagicDBH-Примеры-ипользования.md" title="DataBase/aMagic-DataBaseHelper-DBH/aMagicDBH-Примеры-ипользования.md">aMagicDBH-Примеры-ипользования</a></li><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/aMagicDBH-Универсальный класс.md" title="DataBase/aMagic-DataBaseHelper-DBH/aMagicDBH-Универсальный класс.md">aMagicDBH-Универсальный класс</a></li><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/Модификация для SqLite и MySql.md" title="DataBase/aMagic-DataBaseHelper-DBH/Модификация для SqLite и MySql.md"> для SqLite и MySql</a></li></ul></li><li class="folder"><span class="folder-name">aMagic-DatabaseManager</span><ul class="nav-menu"><li class="file"><a href="#" data-md="DataBase/aMagic-DatabaseManager/README.md" title="DataBase/aMagic-DatabaseManager/README.md">README</a></li><li class="folder"><span class="folder-name">php-7.4</span><ul class="nav-menu"><li class="file"><a href="#" data-md="DataBase/aMagic-DatabaseManager/php-7.4/DatabaseManager-PHP7.4.md" title="DataBase/aMagic-DatabaseManager/php-7.4/DatabaseManager-PHP7.4.md">DatabaseManager-PHP7.4</a></li><li class="file"><a href="#" data-md="DataBase/aMagic-DatabaseManager/php-7.4/README.md" title="DataBase/aMagic-DatabaseManager/php-7.4/README.md">README</a></li><li class="file"><a href="#" data-md="DataBase/aMagic-DatabaseManager/php-7.4/aMagicDBH.md" title="DataBase/aMagic-DatabaseManager/php-7.4/aMagicDBH.md">aMagicDBH</a></li></ul></li><li class="folder"><span class="folder-name">php-8.0</span><ul class="nav-menu"><li class="file"><a href="#" data-md="DataBase/aMagic-DatabaseManager/php-8.0/DatabaseManager-php-8.0.md" title="DataBase/aMagic-DatabaseManager/php-8.0/DatabaseManager-php-8.0.md">DatabaseManager-php-8.0</a></li><li class="file"><a href="#" data-md="DataBase/aMagic-DatabaseManager/php-8.0/README.md" title="DataBase/aMagic-DatabaseManager/php-8.0/README.md">README</a></li><li class="file"><a href="#" data-md="DataBase/aMagic-DatabaseManager/php-8.0/Адаптация-для-php-7.4.md" title="DataBase/aMagic-DatabaseManager/php-8.0/Адаптация-для-php-7.4.md">-для-php-7.4</a></li></ul></li><li class="file"><a href="#" data-md="DataBase/aMagic-DatabaseManager/КОНЦЕПЦИЯ-DatabaseManager.md" title="DataBase/aMagic-DatabaseManager/КОНЦЕПЦИЯ-DatabaseManager.md">-DatabaseManager</a></li></ul></li></ul></li><li class="folder"><span class="folder-name">MTHL</span><ul class="nav-menu"><li class="folder"><span class="folder-name">MDS2-идея</span><ul class="nav-menu"><li class="file"><a href="#" data-md="MTHL/MDS2-идея/1-Итоги.md" title="MTHL/MDS2-идея/1-Итоги.md">1-Итоги</a></li><li class="file"><a href="#" data-md="MTHL/MDS2-идея/1-ПРОДОЛЖЕНИЕ.md" title="MTHL/MDS2-идея/1-ПРОДОЛЖЕНИЕ.md">1-ПРОДОЛЖЕНИЕ</a></li><li class="file"><a href="#" data-md="MTHL/MDS2-идея/README.md" title="MTHL/MDS2-идея/README.md">README</a></li><li class="file"><a href="#" data-md="MTHL/MDS2-идея/mds-с-шаблоном-mdsl.md" title="MTHL/MDS2-идея/mds-с-шаблоном-mdsl.md">mds-с-шаблоном-mdsl</a></li></ul></li><li class="folder expanded"><span class="folder-name">MarkdownStyle</span><ul class="nav-menu"><li class="folder"><span class="folder-name">aMagic-MarkdownStyle-mds</span><ul class="nav-menu"><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/README.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/README.md">README</a></li><li class="folder"><span class="folder-name">mdsl</span><ul class="nav-menu"><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/2-mds-с-шаблоном-mdsl.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/2-mds-с-шаблоном-mdsl.md">2-mds-с-шаблоном-mdsl</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/2-расширяем синтаксис.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/2-расширяем синтаксис.md">2-расширяем синтаксис</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/3-index-php.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/3-index-php.md">3-index-php</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/3-mds-vs-mdh-Концепция.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/3-mds-vs-mdh-Концепция.md">3-mds-vs-mdh-Концепция</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/4-mdh-to-mthl-как HTML6.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/4-mdh-to-mthl-как HTML6.md">4-mdh-to-mthl-как HTML6</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/5-mthl-ЯДРО.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/5-mthl-ЯДРО.md">5-mthl-ЯДРО</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/5-Как-выложить.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/5-Как-выложить.md">5-Как-выложить</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/5-Примеры-тестов.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/5-Примеры-тестов.md">5-Примеры-тестов</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/5-создание-репозитория.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/5-создание-репозитория.md">5-создание-репозитория</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/6-Продолжение.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/6-Продолжение.md">6-Продолжение</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/MDSLParser.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/MDSLParser.md">MDSLParser</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/MDSParser.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/MDSParser.md">MDSParser</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/Сравнение-парсеров.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/Сравнение-парсеров.md">-парсеров</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/Сравнение-синтакиса-mds.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/Сравнение-синтакиса-mds.md">-синтакиса-mds</a></li></ul></li></ul></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/class-HtmlToMDS-PHP8.md" title="MTHL/MarkdownStyle/class-HtmlToMDS-PHP8.md">class-HtmlToMDS-PHP8</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/class-HtmlToMDS-обрамление.md" title="MTHL/MarkdownStyle/class-HtmlToMDS-обрамление.md">class-HtmlToMDS-обрамление</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/class-HtmlToMDS-разделитель-слева.md" title="MTHL/MarkdownStyle/class-HtmlToMDS-разделитель-слева.md">class-HtmlToMDS-разделитель-слева</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/class-MDS-MarkdownStyle.md" title="MTHL/MarkdownStyle/class-MDS-MarkdownStyle.md">class-MDS-MarkdownStyle</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/class-MDS-ДОКУМЕНТАЦИЯ.md" title="MTHL/MarkdownStyle/class-MDS-ДОКУМЕНТАЦИЯ.md">class-MDS-ДОКУМЕНТАЦИЯ</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/class-MDS-НАЧАЛЬНЫЙ.md" title="MTHL/MarkdownStyle/class-MDS-НАЧАЛЬНЫЙ.md">class-MDS-НАЧАЛЬНЫЙ</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/class-MDS-ОБЗОР.md" title="MTHL/MarkdownStyle/class-MDS-ОБЗОР.md">class-MDS-ОБЗОР</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/class-MDS-ПЕРЕРАБОТКА.md" title="MTHL/MarkdownStyle/class-MDS-ПЕРЕРАБОТКА.md">class-MDS-ПЕРЕРАБОТКА</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/class-MDS-ПИШЕМ.md" title="MTHL/MarkdownStyle/class-MDS-ПИШЕМ.md">class-MDS-ПИШЕМ</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/class-MDS-УНИКАЛЬНОСТЬ.md" title="MTHL/MarkdownStyle/class-MDS-УНИКАЛЬНОСТЬ.md">class-MDS-УНИКАЛЬНОСТЬ</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/class-MarkdownStyleParser-МОДИФИКАЦИЯ.md" title="MTHL/MarkdownStyle/class-MarkdownStyleParser-МОДИФИКАЦИЯ.md">class-MarkdownStyleParser-МОДИФИКАЦИЯ</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/class-MarkdownStyleParser.md" title="MTHL/MarkdownStyle/class-MarkdownStyleParser.md">class-MarkdownStyleParser</a></li></ul></li><li class="file"><a href="#" data-md="MTHL/README.md" title="MTHL/README.md">README</a></li><li class="folder"><span class="folder-name">aMagic-JSMCss</span><ul class="nav-menu"><li class="file"><a href="#" data-md="MTHL/aMagic-JSMCss/MCss.md" title="MTHL/aMagic-JSMCss/MCss.md">MCss</a></li><li class="file"><a href="#" data-md="MTHL/aMagic-JSMCss/MCssJS.md" title="MTHL/aMagic-JSMCss/MCssJS.md">MCssJS</a></li><li class="file"><a href="#" data-md="MTHL/aMagic-JSMCss/MCssStatic.md" title="MTHL/aMagic-JSMCss/MCssStatic.md">MCssStatic</a></li><li class="file"><a href="#" data-md="MTHL/aMagic-JSMCss/README.md" title="MTHL/aMagic-JSMCss/README.md">README</a></li></ul></li><li class="folder"><span class="folder-name">aMagic-MarkupTextHybridLanguage-mthl</span><ul class="nav-menu"><li class="file"><a href="#" data-md="MTHL/aMagic-MarkupTextHybridLanguage-mthl/1-MTHL-Ядро-крнцепция.md" title="MTHL/aMagic-MarkupTextHybridLanguage-mthl/1-MTHL-Ядро-крнцепция.md">1-MTHL-Ядро-крнцепция</a></li><li class="file"><a href="#" data-md="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Архитектура-MarkdownStyle.md" title="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Архитектура-MarkdownStyle.md">-MarkdownStyle</a></li><li class="file"><a href="#" data-md="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Архитектура-гибридного-синтаксиса.md" title="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Архитектура-гибридного-синтаксиса.md">-гибридного-синтаксиса</a></li><li class="file"><a href="#" data-md="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Модификация-Синтаксис-MarkdownStyle.md" title="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Модификация-Синтаксис-MarkdownStyle.md">-Синтаксис-MarkdownStyle</a></li><li class="file"><a href="#" data-md="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Пример-class-MTHL.md" title="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Пример-class-MTHL.md">-class-MTHL</a></li><li class="file"><a href="#" data-md="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Расширяем-MarkdownExtra.md" title="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Расширяем-MarkdownExtra.md">-MarkdownExtra</a></li><li class="file"><a href="#" data-md="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Секрктный-язык-разметки.md" title="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Секрктный-язык-разметки.md">-язык-разметки</a></li><li class="file"><a href="#" data-md="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Спецификация-формата-mdh.md" title="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Спецификация-формата-mdh.md">-формата-mdh</a></li><li class="file"><a href="#" data-md="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Фантазия-про-mthl.md" title="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Фантазия-про-mthl.md">-про-mthl</a></li></ul></li><li class="folder"><span class="folder-name">aMagic-TagParser</span><ul class="nav-menu"><li class="file"><a href="#" data-md="MTHL/aMagic-TagParser/README.md" title="MTHL/aMagic-TagParser/README.md">README</a></li><li class="file"><a href="#" data-md="MTHL/aMagic-TagParser/tagparser.md" title="MTHL/aMagic-TagParser/tagparser.md">tagparser</a></li></ul></li><li class="folder"><span class="folder-name">pug-on-php</span><ul class="nav-menu"><li class="file"><a href="#" data-md="MTHL/pug-on-php/01-Использование-PUG-PHP.md" title="MTHL/pug-on-php/01-Использование-PUG-PHP.md">01-Использование-PUG-PHP</a></li><li class="file"><a href="#" data-md="MTHL/pug-on-php/README.md" title="MTHL/pug-on-php/README.md">README</a></li><li class="folder"><span class="folder-name">Использование-PUG-для-PHP-md</span><ul class="nav-menu"><li class="file"><a href="#" data-md="MTHL/pug-on-php/Использование-PUG-для-PHP-md/01-Использование-PUG-PHP.md" title="MTHL/pug-on-php/Использование-PUG-для-PHP-md/01-Использование-PUG-PHP.md">01-Использование-PUG-PHP</a></li><li class="file"><a href="#" data-md="MTHL/pug-on-php/Использование-PUG-для-PHP-md/02-PUG-PHP-без-фреймворков.md" title="MTHL/pug-on-php/Использование-PUG-для-PHP-md/02-PUG-PHP-без-фреймворков.md">02-PUG-PHP-без-фреймворков</a></li><li class="file"><a href="#" data-md="MTHL/pug-on-php/Использование-PUG-для-PHP-md/03-Phug-renderFile.md" title="MTHL/pug-on-php/Использование-PUG-для-PHP-md/03-Phug-renderFile.md">03-Phug-renderFile</a></li><li class="file"><a href="#" data-md="MTHL/pug-on-php/Использование-PUG-для-PHP-md/04-PHP-генерация-PUG-вместо-HTML.md" title="MTHL/pug-on-php/Использование-PUG-для-PHP-md/04-PHP-генерация-PUG-вместо-HTML.md">04-PHP-генерация-PUG-вместо-HTML</a></li><li class="file"><a href="#" data-md="MTHL/pug-on-php/Использование-PUG-для-PHP-md/05-запись-PUG-PHP.md" title="MTHL/pug-on-php/Использование-PUG-для-PHP-md/05-запись-PUG-PHP.md">05-запись-PUG-PHP</a></li><li class="file"><a href="#" data-md="MTHL/pug-on-php/Использование-PUG-для-PHP-md/06-ob_get_clean.md" title="MTHL/pug-on-php/Использование-PUG-для-PHP-md/06-ob_get_clean.md">06-ob_get_clean</a></li><li class="file"><a href="#" data-md="MTHL/pug-on-php/Использование-PUG-для-PHP-md/07-HEREDOC-синтаксис.md" title="MTHL/pug-on-php/Использование-PUG-для-PHP-md/07-HEREDOC-синтаксис.md">07-HEREDOC-синтаксис</a></li><li class="file"><a href="#" data-md="MTHL/pug-on-php/Использование-PUG-для-PHP-md/08-PHUG-PHP-в-проекте.md" title="MTHL/pug-on-php/Использование-PUG-для-PHP-md/08-PHUG-PHP-в-проекте.md">08-PHUG-PHP-в-проекте</a></li><li class="file"><a href="#" data-md="MTHL/pug-on-php/Использование-PUG-для-PHP-md/09-PUG-шаблонизатор.md" title="MTHL/pug-on-php/Использование-PUG-для-PHP-md/09-PUG-шаблонизатор.md">09-PUG-шаблонизатор</a></li><li class="file"><a href="#" data-md="MTHL/pug-on-php/Использование-PUG-для-PHP-md/10-HTML-в-PUG.md" title="MTHL/pug-on-php/Использование-PUG-для-PHP-md/10-HTML-в-PUG.md">10-HTML-в-PUG</a></li><li class="file"><a href="#" data-md="MTHL/pug-on-php/Использование-PUG-для-PHP-md/README.md" title="MTHL/pug-on-php/Использование-PUG-для-PHP-md/README.md">README</a></li><li class="file"><a href="#" data-md="MTHL/pug-on-php/Использование-PUG-для-PHP-md/index1.md" title="MTHL/pug-on-php/Использование-PUG-для-PHP-md/index1.md">index1</a></li></ul></li></ul></li></ul></li><li class="folder"><span class="folder-name">Markdown</span><ul class="nav-menu"><li class="file"><a href="#" data-md="Markdown/README.md" title="Markdown/README.md">README</a></li><li class="folder"><span class="folder-name">aMAGIC-md-page-js</span><ul class="nav-menu"><li class="file"><a href="#" data-md="Markdown/aMAGIC-md-page-js/README.md" title="Markdown/aMAGIC-md-page-js/README.md">README</a></li><li class="folder expanded"><span class="folder-name">md</span><ul class="nav-menu"><li class="file"><a href="#" data-md="Markdown/aMAGIC-md-page-js/md/new-file.md" title="Markdown/aMAGIC-md-page-js/md/new-file.md">new-file</a></li></ul></li><li class="file"><a href="#" data-md="Markdown/aMAGIC-md-page-js/md-page-for-php.md" title="Markdown/aMAGIC-md-page-js/md-page-for-php.md">md-page-for-php</a></li><li class="folder"><span class="folder-name">php-md-reader</span><ul class="nav-menu"><li class="file"><a href="#" data-md="Markdown/aMAGIC-md-page-js/php-md-reader/README.md" title="Markdown/aMAGIC-md-page-js/php-md-reader/README.md">README</a></li><li class="file"><a href="#" data-md="Markdown/aMAGIC-md-page-js/php-md-reader/md-page-for-php.md" title="Markdown/aMAGIC-md-page-js/php-md-reader/md-page-for-php.md">md-page-for-php</a></li></ul></li></ul></li><li class="folder"><span class="folder-name">aMMDR-site</span><ul class="nav-menu"><li class="folder"><span class="folder-name">content</span><ul class="nav-menu"><li class="file"><a href="#" data-md="Markdown/aMMDR-site/content/README.md" title="Markdown/aMMDR-site/content/README.md">README</a></li></ul></li></ul></li><li class="folder"><span class="folder-name">aMagic-MDreader-AMMDr</span><ul class="nav-menu"><li class="folder"><span class="folder-name">AMMDr</span><ul class="nav-menu"><li class="file"><a href="#" data-md="Markdown/aMagic-MDreader-AMMDr/AMMDr/README.md" title="Markdown/aMagic-MDreader-AMMDr/AMMDr/README.md">README</a></li></ul></li><li class="file"><a href="#" data-md="Markdown/aMagic-MDreader-AMMDr/README.md" title="Markdown/aMagic-MDreader-AMMDr/README.md">README</a></li><li class="folder"><span class="folder-name">ammdr-4.0</span><ul class="nav-menu"><li class="file"><a href="#" data-md="Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/AMMDr-4.0-aMagic-MDreader.md" title="Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/AMMDr-4.0-aMagic-MDreader.md">AMMDr-4.0-aMagic-MDreader</a></li><li class="file"><a href="#" data-md="Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/MarkdownMenu.md" title="Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/MarkdownMenu.md">MarkdownMenu</a></li><li class="file"><a href="#" data-md="Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/README.md" title="Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/README.md">README</a></li><li class="file"><a href="#" data-md="Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/ammdr.css.md" title="Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/ammdr.css.md">ammdr.css</a></li><li class="file"><a href="#" data-md="Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/ammdr.js.md" title="Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/ammdr.js.md">ammdr.js</a></li></ul></li></ul></li><li class="folder"><span class="folder-name">parsedown-master</span><ul class="nav-menu"><li class="file"><a href="#" data-md="Markdown/parsedown-master/README.md" title="Markdown/parsedown-master/README.md">README</a></li><li class="file"><a href="#" data-md="Markdown/parsedown-master/md-page-for-php.md" title="Markdown/parsedown-master/md-page-for-php.md">md-page-for-php</a></li></ul></li></ul></li><li class="folder"><span class="folder-name">aMagicOK</span><ul class="nav-menu"><li class="file"><a href="#" data-md="aMagicOK/CSS-MVP-шпаргалка.md" title="aMagicOK/CSS-MVP-шпаргалка.md">CSS-MVP-шпаргалка</a></li><li class="file"><a href="#" data-md="aMagicOK/HTML-editor-ВИЗУАЛЬНЫЙ.md" title="aMagicOK/HTML-editor-ВИЗУАЛЬНЫЙ.md">HTML-editor-ВИЗУАЛЬНЫЙ</a></li><li class="file"><a href="#" data-md="aMagicOK/Marcdown-editor-ВИЗУАЛЬНЫЙ.md" title="aMagicOK/Marcdown-editor-ВИЗУАЛЬНЫЙ.md">Marcdown-editor-ВИЗУАЛЬНЫЙ</a></li><li class="file"><a href="#" data-md="aMagicOK/README.md" title="aMagicOK/README.md">README</a></li><li class="folder"><span class="folder-name">aMagic-TagParser</span><ul class="nav-menu"><li class="file"><a href="#" data-md="aMagicOK/aMagic-TagParser/README.md" title="aMagicOK/aMagic-TagParser/README.md">README</a></li><li class="file"><a href="#" data-md="aMagicOK/aMagic-TagParser/tagparser.md" title="aMagicOK/aMagic-TagParser/tagparser.md">tagparser</a></li></ul></li><li class="file"><a href="#" data-md="aMagicOK/css-для-адаптивной-таблицы.md" title="aMagicOK/css-для-адаптивной-таблицы.md">css-для-адаптивной-таблицы</a></li><li class="file"><a href="#" data-md="aMagicOK/css-для-голого-html.md" title="aMagicOK/css-для-голого-html.md">css-для-голого-html</a></li></ul></li><li class="folder"><span class="folder-name">aMagicPHP</span><ul class="nav-menu"><li class="file"><a href="#" data-md="aMagicPHP/README.md" title="aMagicPHP/README.md">README</a></li></ul></li>
+	    </ul>        
+	</div-->
+  
+    <div id="menu-container"><ul class="nav-menu"><li class="folder expanded"><span class="folder-name">CSS</span><ul class="nav-menu"><li class="folder expanded"><span class="folder-name">CSS-MVP</span><ul class="nav-menu"><li class="file"><a href="#" data-md="CSS/CSS-MVP/CSS-MVP-шпаргалка.md" title="CSS/CSS-MVP/CSS-MVP-шпаргалка.md">CSS-MVP-шпаргалка</a></li><li class="file"><a href="#" data-md="CSS/CSS-MVP/MVP-to-TailWind.md" title="CSS/CSS-MVP/MVP-to-TailWind.md">MVP-to-TailWind</a></li></ul></li><li class="file"><a href="#" data-md="CSS/README.md" title="CSS/README.md">README</a></li><li class="folder expanded"><span class="folder-name">Tailwind</span><ul class="nav-menu"><li class="folder expanded"><span class="folder-name">TailwindStyler</span><ul class="nav-menu"><li class="file"><a href="#" data-md="CSS/Tailwind/TailwindStyler/README.md" title="CSS/Tailwind/TailwindStyler/README.md">README</a></li></ul></li><li class="folder expanded"><span class="folder-name">TilwindStylerScript</span><ul class="nav-menu"><li class="file"><a href="#" data-md="CSS/Tailwind/TilwindStylerScript/README.md" title="CSS/Tailwind/TilwindStylerScript/README.md">README</a></li><li class="file"><a href="#" data-md="CSS/Tailwind/TilwindStylerScript/README2.md" title="CSS/Tailwind/TilwindStylerScript/README2.md">README2</a></li><li class="file"><a href="#" data-md="CSS/Tailwind/TilwindStylerScript/TailwindScriptGenerator5-продвинутый.md" title="CSS/Tailwind/TilwindStylerScript/TailwindScriptGenerator5-продвинутый.md">TailwindScriptGenerator5-продвинутый</a></li></ul></li></ul></li><li class="folder expanded"><span class="folder-name">cssjs</span><ul class="nav-menu"><li class="file"><a href="#" data-md="CSS/cssjs/README.md" title="CSS/cssjs/README.md">README</a></li><li class="file"><a href="#" data-md="CSS/cssjs/Исправленный.md" title="CSS/cssjs/Исправленный.md">Исправленный</a></li></ul></li></ul></li><li class="folder expanded"><span class="folder-name">DataBase</span><ul class="nav-menu"><li class="folder expanded"><span class="folder-name">DatabaseManager-extends-aMagicDBH</span><ul class="nav-menu"><li class="file"><a href="#" data-md="DataBase/DatabaseManager-extends-aMagicDBH/README.md" title="DataBase/DatabaseManager-extends-aMagicDBH/README.md">README</a></li><li class="folder expanded"><span class="folder-name">php-7.4</span><ul class="nav-menu"><li class="file"><a href="#" data-md="DataBase/DatabaseManager-extends-aMagicDBH/php-7.4/DatabaseManager-PHP7.4.md" title="DataBase/DatabaseManager-extends-aMagicDBH/php-7.4/DatabaseManager-PHP7.4.md">DatabaseManager-PHP7.4</a></li><li class="file"><a href="#" data-md="DataBase/DatabaseManager-extends-aMagicDBH/php-7.4/README.md" title="DataBase/DatabaseManager-extends-aMagicDBH/php-7.4/README.md">README</a></li><li class="file"><a href="#" data-md="DataBase/DatabaseManager-extends-aMagicDBH/php-7.4/aMagicDBH.md" title="DataBase/DatabaseManager-extends-aMagicDBH/php-7.4/aMagicDBH.md">aMagicDBH</a></li></ul></li><li class="folder expanded"><span class="folder-name">php-8.0</span><ul class="nav-menu"><li class="file"><a href="#" data-md="DataBase/DatabaseManager-extends-aMagicDBH/php-8.0/DatabaseManager-php-8.0.md" title="DataBase/DatabaseManager-extends-aMagicDBH/php-8.0/DatabaseManager-php-8.0.md">DatabaseManager-php-8.0</a></li><li class="file"><a href="#" data-md="DataBase/DatabaseManager-extends-aMagicDBH/php-8.0/README.md" title="DataBase/DatabaseManager-extends-aMagicDBH/php-8.0/README.md">README</a></li><li class="file"><a href="#" data-md="DataBase/DatabaseManager-extends-aMagicDBH/php-8.0/Адаптация-для-php-7.4.md" title="DataBase/DatabaseManager-extends-aMagicDBH/php-8.0/Адаптация-для-php-7.4.md">Адаптация-для-php-7.4</a></li></ul></li><li class="file"><a href="#" data-md="DataBase/DatabaseManager-extends-aMagicDBH/КОНЦЕПЦИЯ-DatabaseManager.md" title="DataBase/DatabaseManager-extends-aMagicDBH/КОНЦЕПЦИЯ-DatabaseManager.md">КОНЦЕПЦИЯ-DatabaseManager</a></li></ul></li><li class="folder expanded"><span class="folder-name">SQLite</span><ul class="nav-menu"><li class="folder"><span class="folder-name">CsvToSQLite</span><ul class="nav-menu"><li class="file"><a href="#" data-md="DataBase/SQLite/CsvToSQLite/csv-to-sqlite.md" title="DataBase/SQLite/CsvToSQLite/csv-to-sqlite.md">csv-to-sqlite</a></li></ul></li><li class="folder"><span class="folder-name">SQLiteToCSV</span><ul class="nav-menu"><li class="file"><a href="#" data-md="DataBase/SQLite/SQLiteToCSV/sqlite-to-csv.md" title="DataBase/SQLite/SQLiteToCSV/sqlite-to-csv.md">sqlite-to-csv</a></li></ul></li></ul></li><li class="folder expanded"><span class="folder-name">aMagic-DataBaseHelper-DBH</span><ul class="nav-menu"><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/Clas-DBH-Документация.md" title="DataBase/aMagic-DataBaseHelper-DBH/Clas-DBH-Документация.md">Clas-DBH-Документация</a></li><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/DBH-DataBaseHelper.md" title="DataBase/aMagic-DataBaseHelper-DBH/DBH-DataBaseHelper.md">DBH-DataBaseHelper</a></li><li class="folder expanded"><span class="folder-name">DBH-MariaDB</span><ul class="nav-menu"><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/DBH-MariaDB/README.md" title="DataBase/aMagic-DataBaseHelper-DBH/DBH-MariaDB/README.md">README</a></li></ul></li><li class="folder expanded"><span class="folder-name">DBH-MySql</span><ul class="nav-menu"><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/DBH-MySql/Clas-DBH-ВЕРСИЯ.md" title="DataBase/aMagic-DataBaseHelper-DBH/DBH-MySql/Clas-DBH-ВЕРСИЯ.md">Clas-DBH-ВЕРСИЯ</a></li><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/DBH-MySql/README.md" title="DataBase/aMagic-DataBaseHelper-DBH/DBH-MySql/README.md">README</a></li></ul></li><li class="folder expanded"><span class="folder-name">DBH-SQLite</span><ul class="nav-menu"><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/DBH-SQLite/README.md" title="DataBase/aMagic-DataBaseHelper-DBH/DBH-SQLite/README.md">README</a></li></ul></li><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/DBHmariaDB-Документация.md" title="DataBase/aMagic-DataBaseHelper-DBH/DBHmariaDB-Документация.md">DBHmariaDB-Документация</a></li><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/DBHmariaDB.md" title="DataBase/aMagic-DataBaseHelper-DBH/DBHmariaDB.md">DBHmariaDB</a></li><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/DBHsqlite-Документация.md" title="DataBase/aMagic-DataBaseHelper-DBH/DBHsqlite-Документация.md">DBHsqlite-Документация</a></li><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/DBHsqlite.md" title="DataBase/aMagic-DataBaseHelper-DBH/DBHsqlite.md">DBHsqlite</a></li><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/README.md" title="DataBase/aMagic-DataBaseHelper-DBH/README.md">README</a></li><li class="folder expanded"><span class="folder-name">aMagicDBH</span><ul class="nav-menu"><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/aMagicDBH/README.md" title="DataBase/aMagic-DataBaseHelper-DBH/aMagicDBH/README.md">README</a></li></ul></li><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/aMagicDBH-ПОЛНАЯ-РЕАЛИЗАЦИЯ.md" title="DataBase/aMagic-DataBaseHelper-DBH/aMagicDBH-ПОЛНАЯ-РЕАЛИЗАЦИЯ.md">aMagicDBH-ПОЛНАЯ-РЕАЛИЗАЦИЯ</a></li><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/aMagicDBH-Примеры-ипользования.md" title="DataBase/aMagic-DataBaseHelper-DBH/aMagicDBH-Примеры-ипользования.md">aMagicDBH-Примеры-ипользования</a></li><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/aMagicDBH-Универсальный класс.md" title="DataBase/aMagic-DataBaseHelper-DBH/aMagicDBH-Универсальный класс.md">aMagicDBH-Универсальный класс</a></li><li class="file"><a href="#" data-md="DataBase/aMagic-DataBaseHelper-DBH/Модификация для SqLite и MySql.md" title="DataBase/aMagic-DataBaseHelper-DBH/Модификация для SqLite и MySql.md">Модификация для SqLite и MySql</a></li></ul></li><li class="folder expanded"><span class="folder-name">aMagic-DatabaseManager</span><ul class="nav-menu"><li class="file"><a href="#" data-md="DataBase/aMagic-DatabaseManager/README.md" title="DataBase/aMagic-DatabaseManager/README.md">README</a></li><li class="folder expanded"><span class="folder-name">php-7.4</span><ul class="nav-menu"><li class="file"><a href="#" data-md="DataBase/aMagic-DatabaseManager/php-7.4/DatabaseManager-PHP7.4.md" title="DataBase/aMagic-DatabaseManager/php-7.4/DatabaseManager-PHP7.4.md">DatabaseManager-PHP7.4</a></li><li class="file"><a href="#" data-md="DataBase/aMagic-DatabaseManager/php-7.4/README.md" title="DataBase/aMagic-DatabaseManager/php-7.4/README.md">README</a></li><li class="file"><a href="#" data-md="DataBase/aMagic-DatabaseManager/php-7.4/aMagicDBH.md" title="DataBase/aMagic-DatabaseManager/php-7.4/aMagicDBH.md">aMagicDBH</a></li></ul></li><li class="folder expanded"><span class="folder-name">php-8.0</span><ul class="nav-menu"><li class="file"><a href="#" data-md="DataBase/aMagic-DatabaseManager/php-8.0/DatabaseManager-php-8.0.md" title="DataBase/aMagic-DatabaseManager/php-8.0/DatabaseManager-php-8.0.md">DatabaseManager-php-8.0</a></li><li class="file"><a href="#" data-md="DataBase/aMagic-DatabaseManager/php-8.0/README.md" title="DataBase/aMagic-DatabaseManager/php-8.0/README.md">README</a></li><li class="file"><a href="#" data-md="DataBase/aMagic-DatabaseManager/php-8.0/Адаптация-для-php-7.4.md" title="DataBase/aMagic-DatabaseManager/php-8.0/Адаптация-для-php-7.4.md">Адаптация-для-php-7.4</a></li></ul></li><li class="file"><a href="#" data-md="DataBase/aMagic-DatabaseManager/КОНЦЕПЦИЯ-DatabaseManager.md" title="DataBase/aMagic-DatabaseManager/КОНЦЕПЦИЯ-DatabaseManager.md">КОНЦЕПЦИЯ-DatabaseManager</a></li></ul></li></ul></li><li class="folder expanded"><span class="folder-name">MTHL</span><ul class="nav-menu"><li class="folder expanded"><span class="folder-name">MDS2-идея</span><ul class="nav-menu"><li class="file"><a href="#" data-md="MTHL/MDS2-идея/1-Итоги.md" title="MTHL/MDS2-идея/1-Итоги.md">1-Итоги</a></li><li class="file"><a href="#" data-md="MTHL/MDS2-идея/1-ПРОДОЛЖЕНИЕ.md" title="MTHL/MDS2-идея/1-ПРОДОЛЖЕНИЕ.md">1-ПРОДОЛЖЕНИЕ</a></li><li class="file"><a href="#" data-md="MTHL/MDS2-идея/README.md" title="MTHL/MDS2-идея/README.md">README</a></li><li class="file"><a href="#" data-md="MTHL/MDS2-идея/mds-с-шаблоном-mdsl.md" title="MTHL/MDS2-идея/mds-с-шаблоном-mdsl.md">mds-с-шаблоном-mdsl</a></li></ul></li><li class="folder expanded"><span class="folder-name">MarkdownStyle</span><ul class="nav-menu"><li class="folder"><span class="folder-name">aMagic-MarkdownStyle-mds</span><ul class="nav-menu"><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/README.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/README.md">README</a></li><li class="folder"><span class="folder-name">mdsl</span><ul class="nav-menu"><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/2-mds-с-шаблоном-mdsl.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/2-mds-с-шаблоном-mdsl.md">2-mds-с-шаблоном-mdsl</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/2-расширяем синтаксис.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/2-расширяем синтаксис.md">2-расширяем синтаксис</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/3-index-php.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/3-index-php.md">3-index-php</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/3-mds-vs-mdh-Концепция.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/3-mds-vs-mdh-Концепция.md">3-mds-vs-mdh-Концепция</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/4-mdh-to-mthl-как HTML6.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/4-mdh-to-mthl-как HTML6.md">4-mdh-to-mthl-как HTML6</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/5-mthl-ЯДРО.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/5-mthl-ЯДРО.md">5-mthl-ЯДРО</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/5-Как-выложить.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/5-Как-выложить.md">5-Как-выложить</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/5-Примеры-тестов.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/5-Примеры-тестов.md">5-Примеры-тестов</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/5-создание-репозитория.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/5-создание-репозитория.md">5-создание-репозитория</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/6-Продолжение.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/6-Продолжение.md">6-Продолжение</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/MDSLParser.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/MDSLParser.md">MDSLParser</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/MDSParser.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/MDSParser.md">MDSParser</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/Сравнение-парсеров.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/Сравнение-парсеров.md">Сравнение-парсеров</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/Сравнение-синтакиса-mds.md" title="MTHL/MarkdownStyle/aMagic-MarkdownStyle-mds/mdsl/Сравнение-синтакиса-mds.md">Сравнение-синтакиса-mds</a></li></ul></li></ul></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/class-HtmlToMDS-PHP8.md" title="MTHL/MarkdownStyle/class-HtmlToMDS-PHP8.md">class-HtmlToMDS-PHP8</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/class-HtmlToMDS-обрамление.md" title="MTHL/MarkdownStyle/class-HtmlToMDS-обрамление.md">class-HtmlToMDS-обрамление</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/class-HtmlToMDS-разделитель-слева.md" title="MTHL/MarkdownStyle/class-HtmlToMDS-разделитель-слева.md">class-HtmlToMDS-разделитель-слева</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/class-MDS-MarkdownStyle.md" title="MTHL/MarkdownStyle/class-MDS-MarkdownStyle.md">class-MDS-MarkdownStyle</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/class-MDS-ДОКУМЕНТАЦИЯ.md" title="MTHL/MarkdownStyle/class-MDS-ДОКУМЕНТАЦИЯ.md">class-MDS-ДОКУМЕНТАЦИЯ</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/class-MDS-НАЧАЛЬНЫЙ.md" title="MTHL/MarkdownStyle/class-MDS-НАЧАЛЬНЫЙ.md">class-MDS-НАЧАЛЬНЫЙ</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/class-MDS-ОБЗОР.md" title="MTHL/MarkdownStyle/class-MDS-ОБЗОР.md">class-MDS-ОБЗОР</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/class-MDS-ПЕРЕРАБОТКА.md" title="MTHL/MarkdownStyle/class-MDS-ПЕРЕРАБОТКА.md">class-MDS-ПЕРЕРАБОТКА</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/class-MDS-ПИШЕМ.md" title="MTHL/MarkdownStyle/class-MDS-ПИШЕМ.md">class-MDS-ПИШЕМ</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/class-MDS-УНИКАЛЬНОСТЬ.md" title="MTHL/MarkdownStyle/class-MDS-УНИКАЛЬНОСТЬ.md">class-MDS-УНИКАЛЬНОСТЬ</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/class-MarkdownStyleParser-МОДИФИКАЦИЯ.md" title="MTHL/MarkdownStyle/class-MarkdownStyleParser-МОДИФИКАЦИЯ.md">class-MarkdownStyleParser-МОДИФИКАЦИЯ</a></li><li class="file"><a href="#" data-md="MTHL/MarkdownStyle/class-MarkdownStyleParser.md" title="MTHL/MarkdownStyle/class-MarkdownStyleParser.md">class-MarkdownStyleParser</a></li></ul></li><li class="file"><a href="#" data-md="MTHL/README.md" title="MTHL/README.md">README</a></li><li class="folder expanded"><span class="folder-name">aMagic-JSMCss</span><ul class="nav-menu"><li class="file"><a href="#" data-md="MTHL/aMagic-JSMCss/MCss.md" title="MTHL/aMagic-JSMCss/MCss.md">MCss</a></li><li class="file"><a href="#" data-md="MTHL/aMagic-JSMCss/MCssJS.md" title="MTHL/aMagic-JSMCss/MCssJS.md">MCssJS</a></li><li class="file"><a href="#" data-md="MTHL/aMagic-JSMCss/MCssStatic.md" title="MTHL/aMagic-JSMCss/MCssStatic.md">MCssStatic</a></li><li class="file"><a href="#" data-md="MTHL/aMagic-JSMCss/README.md" title="MTHL/aMagic-JSMCss/README.md">README</a></li></ul></li><li class="folder expanded"><span class="folder-name">aMagic-MCss</span><ul class="nav-menu"><li class="file"><a href="#" data-md="MTHL/aMagic-MCss/README.md" title="MTHL/aMagic-MCss/README.md">README</a></li><li class="file"><a href="#" data-md="MTHL/aMagic-MCss/tailwind1.md" title="MTHL/aMagic-MCss/tailwind1.md">tailwind1</a></li><li class="file"><a href="#" data-md="MTHL/aMagic-MCss/ПРИМЕР1.md" title="MTHL/aMagic-MCss/ПРИМЕР1.md">ПРИМЕР1</a></li></ul></li><li class="folder expanded"><span class="folder-name">aMagic-MarkupTextHybridLanguage-mthl</span><ul class="nav-menu"><li class="file"><a href="#" data-md="MTHL/aMagic-MarkupTextHybridLanguage-mthl/1-MTHL-Ядро-крнцепция.md" title="MTHL/aMagic-MarkupTextHybridLanguage-mthl/1-MTHL-Ядро-крнцепция.md">1-MTHL-Ядро-крнцепция</a></li><li class="file"><a href="#" data-md="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Архитектура-MarkdownStyle.md" title="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Архитектура-MarkdownStyle.md">Архитектура-MarkdownStyle</a></li><li class="file"><a href="#" data-md="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Архитектура-гибридного-синтаксиса.md" title="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Архитектура-гибридного-синтаксиса.md">Архитектура-гибридного-синтаксиса</a></li><li class="file"><a href="#" data-md="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Модификация-Синтаксис-MarkdownStyle.md" title="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Модификация-Синтаксис-MarkdownStyle.md">Модификация-Синтаксис-MarkdownStyle</a></li><li class="file"><a href="#" data-md="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Пример-class-MTHL.md" title="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Пример-class-MTHL.md">Пример-class-MTHL</a></li><li class="file"><a href="#" data-md="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Расширяем-MarkdownExtra.md" title="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Расширяем-MarkdownExtra.md">Расширяем-MarkdownExtra</a></li><li class="file"><a href="#" data-md="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Секрктный-язык-разметки.md" title="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Секрктный-язык-разметки.md">Секрктный-язык-разметки</a></li><li class="file"><a href="#" data-md="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Спецификация-формата-mdh.md" title="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Спецификация-формата-mdh.md">Спецификация-формата-mdh</a></li><li class="file"><a href="#" data-md="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Фантазия-про-mthl.md" title="MTHL/aMagic-MarkupTextHybridLanguage-mthl/Фантазия-про-mthl.md">Фантазия-про-mthl</a></li></ul></li><li class="folder"><span class="folder-name">aMagic-TagParser</span><ul class="nav-menu"><li class="file"><a href="#" data-md="MTHL/aMagic-TagParser/README.md" title="MTHL/aMagic-TagParser/README.md">README</a></li><li class="file"><a href="#" data-md="MTHL/aMagic-TagParser/tagparser.md" title="MTHL/aMagic-TagParser/tagparser.md">tagparser</a></li></ul></li><li class="folder"><span class="folder-name">pug-on-php</span><ul class="nav-menu"><li class="file"><a href="#" data-md="MTHL/pug-on-php/01-Использование-PUG-PHP.md" title="MTHL/pug-on-php/01-Использование-PUG-PHP.md">01-Использование-PUG-PHP</a></li><li class="file"><a href="#" data-md="MTHL/pug-on-php/README.md" title="MTHL/pug-on-php/README.md">README</a></li><li class="folder"><span class="folder-name">Использование-PUG-для-PHP-md</span><ul class="nav-menu"><li class="file"><a href="#" data-md="MTHL/pug-on-php/Использование-PUG-для-PHP-md/01-Использование-PUG-PHP.md" title="MTHL/pug-on-php/Использование-PUG-для-PHP-md/01-Использование-PUG-PHP.md">01-Использование-PUG-PHP</a></li><li class="file"><a href="#" data-md="MTHL/pug-on-php/Использование-PUG-для-PHP-md/02-PUG-PHP-без-фреймворков.md" title="MTHL/pug-on-php/Использование-PUG-для-PHP-md/02-PUG-PHP-без-фреймворков.md">02-PUG-PHP-без-фреймворков</a></li><li class="file"><a href="#" data-md="MTHL/pug-on-php/Использование-PUG-для-PHP-md/03-Phug-renderFile.md" title="MTHL/pug-on-php/Использование-PUG-для-PHP-md/03-Phug-renderFile.md">03-Phug-renderFile</a></li><li class="file"><a href="#" data-md="MTHL/pug-on-php/Использование-PUG-для-PHP-md/04-PHP-генерация-PUG-вместо-HTML.md" title="MTHL/pug-on-php/Использование-PUG-для-PHP-md/04-PHP-генерация-PUG-вместо-HTML.md">04-PHP-генерация-PUG-вместо-HTML</a></li><li class="file"><a href="#" data-md="MTHL/pug-on-php/Использование-PUG-для-PHP-md/05-запись-PUG-PHP.md" title="MTHL/pug-on-php/Использование-PUG-для-PHP-md/05-запись-PUG-PHP.md">05-запись-PUG-PHP</a></li><li class="file"><a href="#" data-md="MTHL/pug-on-php/Использование-PUG-для-PHP-md/06-ob_get_clean.md" title="MTHL/pug-on-php/Использование-PUG-для-PHP-md/06-ob_get_clean.md">06-ob_get_clean</a></li><li class="file"><a href="#" data-md="MTHL/pug-on-php/Использование-PUG-для-PHP-md/07-HEREDOC-синтаксис.md" title="MTHL/pug-on-php/Использование-PUG-для-PHP-md/07-HEREDOC-синтаксис.md">07-HEREDOC-синтаксис</a></li><li class="file"><a href="#" data-md="MTHL/pug-on-php/Использование-PUG-для-PHP-md/08-PHUG-PHP-в-проекте.md" title="MTHL/pug-on-php/Использование-PUG-для-PHP-md/08-PHUG-PHP-в-проекте.md">08-PHUG-PHP-в-проекте</a></li><li class="file"><a href="#" data-md="MTHL/pug-on-php/Использование-PUG-для-PHP-md/09-PUG-шаблонизатор.md" title="MTHL/pug-on-php/Использование-PUG-для-PHP-md/09-PUG-шаблонизатор.md">09-PUG-шаблонизатор</a></li><li class="file"><a href="#" data-md="MTHL/pug-on-php/Использование-PUG-для-PHP-md/10-HTML-в-PUG.md" title="MTHL/pug-on-php/Использование-PUG-для-PHP-md/10-HTML-в-PUG.md">10-HTML-в-PUG</a></li><li class="file"><a href="#" data-md="MTHL/pug-on-php/Использование-PUG-для-PHP-md/README.md" title="MTHL/pug-on-php/Использование-PUG-для-PHP-md/README.md">README</a></li><li class="file"><a href="#" data-md="MTHL/pug-on-php/Использование-PUG-для-PHP-md/index1.md" title="MTHL/pug-on-php/Использование-PUG-для-PHP-md/index1.md">index1</a></li></ul></li></ul></li></ul></li><li class="folder expanded"><span class="folder-name">Markdown</span><ul class="nav-menu"><li class="folder expanded"><span class="folder-name">aMAGIC-md-page-js</span><ul class="nav-menu"><li class="file"><a href="#" data-md="Markdown/aMAGIC-md-page-js/README.md" title="Markdown/aMAGIC-md-page-js/README.md">README</a></li><li class="folder expanded"><span class="folder-name">md</span><ul class="nav-menu"><li class="file"><a href="#" data-md="Markdown/aMAGIC-md-page-js/md/new-file.md" title="Markdown/aMAGIC-md-page-js/md/new-file.md">new-file</a></li></ul></li><li class="file"><a href="#" data-md="Markdown/aMAGIC-md-page-js/md-page-for-php.md" title="Markdown/aMAGIC-md-page-js/md-page-for-php.md">md-page-for-php</a></li><li class="folder expanded"><span class="folder-name">php-md-reader</span><ul class="nav-menu"><li class="file"><a href="#" data-md="Markdown/aMAGIC-md-page-js/php-md-reader/README.md" title="Markdown/aMAGIC-md-page-js/php-md-reader/README.md">README</a></li><li class="file"><a href="#" data-md="Markdown/aMAGIC-md-page-js/php-md-reader/md-page-for-php.md" title="Markdown/aMAGIC-md-page-js/php-md-reader/md-page-for-php.md">md-page-for-php</a></li></ul></li></ul></li><li class="folder expanded"><span class="folder-name">aMagic-MDreader-AMMDr</span><ul class="nav-menu"><li class="folder expanded"><span class="folder-name">AMMDr</span><ul class="nav-menu"><li class="file"><a href="#" data-md="Markdown/aMagic-MDreader-AMMDr/AMMDr/README.md" title="Markdown/aMagic-MDreader-AMMDr/AMMDr/README.md">README</a></li></ul></li><li class="file"><a href="#" data-md="Markdown/aMagic-MDreader-AMMDr/README.md" title="Markdown/aMagic-MDreader-AMMDr/README.md">README</a></li><li class="folder expanded"><span class="folder-name">ammdr-4.0</span><ul class="nav-menu"><li class="file"><a href="#" data-md="Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/AMMDr-4.0-aMagic-MDreader.md" title="Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/AMMDr-4.0-aMagic-MDreader.md">AMMDr-4.0-aMagic-MDreader</a></li><li class="file"><a href="#" data-md="Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/MarkdownMenu.md" title="Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/MarkdownMenu.md">MarkdownMenu</a></li><li class="file"><a href="#" data-md="Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/README.md" title="Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/README.md">README</a></li><li class="file"><a href="#" data-md="Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/ammdr.css.md" title="Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/ammdr.css.md">ammdr.css</a></li><li class="file"><a href="#" data-md="Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/ammdr.js.md" title="Markdown/aMagic-MDreader-AMMDr/ammdr-4.0/ammdr.js.md">ammdr.js</a></li></ul></li></ul></li></ul></li><li class="file"><a href="#" data-md="README.md" title="README.md">README</a></li><li class="folder expanded"><span class="folder-name">aMagicOK</span><ul class="nav-menu"><li class="file"><a href="#" data-md="aMagicOK/CSS-MVP-шпаргалка.md" title="aMagicOK/CSS-MVP-шпаргалка.md">CSS-MVP-шпаргалка</a></li><li class="file"><a href="#" data-md="aMagicOK/HTML-editor-ВИЗУАЛЬНЫЙ.md" title="aMagicOK/HTML-editor-ВИЗУАЛЬНЫЙ.md">HTML-editor-ВИЗУАЛЬНЫЙ</a></li><li class="file"><a href="#" data-md="aMagicOK/Marcdown-editor-ВИЗУАЛЬНЫЙ.md" title="aMagicOK/Marcdown-editor-ВИЗУАЛЬНЫЙ.md">Marcdown-editor-ВИЗУАЛЬНЫЙ</a></li><li class="file"><a href="#" data-md="aMagicOK/README.md" title="aMagicOK/README.md">README</a></li><li class="folder expanded"><span class="folder-name">aMagic-TagParser</span><ul class="nav-menu"><li class="file"><a href="#" data-md="aMagicOK/aMagic-TagParser/README.md" title="aMagicOK/aMagic-TagParser/README.md">README</a></li><li class="file"><a href="#" data-md="aMagicOK/aMagic-TagParser/tagparser.md" title="aMagicOK/aMagic-TagParser/tagparser.md">tagparser</a></li></ul></li><li class="file"><a href="#" data-md="aMagicOK/css-для-адаптивной-таблицы.md" title="aMagicOK/css-для-адаптивной-таблицы.md">css-для-адаптивной-таблицы</a></li><li class="file"><a href="#" data-md="aMagicOK/css-для-голого-html.md" title="aMagicOK/css-для-голого-html.md">css-для-голого-html</a></li></ul></li>
+	</ul></div>
+</nav>
+    <main>
+<!-- Преобразованный HTML -->
+<article class="prose prose-lg mx-auto">
+        <div class="content-wrapper">
+<zero-md src="./MTHL/README.md"></zero-md>        </div>
+    
+</article>  
+    </main>
+    <footer>
+        <p>Generated with PHP Markdown Navigation</p>
+    </footer>
+    
+    <div class="loading">Загрузка...</div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            // Обработка кликов по ссылкам в меню
+            $('nav').on('click', 'a[data-md]', function(e) {
+                e.preventDefault();
+                var mdFile = $(this).data('md');
+                
+                // Показываем индикатор загрузки
+                $('.loading').fadeIn();
+                
+                // Проверяем, существует ли уже элемент zero-md
+                var zeroMdElement = $('zero-md');
+                
+                if (zeroMdElement.length === 0) {
+                    // Если элемента нет, создаем его
+                    $('.content-wrapper').html('<zero-md src="' + mdFile + '"></zero-md>');
+                } else {
+                    // Если элемент уже есть, просто обновляем src
+                    zeroMdElement.attr('src', mdFile);
+                }
+                
+                // Обновляем URL без перезагрузки страницы
+                history.pushState(null, null, '?md=' + encodeURIComponent(mdFile));
+                
+                // На мобильных устройствах закрываем меню после выбора файла
+                if ($(window).width() <= 600) {
+                    $('#main-nav').removeClass('active');
+                    $('.mobile-menu-btn').removeClass('active');
+                }
+                
+                // Скрываем индикатор загрузки
+                $('.loading').fadeOut();
+            });
+            
+            // Обработка нажатия кнопки "назад" в браузере
+            window.onpopstate = function(event) {
+                if (location.search.includes('md=')) {
+                    var mdFile = location.search.split('md=')[1].split('&')[0];
+                    $('a[data-md="' + decodeURIComponent(mdFile) + '"]').click();
+                } else {
+                    $('.content-wrapper').html('<h1>Добро пожаловать!</h1><p>Выберите документ из меню слева.</p>');
+                }
+            };
+            
+            // Добавляем обработчики кликов для папок
+            $('.folder-name').on('click', function() {
+                $(this).parent().toggleClass('expanded');
+            });
+            
+            // Раскрываем папку, если в ней выбран текущий документ
+            if (location.search.includes('md=')) {
+                var mdFile = location.search.split('md=')[1].split('&')[0];
+                $('a[data-md="' + decodeURIComponent(mdFile) + '"]').each(function() {
+                    $(this).parents('.folder').addClass('expanded');
+                });
+            }
+			
+			// Меню
+            $('.menu-btn').click(function() {
+                //$(this).toggleClass('active');
+				//$('.mobile-menu-btn').removeClass('active');
+				//$('.mobile-menu-btn').display('none');
+                $('#main-nav').toggleClass('active');
+            });
+            
+            // Мобильное меню
+            $('.mobile-menu-btn').click(function() {
+                //$(this).toggleClass('active');
+                $('#main-nav').toggleClass('active');
+            });
+            
+            // При клике на файл
+            $('.file a').click(function() {
+                // Удаляем active у всех файлов
+                $('.file a').removeClass('active');
+                // Добавляем active к текущему
+                $(this).addClass('active');
+            });
+
+// Функция для Перепривязки обработчиков
+function bindFolderHandlers() {
+    $('.folder-name').off('click').on('click', function() {
+        $(this).parent().toggleClass('expanded');
+    });
+}
+			
+	// Обработка кнопок представления
+    $('.nav-btn[data-view]').on('click', function() {
+        const viewType = $(this).data('view');
+        
+        $.ajax({
+            url: window.location.href,
+            type: 'POST',
+            data: { 'v': viewType },
+            success: function(response) {
+                $('#menu-container').html(response);
+				bindFolderHandlers(); // Перепривязываем обработчики
+			},
+            error: function() {
+                alert('Ошибка при загрузке данных');
+            }
+        });
+    });
+
+    // Обработка кнопки сканирования
+    $('#scan-btn').on('click', function() {
+        $.ajax({
+            url: window.location.href,
+            type: 'POST',
+            data: { 'scan': 1 },
+            success: function(response) {
+                $('#menu-container').html(response);
+				bindFolderHandlers(); // Перепривязываем обработчики
+            },
+            error: function() {
+                alert('Ошибка при сканировании');
+            }
+        });
+    });
+        });
+    </script>
+
+	<script>
+$(document).ready(function() {
+    // Обработка кнопки скрытия/показа панели
+    $('#toggle-nav').on('click', function() {
+        $('#main-nav').toggleClass('active');
+    });
+});
+</script> 
+
+</body></html>
