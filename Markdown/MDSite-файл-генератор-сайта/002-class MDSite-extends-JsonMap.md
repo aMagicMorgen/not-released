@@ -2,6 +2,54 @@
 
 # Документация MDSite (Markdown Site Generator)
 
+```PHP
+/*
+#print_r(function_exists('mb_internal_encoding')); //проверка 1-подключено, 0 - не подключено
+error_reporting(E_ALL);
+ini_set('display_errors','on');
+mb_internal_encoding('UTF-8');
+*/
+/**
+ * MDSite - генератор структуры сайта на основе Markdown-файлов
+ * 
+ 
+ 
+
+#JsonMap::setExcludedDirs(['temp', 'cache']);
+
+
+
+// Получить текущие настройки
+#$config = MDSite::getConfig();
+
+
+* Настройки по умолчанию:
+ * - previewLines: количество строк для превью (по умолчанию 10)
+ * - excludeDirs: исключаемые директории
+ * - filePattern: паттерн для поиска файлов (по умолчанию /\d{2}-/)
+// Базовая инициализация
+// Изменить паттерн для файлов
+#JsonMap::setFilePattern('/\d{2}-/');
+ // Добавить исключаемые директории
+MDSite::setExcludedDirs(['tests', 'backup']);
+//СОЗДАТЬ ВСЕ ПУТИ К ФАЙЛАМ в массив json в файл index.json
+#MDSite::indexJson();
+ // извлекать Количество строк для превью
+MDSite::contentJson(15); // С превью по 15 строк
+
+
+// Получение данных
+$indexJson = MDSite::getIndex()
+$contentJson = MDSite::getContent();
+
+// Принудительное обновление
+#MDSite::indexJson();
+#MDSite::contentJson();
+ */
+
+```
+
+
 ## Обзор
 
 Класс `MDSite` (наследник `JsonMap`) предоставляет инструменты для генерации структуры сайта на основе Markdown-файлов. Основные функции:
