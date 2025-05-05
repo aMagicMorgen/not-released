@@ -396,5 +396,234 @@
       </div>
     </div>
   </section>
-</body></html>
+
+  <!-- Контакты -->
+  <section id="contact" class="section animate-fade-in">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="box tw-p-8 tw-rounded-2xl tw-shadow-md">
+            <h2 class="title is-2 has-text-centered tw-text-3xl tw-font-bold tw-mb-8">Свяжитесь с нами</h2>
+            
+            <form>
+              <div class="columns is-multiline">
+                <div class="column is-6">
+                  <div class="field">
+                    <label class="label tw-text-gray-700 tw-font-medium">Имя</label>
+                    <div class="control has-icons-left">
+                      <input class="input tw-rounded-lg tw-py-3" type="text" placeholder="Ваше имя">
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-user tw-text-gray-400"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="column is-6">
+                  <div class="field">
+                    <label class="label tw-text-gray-700 tw-font-medium">Email</label>
+                    <div class="control has-icons-left">
+                      <input class="input tw-rounded-lg tw-py-3" type="email" placeholder="Ваш email">
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-envelope tw-text-gray-400"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="column is-12">
+                  <div class="field">
+                    <label class="label tw-text-gray-700 tw-font-medium">Сообщение</label>
+                    <div class="control">
+                      <textarea class="textarea tw-rounded-lg tw-py-3" rows="5" placeholder="Ваше сообщение"></textarea>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="column is-12">
+                  <div class="field">
+                    <div class="control">
+                      <button class="button is-primary is-medium tw-w-full tw-rounded-lg tw-py-3 tw-font-bold tw-shadow-md hover:tw-shadow-lg transition-all">
+                        Отправить сообщение
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer tw-bg-gray-900 tw-text-white">
+    <div class="container">
+      <div class="columns is-multiline">
+        <div class="column is-4">
+          <h3 class="title is-4 tw-text-white tw-mb-4">HybridLand</h3>
+          <p class="tw-text-gray-300 tw-mb-4">
+            Пример гибридного лендинга с использованием Bulma и Tailwind CSS.
+          </p>
+          <div class="tw-flex tw-space-x-4">
+            <a href="#" class="tw-text-gray-300 hover:tw-text-white">
+              <i class="fab fa-2x fa-vk"></i>
+            </a>
+            <a href="#" class="tw-text-gray-300 hover:tw-text-white">
+              <i class="fab fa-2x fa-telegram"></i>
+            </a>
+            <a href="#" class="tw-text-gray-300 hover:tw-text-white">
+              <i class="fab fa-2x fa-github"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="column is-2">
+          <h4 class="title is-5 tw-text-white tw-mb-4">Меню</h4>
+          <ul class="tw-space-y-2">
+            <li><a href="#" class="tw-text-gray-300 hover:tw-text-white">Главная</a></li>
+            <li><a href="#features" class="tw-text-gray-300 hover:tw-text-white">Возможности</a></li>
+            <li><a href="#pricing" class="tw-text-gray-300 hover:tw-text-white">Цены</a></li>
+            <li><a href="#contact" class="tw-text-gray-300 hover:tw-text-white">Контакты</a></li>
+          </ul>
+        </div>
+        
+        <div class="column is-6">
+          <h4 class="title is-5 tw-text-white tw-mb-4">Подписка на новости</h4>
+          <div class="field has-addons">
+            <div class="control is-expanded">
+              <input class="input tw-rounded-l-full" type="email" placeholder="Ваш email">
+            </div>
+            <div class="control">
+              <button class="button is-primary tw-rounded-r-full">
+                Подписаться
+              </button>
+            </div>
+          </div>
+          <p class="tw-text-gray-400 tw-mt-2 tw-text-sm">
+            Подпишитесь, чтобы получать последние новости и обновления.
+          </p>
+        </div>
+      </div>
+      
+      <div class="tw-border-t tw-border-gray-800 tw-mt-8 tw-pt-8 tw-text-center tw-text-gray-400">
+        <p>© 2023 HybridLand. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Модальное окно регистрации -->
+  <div class="modal" id="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card tw-rounded-lg tw-overflow-hidden">
+      <header class="modal-card-head tw-bg-indigo-600">
+        <p class="modal-card-title tw-text-white">Создать аккаунт</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <div class="field">
+          <label class="label">Email</label>
+          <div class="control has-icons-left">
+            <input class="input tw-rounded-lg" type="email" placeholder="Ваш email">
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+          </div>
+        </div>
+        
+        <div class="field">
+          <label class="label">Пароль</label>
+          <div class="control has-icons-left">
+            <input class="input tw-rounded-lg" type="password" placeholder="Ваш пароль">
+            <span class="icon is-small is-left">
+              <i class="fas fa-lock"></i>
+            </span>
+          </div>
+        </div>
+        
+        <div class="field tw-mt-6">
+          <div class="control">
+            <button class="button is-primary is-fullwidth tw-rounded-lg tw-py-3 tw-font-bold">
+              Зарегистрироваться
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Бургер-меню
+      const navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      if (navbarBurgers.length > 0) {
+        navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+            const target = el.dataset.target;
+            const targetEl = document.getElementById(target);
+            el.classList.toggle('is-active');
+            targetEl.classList.toggle('is-active');
+          });
+        });
+      }
+      
+      // Модальное окно
+      const modal = document.getElementById('modal');
+      const modalBtn = document.getElementById('registerBtn');
+      const closeBtns = document.querySelectorAll('.delete, .modal-background');
+      
+      modalBtn.addEventListener('click', () => {
+        modal.classList.add('is-active');
+      });
+      
+      closeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          modal.classList.remove('is-active');
+        });
+      });
+      
+      // Плавный скролл для якорей
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
 ```
+
+## 🔥 Ключевые особенности этого гибридного лендинга:
+
+1. **Гармоничное сочетание Bulma и Tailwind**:
+   - Используем Bulma для основных компонентов (навбар, карточки, модальные окна)
+   - Tailwind для тонкой настройки стилей (тени, скругления, анимации)
+
+2. **Дополнительные улучшения**:
+   - Анимация появления секций
+   - Кастомные волны в герой-секции
+   - Полностью адаптивный дизайн
+   - Интерактивные элементы с hover-эффектами
+   - Пример кода с подсветкой
+   - Плавная прокрутка по якорям
+
+3. **Оптимизация совместного использования**:
+   - Префиксы для Tailwind-классов (`tw-`)
+   - Отключение preflight в Tailwind
+   - Кастомные стили для устранения конфликтов
+
+4. **Дополнительные компоненты**:
+   - Улучшенный футер с подпиской
+   - Секция с преимуществами
+   - Пример кода для наглядности
+
+Этот лендинг демонстрирует, как можно комбинировать оба фреймворка, но для production-проектов лучше выбрать один подход.
