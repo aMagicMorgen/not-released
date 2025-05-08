@@ -16,13 +16,7 @@
 /* <!--MDS-->   
 
 <!-- ===== КНОПКИ ===== -->  
-.mds-btn {  
-  button  
-  tw-px-6 tw-py-2  
-  tw-rounded-[var(--mds-radius)]  
-  tw-transition-all  
-  hover:tw-scale-105  
-}  
+.mds-btn {  button  tw-px-6 tw-py-2   tw-rounded-[var(--mds-radius)]   tw-transition-all hover:tw-scale-105 }  
 
 .mds-btn-primary {  
   .mds-btn  
