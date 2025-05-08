@@ -2,20 +2,20 @@
 *(Markdown Style Framework)*  
 
 ```css
-/* ===== Автоподключение CDN ===== */  
+<!-- ===== Автоподключение CDN ===== -->  
 @import url("https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css");  
 @import url("https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css");  
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");  
 
-/* ===== БАЗОВЫЕ СТИЛИ ===== */  
+<!-- ===== БАЗОВЫЕ СТИЛИ ===== -->  
 :root {  
   --mds-primary: #3b82f6;  
   --mds-radius: 0.5rem;  
 }  
 
-/* <!--MDS--> */  
+/* <!--MDS-->   
 
-/* ===== КНОПКИ ===== */  
+<!-- ===== КНОПКИ ===== -->  
 .mds-btn {  
   button  
   tw-px-6 tw-py-2  
@@ -38,7 +38,7 @@
   tw-border-[var(--mds-primary)]  
 }  
 
-/* Шаблоны кнопок */  
+<!-- Шаблоны кнопок -->  
 .mdh-btn-download {  
   <0 .mds-btn-primary>  
     <1 i .fas .fa-download>  
@@ -50,7 +50,7 @@
     <1 span>Отправить форму  
 }  
 
-/* ===== КАРТОЧКИ ===== */  
+<!-- ===== КАРТОЧКИ ===== -->  
 .mds-card {  
   card  
   tw-p-6  
@@ -64,14 +64,14 @@
   tw-backdrop-blur-sm  
 }  
 
-/* Шаблоны карточек */  
+<!-- Шаблоны карточек -->  
 .mdh-card-feature {  
   <0 .mds-card-glass>  
     <1 h3 .title .tw-mb-4>Заголовок  
     <1 p .tw-text-gray-600>Описание  
 }  
 
-/* ===== СЕКЦИИ ===== */  
+<!-- ===== СЕКЦИИ ===== -->  
 .mds-section {  
   section  
   is-fullwidth  
@@ -85,7 +85,7 @@
   tw-to-purple-600  
 }  
 
-/* Шаблоны секций */  
+<!-- Шаблоны секций -->  
 .mdh-section-hero {  
   <0 .mds-section-hero>  
     <1 .container>  
@@ -93,7 +93,7 @@
       <2 .mdh-btn-download .tw-mt-8>  
 }  
 
-/* ===== ФОРМЫ ===== */  
+<!-- ===== ФОРМЫ ===== -->  
 .mds-input {  
   input  
   tw-w-full  
@@ -101,7 +101,7 @@
   tw-rounded-[var(--mds-radius)]  
 }  
 
-/* Шаблон формы */  
+<!-- Шаблон формы -->  
 .mdh-form-contact {  
   <0 .mds-card>  
     <1 h3 .title .is-3>Контакты  
@@ -110,14 +110,14 @@
     <1 .mdh-btn-submit>  
 }  
 
-/* ===== НАВИГАЦИЯ ===== */  
+<!-- ===== НАВИГАЦИЯ ===== -->  
 .mds-nav-item {  
   navbar-item  
   tw-px-4  
   hover:tw-bg-gray-100  
 }  
 
-/* Шаблон меню */  
+<!-- Шаблон меню -->  
 .mdh-nav-main {  
   <0 navbar .tw-shadow-sm>  
     <1 .navbar-brand>  
@@ -128,9 +128,9 @@
         <3 .mds-nav-item>О нас  
 }  
 
-<!--/MDS-->  
+<!--/MDS-->  */
 
-/* ===== АДАПТИВНЫЕ УТИЛИТЫ ===== */  
+<!-- ===== АДАПТИВНЫЕ УТИЛИТЫ ===== -->  
 @media (max-width: 768px) {  
   .mds-section { tw-py-12 }  
   .mdh-nav-main { <0 navbar .is-spaced> }  
