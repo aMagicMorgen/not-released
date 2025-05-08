@@ -2,12 +2,12 @@
 *(Markdown Style Framework)*  
 
 ```css
-<!-- ===== Автоподключение CDN ===== -->  
+/* ===== Автоподключение CDN ===== */ 
 @import url("https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css");  
 @import url("https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css");  
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");  
 
-<!-- ===== БАЗОВЫЕ СТИЛИ ===== -->  
+/* ===== БАЗОВЫЕ СТИЛИ ===== */ 
 :root {  
   --mds-primary: #3b82f6;  
   --mds-radius: 0.5rem;  
