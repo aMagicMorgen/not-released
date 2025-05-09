@@ -234,4 +234,134 @@
 2. Добавить валидацию полей  
 3. Создать документацию с примерами  
 
-Утвердите направление — внедрю изменения!
+### **MDS Input Библиотека с нанизыванием в массиве**
+
+Файл: `mds-input.css`
+
+```css
+/*
+<!--MDS-->
+/* ===== БАЗОВЫЙ КЛАСС ===== */
+.mds-input {
+  input
+  w-full
+  border
+  border-gray-300
+  transition-all
+  duration-200
+  focus:outline-none
+  focus:ring-2
+  focus:ring-blue-200
+  focus:border-blue-500
+}
+
+/* ===== МОДИФИКАТОРЫ ===== */
+
+/* Размеры */
+.mds-input[xs] { px-2 py-1 text-xs h-8 }
+.mds-input[sm] { px-3 py-2 text-sm h-10 }
+.mds-input[md] { px-4 py-3 h-12 }
+.mds-input[lg] { px-5 py-4 text-lg h-14 }
+.mds-input[xl] { px-6 py-5 text-xl h-16 }
+
+/* Стили */
+.mds-input[outline] {
+  bg-transparent
+  border-2
+  border-current
+}
+.mds-input[filled] {
+  bg-gray-100
+  border-none
+  focus:bg-white
+}
+.mds-input[underline] {
+  border-0
+  border-b-2
+  rounded-none
+  px-1
+}
+
+/* Состояния */
+.mds-input[disabled] {
+  opacity-50
+  cursor-not-allowed
+}
+.mds-input[error] {
+  border-red-500
+  focus:ring-red-200
+}
+.mds-input[success] {
+  border-green-500
+  focus:ring-green-200
+}
+
+/* Иконки */
+.mds-input[icon-left] { pl-10 }
+.mds-input[icon-right] { pr-10 }
+.mds-input[icon-both] { px-10 }
+
+/* Дополнительно */
+.mds-input[rounded] { rounded-full }
+.mds-input[transparent] { bg-transparent }
+<!--/MDS-->
+*/
+```
+
+### **Примеры использования**
+
+```html
+<!-- Базовый input -->
+<input class="mds-input-md">
+
+<!-- Input с нанизанными свойствами -->
+<input class="mds-input-lg-outline-error-icon-left">
+
+<!-- Группа свойств -->
+<input class="mds-input-xl-filled-success-rounded">
+```
+
+### **Как работает парсер**
+
+1. Разбивает класс на части по шаблону:
+   ```js
+   "mds-input-lg-outline-error-icon-left" → ["lg", "outline", "error", "icon-left"]
+   ```
+
+2. Для каждой части ищет соответствующий `[модификатор]` в CSS:
+   ```css
+   .mds-input[lg] { ... }
+   .mds-input[outline] { ... }
+   ```
+
+3. Комбинирует все найденные стили в правильном порядке.
+
+### **Преимущества системы**
+
+1. **Компактность**: Один класс вместо нескольких
+2. **Гибкость**: 100+ комбинаций из 15 модификаторов
+3. **Читаемость**: Логичная структура `размер-стиль-состояние`
+
+### **Полный список модификаторов**
+
+| Категория  | Модификаторы                     |
+|------------|----------------------------------|
+| Размеры    | `xs`, `sm`, `md`, `lg`, `xl`     |
+| Стили      | `outline`, `filled`, `underline` |
+| Состояния  | `disabled`, `error`, `success`   |
+| Иконки     | `icon-left`, `icon-right`        |
+| Дополнительно | `rounded`, `transparent`      |
+
+### **Интеграция с иконками**
+
+```html
+<div class="relative">
+  <input class="mds-input-lg-icon-left" placeholder="Поиск">
+  <i class="absolute left-3 top-1/2 transform -translate-y-1/2 fas fa-search"></i>
+</div>
+```
+
+Эта система:
+- Сохраняет все преимущества нанизывания свойств
+- Позволяет создавать сложные комбинации одним классом
+- Остается легко расширяемой для новых модификаторов
