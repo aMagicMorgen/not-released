@@ -286,4 +286,106 @@
 2. Добавить `mds-cards.css` с вариантами карточек  
 3. Разработать `mds-nav.css` для навигации  
 
-Какой модуль сделать следующим?
+ты забыл, наш стиль написания
+мы пишем так в css файле
+/*
+<!--MDS
+.mds-btn {button px-6 py-3 rounded-lg font-medium transition-all duration-200 focus:outline-none}
+/MDS-->
+*/
+
+> это строка в скрытом закоментированном > виде, которую будет парсить class MDS и > затем подставлять эти цепочки в соответствующий суперклассов класс тега
+перепиши это все в правильном нашем формате
+>
+### **Файл `mds-btn.css`** *(в формате MDS-парсера)*
+
+```css
+/*
+<!--MDS-->
+/* ===== БАЗОВАЯ КНОПКА ===== */
+.mds-btn { button px-6 py-3 rounded-lg font-medium transition-all duration-200 focus:outline-none }
+
+/* ===== ЦВЕТА ===== */
+.mds-btn-red { button is-danger bg-red-600 hover:bg-red-700 text-white }
+.mds-btn-blue { button is-primary bg-blue-600 hover:bg-blue-700 text-white }
+.mds-btn-green { button is-success bg-green-600 hover:bg-green-700 text-white }
+.mds-btn-gray { button is-light bg-gray-200 hover:bg-gray-300 text-gray-800 }
+.mds-btn-white { button is-white border-2 border-gray-300 hover:border-gray-400 }
+
+/* ===== ФОРМЫ ===== */
+.mds-btn-1 { rounded } /* Прямоугольная */
+.mds-btn-2 { rounded-xl } /* Скругленная */
+.mds-btn-3 { rounded-full p-4 aspect-square } /* Круглая */
+
+/* ===== РАЗМЕРЫ ===== */
+.mds-btn-sm { px-4 py-2 text-sm }
+.mds-btn-md { px-6 py-3 }
+.mds-btn-lg { px-8 py-4 text-lg }
+
+/* ===== СОСТОЯНИЯ ===== */
+.mds-btn-disabled { opacity-50 cursor-not-allowed }
+.mds-btn-loading { relative pl-10 }
+.mds-btn-loading:after { absolute left-3 top-1/2 -translate-y-1/2 content: "" border-2 border-current border-t-transparent rounded-full w-4 h-4 animate-spin }
+
+/* ===== ГРУППЫ ===== */
+.mds-btn-group-h { flex gap-2 }
+.mds-btn-group-v { flex flex-col gap-2 }
+.mds-btn-group-c { flex justify-center gap-2 }
+
+/* ===== ЭФФЕКТЫ ===== */
+.mds-btn-glass { bg-white/10 backdrop-blur-sm border border-white/20 }
+.mds-btn-hover-scale { hover:scale-105 transform transition-transform }
+.mds-btn-shadow { shadow-md hover:shadow-lg }
+<!--/MDS-->
+*/
+```
+
+### **Файл `mds.css`** *(главный импортер)*
+```css
+/*
+<!--MDS-->
+/* Подключение CDN */
+.mds-bulma-cdn { @import url('https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css') }
+.mds-tailwind-cdn { @import url('https://cdn.jsdelivr.net/npm/@tailwindcss/utilities@latest') }
+
+/* Подключение модулей */
+.mds-btn-module { @import 'mds-btn.css' }
+<!--/MDS-->
+*/
+```
+
+### **Особенности формата**:
+1. **Строгий синтаксис**:
+   - Каждое правило в одной строке
+   - Без точек с запятой
+   - Пробелы между классами
+
+2. **Структура**:
+   ```css
+   .суперкласс { класс1 класс2 класс3 }
+   ```
+
+3. **Поддержка псевдоэлементов**:
+   ```css
+   .mds-btn-loading:after { ... }
+   ```
+
+4. **Комментарии**:
+   - Разделы помечаются стандартными CSS-комментариями
+   - Блоки обрамляются `<!--MDS--> ... <!--/MDS-->`
+
+### **Пример использования**:
+```html
+<!-- В HTML -->
+<button class="mds-btn mds-btn-blue mds-btn-2 mds-btn-lg">
+  Кнопка
+</button>
+
+<!-- После обработки парсером -->
+<button class="button is-primary bg-blue-600 hover:bg-blue-700 text-white rounded-xl px-8 py-4 text-lg">
+  Кнопка
+</button>
+```
+
+Для добавления новых компонентов просто создавайте файлы по аналогии (`mds-forms.css`, `mds-cards.css`) и подключайте их в главном `mds.css`.
+
