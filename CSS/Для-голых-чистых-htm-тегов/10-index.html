@@ -34,6 +34,37 @@
       transform: translateY(-5px);
       box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
     }
+  
+    /* Базовые отступы и скругления */
+    body {
+      padding: 1rem;
+      background-color: #f8f9fa; /* Лёгкий серый фон */
+    }
+
+    .section, .box, .hero {
+      border-radius: 12px !important;
+      margin-bottom: 2rem !important;
+    }
+
+    .button {
+      border-radius: 8px !important;
+    }
+
+    /* Тени */
+    .section, .box {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .box:hover {
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    /* Адаптивность */
+    @media (min-width: 768px) {
+      body {
+        padding: 2rem;
+      }
+    }
   </style>
 </head>
 <body class="tw-bg-gray-50 tw-font-sans">
