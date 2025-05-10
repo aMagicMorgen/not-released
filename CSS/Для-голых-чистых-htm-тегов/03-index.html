@@ -4,19 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Design System Demo</title>
-    <link rel="stylesheet" href="mds-html.css">
-<style>
-/* <!--MDS--> */
-/* ===== ЯДРО СИСТЕМЫ ===== */
-/* 1. Подключение CDN */
-@import url('https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css');
-@import url('https://cdn.tailwindcss.com');
-@tailwind base;
-@tailwind utilities;
+    <!--link rel="stylesheet" href="mds-html.css"-->
+  <!-- Подключаем Bulma CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  
+  <!-- Подключаем Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Кастомные стили для тегов -->
+  <style>
+    /* Базовые стили */
+    body {
+      font-family: 'Inter', sans-serif;
+      @apply bg-gray-50 text-gray-800 antialiased;
+    }
+    
+    /* Навигация */
+    nav {
+      @apply py-4 px-6 bg-white shadow-sm;
+    }
+    
+    nav ul {
+      @apply flex gap-6 items-center;
+    }
+    
+    nav a {
+      @apply text-gray-700 hover:text-indigo-600 transition-colors;
+    }
+    
+    /* Кнопки */
+    button {
+      @apply px-5 py-2 rounded-lg font-medium transition-all;
+    }
+    
+    button.primary {
+      @apply bg-indigo-600 text-white hover:bg-indigo-700 shadow-md hover:shadow-lg;
+    }
+    
+    /* Формы */
+    input, textarea {
+      @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500;
+    }
+    
+    /* Карточки */
+    article {
+      @apply bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow;
+    }
+    
+    /* Адаптивные контейнеры */
+    .container {
+      @apply max-w-7xl mx-auto px-4;
+    }
 
-/* 2. Современные шрифты и иконки */
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
 :root {
   --mds-primary: #6366f1;  /* Индиго */
