@@ -2,8 +2,8 @@ const MDS = {
   styles: {
     /* === Основные структурные элементы === */
     'html': 'scroll-behavior-smooth',
-    'body': 'min-h-screen bg-gray-50 font-sans text-gray-900 antialiased p-4 md:p-0',
-    'header': 'bg-white shadow-sm py-4 px-6 mb-8 sticky top-0 z-50',
+    'body': 'min-h-screen bg-gray-50 font-sans text-gray-900 antialiased md:p-0', /*p-4*/
+    'header': 'bg-white shadow-sm sticky top-0 z-50', /*py-4 px-6 mb-8 */
     'footer': 'bg-gray-800 text-gray-300 py-12 mt-20 px-6',
     'main': 'container mx-auto px-4 py-8 max-w-7xl',
     'section': 'py-16 first:pt-12 last:pb-20',
