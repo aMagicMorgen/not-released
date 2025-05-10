@@ -13,13 +13,13 @@ const MDS = {
     /* === Навигация === */
   /*  'nav': 'bg-white/80 backdrop-blur-md py-4 px-6 rounded-xl mb-8',
     'nav ul': 'flex flex-wrap gap-6 items-center',
-    'nav li': 'list-none',
-    'nav a': 'text-gray-700 hover:text-indigo-600 transition-colors px-3 py-2 rounded-lg hover:bg-gray-100/50',*/
+    'nav li': 'list-none',*/
+    'nav a': 'text-gray-700 hover:text-indigo-600 transition-colors px-3 py-2 rounded-lg hover:bg-gray-100/50',
 
     'nav': 'navbar is-white is-fixed-top', // Добавляем fixed-top
 'nav ul': 'navbar-start',
 'nav li': 'navbar-item',
-'nav a': 'navbar-link',
+/*'nav a': 'navbar-link',*/
     
     /* === Типография === */
     'h1': 'text-4xl md:text-5xl font-extrabold mb-8 mt-12 bg-gradient-to-r from-indigo-600 to-pink-500 bg-clip-text text-transparent',
