@@ -9,6 +9,17 @@
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
+  tailwind.config = {
+    prefix: 'tw-',
+    corePlugins: {
+      preflight: false, // Отключаем сброс стилей (чтобы не мешать Bulma)
+    },
+    // Разрешаем @apply для всех утилит
+    important: true,
+  }
+</script>
+
+<!--script>
     tailwind.config = {
       prefix: 'tw-',
       corePlugins: {
@@ -24,7 +35,7 @@
         }
       }
     }
-  </script>
+      </script-->
   <style>
     /* Дополнительные кастомные стили */
     .hero-bg {
