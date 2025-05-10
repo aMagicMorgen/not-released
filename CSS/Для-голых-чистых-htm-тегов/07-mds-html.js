@@ -13,7 +13,7 @@ const MDS = {
     /* === Навигация === */
   /*  'nav': 'bg-white/80 backdrop-blur-md py-4 px-6 rounded-xl mb-8',
     'nav ul': 'flex flex-wrap gap-6 items-center',
-    'nav li': 'list-none',*/
+    'nav li': 'list-none',*/ 
     'nav a': 'text-gray-700 hover:text-indigo-600 transition-colors px-3 py-2 rounded-lg hover:bg-gray-100/50',
 
     'nav': 'navbar is-white is-fixed-top', // Добавляем fixed-top
