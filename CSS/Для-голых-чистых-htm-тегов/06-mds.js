@@ -2,7 +2,7 @@ const MDS = {
   styles: {
     /* === Структурные элементы === */
     'html': 'scroll-behavior-smooth',
-    'body': 'min-h-screen bg-gray-50 font-inter antialiased text-gray-900',
+    'body': 'min-h-screen m-6 bg-gray-50 font-inter antialiased text-gray-900',
     'header': 'bg-white shadow-sm py-4 sticky top-0 z-50',
     'footer': 'bg-gray-800 text-gray-300 py-12 mt-20',
     'main': 'container mx-auto px-4 py-8',
