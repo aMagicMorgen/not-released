@@ -74,7 +74,7 @@ const MDS = {
     'div.div2': 'bg-gradient-to-r from-indigo-50 to-blue-50 rounded-3xl p-10 mb-10 text-center', // Герой-блок
     'div.div3': 'bg-gray-100 rounded-lg p-6 mb-6 border-l-8 border-gray-300', // Панель
     'div.div4': 'grid grid-cols-1 md:grid-cols-2 gap-8 mb-10', // 2-колоночная сетка
-    'div.div5': 'bg-black/90 text-white p-6 rounded-xl backdrop-blur-sm', // Темный стеклянный блок
+    'div.div5': 'bg-black/10 text-white p-6 rounded-xl backdrop-blur-sm', // Темный стеклянный блок
     'div.div6': 'flex flex-col sm:flex-row gap-6 mb-8', // Горизонтальный контейнер
     'div.div7': 'bg-white/80 border border-gray-200 rounded-xl p-6 shadow-inner', // Светлый интерактивный блок
 
