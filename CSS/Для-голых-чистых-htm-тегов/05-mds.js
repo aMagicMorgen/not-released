@@ -27,7 +27,7 @@ const MDS = {
     'body': 'min-h-screen bg-gray-50',
     'header': 'bg-white shadow-sm py-4',
     'footer': 'bg-gray-800 text-white py-8 mt-12',
-    'section': 'py-12',
+    'section': 'py-16 m-2',
     'div': 'mb-4',
     
     // Навигация
