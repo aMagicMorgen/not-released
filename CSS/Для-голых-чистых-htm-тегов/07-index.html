@@ -12,12 +12,27 @@
     <script src="07-mds.js"></script>
     <!-- Font Awesome для иконок -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+@media screen and (max-width: 1023px) {
+  .navbar-menu {
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+    padding: 0.5rem 0;
+  }
+  
+  .navbar-item {
+    padding: 0.75rem 1rem;
+  }
+}
+    
+</style>
+
 </head>
 <body>
     <!-- Шапка -->
-    <header>
+    <!--header>
         <nav>
-            <div class="div6"> <!-- Горизонтальный контейнер -->
+            <div class="div6">
                 <a href="#">
                     <span class="text-2xl font-bold text-indigo-600">MDS</span>
                 </a>
@@ -30,8 +45,39 @@
                 <button>Демо</button>
             </div>
         </nav>
-    </header>
+</header-->
+<header>
+  <nav class="navbar is-white" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">
+        <span class="text-2xl font-bold text-indigo-600">MDS</span>
+      </a>
 
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasic" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="#features">Возможности</a>
+        <a class="navbar-item" href="#pricing">Цены</a>
+        <a class="navbar-item" href="#gallery">Галерея</a>
+        <a class="navbar-item" href="#contact">Контакты</a>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary">Демо</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
     <!-- Герой-секция -->
     <main>
         <section>
@@ -226,5 +272,25 @@
             <p>© 2023 Modern Design System. Все права защищены.</p>
         </div>
     </footer>
+
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Получаем все "бургеры" на странице
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Добавляем обработчик клика на каждый
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+      // Получаем цель из атрибута "data-target"
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      // Переключаем класс "is-active"
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+    });
+  });
+});
+</script>
 </body>
 </html>
