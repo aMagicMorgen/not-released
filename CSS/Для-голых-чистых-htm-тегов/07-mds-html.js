@@ -10,17 +10,16 @@ const MDS = {
     'article': 'bg-white rounded-xl shadow-md overflow-hidden mb-10 p-6',
     'aside': 'bg-gray-100 p-6 rounded-lg border-l-4 border-indigo-500 mb-8',
 
-    /* === Навигация === */ 
-  /*  'nav': 'bg-white/80 backdrop-blur-md py-4 px-6 rounded-xl mb-8',
-    'nav ul': 'flex flex-wrap gap-6 items-center',
-    'nav li': 'list-none',*/ 
+    /* === Навигация === */
+   //'nav': 'bg-white/80 backdrop-blur-md py-4 px-6 rounded-xl mb-8',
+   'nav': 'navbar is-white is-fixed-top',
+    //'nav ul': 'flex flex-wrap gap-6 items-center',
+	'nav ul': 'navbar-start',
+    //'nav li': 'list-none',
+	'nav li': 'navbar-item',
     'nav a': 'text-gray-700 hover:text-indigo-600 transition-colors px-3 py-2 rounded-lg hover:bg-gray-100/50',
-
-    'nav': 'navbar is-white is-fixed-top', // Добавляем fixed-top
-'nav ul': 'navbar-start',
-'nav li': 'navbar-item',
-/*'nav a': 'navbar-link',*/
-    
+	//'nav a': 'navbar-link',
+ 
     /* === Типография === */
     'h1': 'text-4xl md:text-5xl font-extrabold mb-8 mt-12 bg-gradient-to-r from-indigo-600 to-pink-500 bg-clip-text text-transparent',
     'h2': 'text-3xl font-bold mb-8 mt-10 text-gray-900 border-b pb-2 border-gray-200',
@@ -70,13 +69,13 @@ const MDS = {
     'iframe': 'rounded-xl shadow-md w-full aspect-video my-8',
 
     /* === Специальные div-классы === */
-    'div.div1': 'bg-white rounded-2xl shadow-xl p-8 mb-8 border-t-4 border-indigo-500', // Карточка с акцентной полосой
-    'div.div2': 'bg-gradient-to-r from-indigo-50 to-blue-50 rounded-3xl p-10 mb-10 text-center', // Герой-блок
-    'div.div3': 'bg-gray-100 rounded-lg p-6 mb-6 border-l-8 border-gray-300', // Панель
-    'div.div4': 'grid grid-cols-1 md:grid-cols-2 gap-8 mb-10', // 2-колоночная сетка
-    'div.div5': 'bg-black/10 text-white p-6 rounded-xl backdrop-blur-sm', // Темный стеклянный блок
-    'div.div6': 'flex flex-col sm:flex-row gap-6 mb-8', // Горизонтальный контейнер
-    'div.div7': 'bg-white/80 border border-gray-200 rounded-xl p-6 shadow-inner', // Светлый интерактивный блок
+    'div.div-card': 'bg-white rounded-2xl shadow-xl p-8 mb-8 border-t-4 border-indigo-500', // Карточка с акцентной полосой
+    'div.div-heroy': 'bg-gradient-to-r from-indigo-50 to-blue-50 rounded-3xl p-10 mb-10 text-center', // Герой-блок
+    'div.div-panel': 'bg-gray-100 rounded-lg p-6 mb-6 border-l-8 border-gray-300', // Панель
+    'div.div-col2': 'grid grid-cols-1 md:grid-cols-2 gap-8 mb-10', // 2-колоночная сетка
+    'div.div-block-dark': 'bg-black/10 text-white p-6 rounded-xl backdrop-blur-sm', // Темный стеклянный блок
+    'div.div-h': 'flex flex-col sm:flex-row gap-6 mb-8', // Горизонтальный контейнер
+    'div.div-block': 'bg-white/80 border border-gray-200 rounded-xl p-6 shadow-inner', // Светлый интерактивный блок
 
     /* === Прочие элементы === */
     'hr': 'my-12 border-t border-gray-200',
