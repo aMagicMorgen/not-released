@@ -10,7 +10,7 @@ const MDS = {
     'article': 'bg-white rounded-xl shadow-md overflow-hidden mb-10 p-6',
     'aside': 'bg-gray-100 p-6 rounded-lg border-l-4 border-indigo-500 mb-8',
 
-    /* === Навигация === */
+    /* === Навигация === */ 
   /*  'nav': 'bg-white/80 backdrop-blur-md py-4 px-6 rounded-xl mb-8',
     'nav ul': 'flex flex-wrap gap-6 items-center',
     'nav li': 'list-none',*/ 
