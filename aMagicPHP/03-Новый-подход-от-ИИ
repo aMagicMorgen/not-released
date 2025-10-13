@@ -1,0 +1,578 @@
+ИИ. Я разработаю улучшенную версию этой системы с современным подходом. Вот моя реализация:
+
+1. Структура проекта
+
+```
+project/
+├── composer.json
+├── public/
+│   └── index.php
+├── src/
+│   ├── Core/
+│   ├── Builders/
+│   ├── Components/
+│   └── Utilities/
+├── templates/
+├── assets/
+└── config/
+```
+
+2. Основной код системы
+
+composer.json
+
+```json
+{
+    "name": "amagic/framework",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "AMagic\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=8.1",
+        "ext-dom": "*",
+        "ext-mbstring": "*"
+    }
+}
+```
+
+src/Core/Application.php
+
+```php
+<?php
+
+namespace AMagic\Core;
+
+class Application
+{
+    private array $config;
+    private PageBuilder $pageBuilder;
+    private FileManager $fileManager;
+
+    public function __construct(array $config = [])
+    {
+        $this->config = array_merge($this->getDefaultConfig(), $config);
+        $this->fileManager = new FileManager();
+        $this->pageBuilder = new PageBuilder($this->config);
+    }
+
+    public function run(): void
+    {
+        try {
+            $this->initializeProject();
+            $pageContent = $this->pageBuilder->build();
+            echo $pageContent;
+        } catch (\Exception $e) {
+            $this->handleError($e);
+        }
+    }
+
+    private function initializeProject(): void
+    {
+        $this->fileManager->createDirectories($this->config['directories']);
+        $this->fileManager->createDefaultFiles($this->config['default_files']);
+    }
+
+    private function getDefaultConfig(): array
+    {
+        return [
+            'lang' => 'ru',
+            'title' => 'AMagic Project',
+            'charset' => 'UTF-8',
+            'directories' => [
+                'pages' => 'pages/',
+                'templates' => 'templates/',
+                'assets' => [
+                    'css' => 'assets/css/',
+                    'js' => 'assets/js/',
+                    'images' => 'assets/images/'
+                ]
+            ]
+        ];
+    }
+
+    private function handleError(\Exception $e): void
+    {
+        if ($this->config['debug']) {
+            echo "<div style='color: red; padding: 20px; border: 1px solid red;'>Error: {$e->getMessage()}</div>";
+        } else {
+            echo "An error occurred. Please try again later.";
+        }
+    }
+}
+```
+
+src/Builders/PageBuilder.php
+
+```php
+<?php
+
+namespace AMagic\Builders;
+
+use AMagic\Components\Head;
+use AMagic\Components\Body;
+use AMagic\Utilities\HtmlMinifier;
+use AMagic\Utilities\Security;
+
+class PageBuilder
+{
+    private array $config;
+    private Head $head;
+    private Body $body;
+    private HtmlMinifier $minifier;
+
+    public function __construct(array $config)
+    {
+        $this->config = $config;
+        $this->head = new Head($config);
+        $this->body = new Body($config);
+        $this->minifier = new HtmlMinifier();
+    }
+
+    public function build(): string
+    {
+        $pageData = $this->collectPageData();
+        
+        $html = $this->renderTemplate('layout', $pageData);
+        
+        if ($this->config['minify_html']) {
+            $html = $this->minifier->minify($html);
+        }
+
+        return $html;
+    }
+
+    private function collectPageData(): array
+    {
+        return [
+            'lang' => Security::escape($this->config['lang']),
+            'title' => Security::escape($this->config['title']),
+            'head' => $this->head->build(),
+            'body' => $this->body->build(),
+            'attributes' => [
+                'body' => $this->config['body_attributes'] ?? ''
+            ]
+        ];
+    }
+
+    private function renderTemplate(string $template, array $data): string
+    {
+        $templatePath = $this->config['directories']['templates'] . $template . '.php';
+        
+        if (!file_exists($templatePath)) {
+            return $this->renderDefaultTemplate($data);
+        }
+
+        extract($data, EXTR_SKIP);
+        ob_start();
+        include $templatePath;
+        return ob_get_clean();
+    }
+
+    private function renderDefaultTemplate(array $data): string
+    {
+        return sprintf(
+            '<!DOCTYPE html>
+            <html lang="%s">
+            <head>
+                <meta charset="%s">
+                <title>%s</title>
+                %s
+            </head>
+            <body %s>
+                %s
+            </body>
+            </html>',
+            $data['lang'],
+            $this->config['charset'],
+            $data['title'],
+            $data['head'],
+            $data['attributes']['body'],
+            $data['body']
+        );
+    }
+}
+```
+
+src/Components/Head.php
+
+```php
+<?php
+
+namespace AMagic\Components;
+
+use AMagic\Utilities\Security;
+
+class Head
+{
+    private array $metaTags = [];
+    private array $links = [];
+    private array $scripts = [];
+    private array $styles = [];
+
+    public function __construct(array $config)
+    {
+        $this->initializeDefaultTags($config);
+    }
+
+    public function addMeta(array $attributes): void
+    {
+        $this->metaTags[] = $attributes;
+    }
+
+    public function addLink(array $attributes): void
+    {
+        $this->links[] = $attributes;
+    }
+
+    public function addScript(string $src, array $attributes = []): void
+    {
+        $this->scripts[] = [
+            'src' => $src,
+            'attributes' => $attributes
+        ];
+    }
+
+    public function addStyle(string $content, bool $isInline = false): void
+    {
+        if ($isInline) {
+            $this->styles[] = $content;
+        } else {
+            $this->links[] = [
+                'rel' => 'stylesheet',
+                'href' => $content
+            ];
+        }
+    }
+
+    public function build(): string
+    {
+        $output = [];
+        
+        // Meta tags
+        foreach ($this->metaTags as $meta) {
+            $output[] = $this->buildTag('meta', $meta, true);
+        }
+        
+        // Links
+        foreach ($this->links as $link) {
+            $output[] = $this->buildTag('link', $link, true);
+        }
+        
+        // Styles
+        if (!empty($this->styles)) {
+            $output[] = '<style>' . implode('', $this->styles) . '</style>';
+        }
+        
+        // Scripts
+        foreach ($this->scripts as $script) {
+            $output[] = $this->buildTag('script', 
+                array_merge(['src' => $script['src']], $script['attributes']), 
+                false
+            );
+        }
+
+        return implode("\n    ", $output);
+    }
+
+    private function initializeDefaultTags(array $config): void
+    {
+        // Default meta tags
+        $this->addMeta(['charset' => $config['charset']]);
+        $this->addMeta(['name' => 'viewport', 'content' => 'width=device-width, initial-scale=1.0']);
+        
+        // Default CSS
+        $this->addStyle($config['assets']['css'] . 'style.css');
+        
+        // Default JS
+        $this->addScript($config['assets']['js'] . 'app.js', ['defer' => true]);
+    }
+
+    private function buildTag(string $tag, array $attributes, bool $selfClosing): string
+    {
+        $attrString = '';
+        foreach ($attributes as $key => $value) {
+            if ($value === true) {
+                $attrString .= " $key";
+            } elseif ($value !== false) {
+                $attrString .= sprintf(' %s="%s"', $key, Security::escape($value));
+            }
+        }
+
+        if ($selfClosing) {
+            return "<{$tag}{$attrString}>";
+        } else {
+            return "<{$tag}{$attrString}></{$tag}>";
+        }
+    }
+}
+```
+
+src/Components/Body.php
+
+```php
+<?php
+
+namespace AMagic\Components;
+
+class Body
+{
+    private array $sections = [];
+    private array $components = [];
+
+    public function __construct(array $config)
+    {
+        $this->initializeDefaultStructure($config);
+    }
+
+    public function addSection(string $name, string $content): void
+    {
+        $this->sections[$name] = $content;
+    }
+
+    public function addComponent(string $component, array $data = []): void
+    {
+        $this->components[] = [
+            'name' => $component,
+            'data' => $data
+        ];
+    }
+
+    public function build(): string
+    {
+        $output = [];
+        
+        // Header
+        if (isset($this->components['header'])) {
+            $output[] = $this->renderComponent('header');
+        }
+        
+        // Main sections
+        foreach ($this->sections as $section) {
+            $output[] = $section;
+        }
+        
+        // Footer
+        if (isset($this->components['footer'])) {
+            $output[] = $this->renderComponent('footer');
+        }
+
+        return implode("\n", $output);
+    }
+
+    private function initializeDefaultStructure(array $config): void
+    {
+        // Add default components
+        $this->components['header'] = ['name' => 'header', 'data' => []];
+        $this->components['footer'] = ['name' => 'footer', 'data' => []];
+        
+        // Add main content section
+        $this->addSection('main', '<main>Default content</main>');
+    }
+
+    private function renderComponent(string $component): string
+    {
+        $componentPath = "templates/components/{$component}.php";
+        
+        if (file_exists($componentPath)) {
+            ob_start();
+            include $componentPath;
+            return ob_get_clean();
+        }
+        
+        // Fallback
+        return "<{$component}>Default {$component} content</{$component}>";
+    }
+}
+```
+
+src/Utilities/HtmlMinifier.php
+
+```php
+<?php
+
+namespace AMagic\Utilities;
+
+class HtmlMinifier
+{
+    public function minify(string $html): string
+    {
+        $patterns = [
+            '/\s+/' => ' ',
+            '/> </' => '><',
+            '/<!--.*?-->/s' => '',
+            '/=\s+>/' => '=>'
+        ];
+
+        $html = preg_replace(array_keys($patterns), array_values($patterns), $html);
+        
+        return trim($html);
+    }
+
+    public function format(string $html): string
+    {
+        if (class_exists('tidy')) {
+            $tidy = new \tidy();
+            return $tidy->repairString($html, [
+                'indent' => true,
+                'wrap' => 200,
+                'indent-spaces' => 4
+            ]);
+        }
+        
+        return $html;
+    }
+}
+```
+
+src/Utilities/Security.php
+
+```php
+<?php
+
+namespace AMagic\Utilities;
+
+class Security
+{
+    public static function escape(string $value): string
+    {
+        return htmlspecialchars($value, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+    }
+
+    public static function validateFileName(string $filename): bool
+    {
+        return preg_match('/^[a-zA-Z0-9_\-\.]+$/', $filename) === 1;
+    }
+
+    public static function sanitizePath(string $path): string
+    {
+        return preg_replace('/\.\.\//', '', $path);
+    }
+}
+```
+
+src/Manager/FileManager.php
+
+```php
+<?php
+
+namespace AMagic\Manager;
+
+use AMagic\Utilities\Security;
+
+class FileManager
+{
+    public function createDirectories(array $directories): void
+    {
+        foreach ($directories as $directory) {
+            if (is_array($directory)) {
+                $this->createDirectories($directory);
+            } else {
+                $this->createDirectory($directory);
+            }
+        }
+    }
+
+    public function createDefaultFiles(array $files): void
+    {
+        foreach ($files as $filePath => $content) {
+            if (!file_exists($filePath)) {
+                $this->ensureDirectoryExists(dirname($filePath));
+                file_put_contents($filePath, $content);
+            }
+        }
+    }
+
+    private function createDirectory(string $path): void
+    {
+        if (!is_dir($path)) {
+            mkdir($path, 0755, true);
+        }
+    }
+
+    private function ensureDirectoryExists(string $path): void
+    {
+        if (!is_dir($path)) {
+            mkdir($path, 0755, true);
+        }
+    }
+}
+```
+
+public/index.php
+
+```php
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use AMagic\Core\Application;
+
+$config = [
+    'debug' => true,
+    'minify_html' => false,
+    'title' => 'Мой сайт',
+    'lang' => 'ru',
+    'body_attributes' => 'class="page-home"',
+    'directories' => [
+        'pages' => __DIR__ . '/../pages/',
+        'templates' => __DIR__ . '/../templates/',
+        'assets' => [
+            'css' => 'assets/css/',
+            'js' => 'assets/js/',
+            'images' => 'assets/images/'
+        ]
+    ],
+    'default_files' => [
+        'assets/css/style.css' => '/* Main styles */',
+        'assets/js/app.js' => '// Main scripts'
+    ]
+];
+
+$app = new Application($config);
+$app->run();
+```
+
+3. Пример использования
+
+templates/layout.php
+
+```php
+<!DOCTYPE html>
+<html lang="<?= $lang ?>">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?= $title ?></title>
+    <?= $head ?>
+</head>
+<body <?= $attributes['body'] ?>>
+    <?= $body ?>
+</body>
+</html>
+```
+
+templates/components/header.php
+
+```php
+<header class="header">
+    <nav class="navigation">
+        <a href="/">Главная</a>
+        <a href="/about">О нас</a>
+    </nav>
+</header>
+```
+
+4. Преимущества этой реализации:
+
+1. Современная архитектура - PSR-4, namespaces, ООП
+2. Безопасность - экранирование, валидация путей
+3. Гибкость - легко расширяется через конфигурацию
+4. Читаемость - чистый код с комментариями
+5. Поддержка - легко модифицировать и расширять
+6. Обработка ошибок - корректная обработка исключений
+7. Тестируемость - классы можно легко тестировать
+
+Эта система предоставляет тот же функционал, что и исходный код, но с современным подходом к разработке на PHP.
