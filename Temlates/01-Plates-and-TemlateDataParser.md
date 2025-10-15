@@ -317,3 +317,146 @@ php page.php
 5. Расширяемость - легко добавить новые методы парсера
 
 Теперь у вас есть полноценная система для работы с шаблонами!
+
+Вот полный HTML код, который сгенерирует page.php на основе нашей системы:
+
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин электроники</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <!-- Хлебные крошки -->
+            <nav class="breadcrumb" aria-label="breadcrumbs">
+    <ul>
+            <li class="">
+                <a href="/" >
+                    <span class="icon is-small">
+                        <i class="fas fa-home" aria-hidden="true"></i>
+                    </span>
+                    <span>Главная</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="/catalog" >
+                    <span class="icon is-small">
+                        <i class="fas fa-th-list" aria-hidden="true"></i>
+                    </span>
+                    <span>Каталог</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="/catalog/electronics" >
+                    <span>Электроника</span>
+                </a>
+            </li>
+            <li class="is-active">
+                <a href="#" aria-current="page">
+                    <span>Смартфоны</span>
+                </a>
+            </li>
+    </ul>
+</nav>
+            
+            <!-- Основной контент -->
+            <div class="content">
+                <h1 class="title">Наши товары</h1>
+                <div class="columns">
+                    <div class="column is-one-third"><div class="card mb-4">
+    <div class="card-image">
+        <figure class="image is-4by3">
+            <img src="https://example.com/iphone15.jpg" alt="iPhone 15">
+        </figure>
+    </div>
+    
+    <div class="card-content">
+        <div class="content">
+            <h3 class="title is-4">iPhone 15</h3>
+            <p>Новый iPhone с революционной камерой</p>
+            
+            <a href="/buy/iphone15" class="button is-primary">
+                Купить
+            </a>
+        </div>
+    </div>
+</div></div>
+                    <div class="column is-one-third"><div class="card mb-4">
+    <div class="card-image">
+        <figure class="image is-4by3">
+            <img src="https://example.com/galaxy.jpg" alt="Samsung Galaxy">
+        </figure>
+    </div>
+    
+    <div class="card-content">
+        <div class="content">
+            <h3 class="title is-4">Samsung Galaxy</h3>
+            <p>Мощный Android-смартфон</p>
+            
+            <a href="/buy/galaxy" class="button is-primary">
+                В корзину
+            </a>
+        </div>
+    </div>
+</div></div>
+                    <div class="column is-one-third"><div class="card mb-4 has-background-light">
+    
+    <div class="card-content">
+        <div class="content">
+            <h3 class="title is-4">Google Pixel</h3>
+            <p>Лучшая камера на рынке</p>
+            
+            <a href="/pixel" class="button is-primary">
+                Подробнее
+            </a>
+        </div>
+    </div>
+</div></div>
+                </div>
+                <div class="notification is-info">
+                    <strong>Всего товаров:</strong> 3
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+```
+
+Как выглядит страница в браузере:
+
+Страница будет содержать:
+
+1. Хлебные крошки вверху:
+   · Главная (с иконкой дома) → Каталог (с иконкой списка) → Электроника → Смартфоны (активный элемент)
+2. Заголовок: "Наши товары"
+3. Три карточки товаров в ряд:
+   · iPhone 15 - с изображением и кнопкой "Купить"
+   · Samsung Galaxy - с изображением и кнопкой "В корзину"
+   · Google Pixel - без изображения, с серым фоном и кнопкой "Подробнее"
+4. Информационное уведомление внизу с количеством товаров
+
+CSS-классы использованные из Bulma:
+
+· .breadcrumb - стили для навигационной цепочки
+· .columns и .column is-one-third - сетка 3 колонки
+· .card - карточки товаров
+· .button is-primary - основные кнопки
+· .notification is-info - информационное уведомление
+· .has-background-light - светлый фон
+· .mb-4 - отступ снизу
+
+Особенности реализации:
+
+· Иконки Font Awesome используются через классы fas fa-*
+· Адаптивный дизайн - на мобильных устройствах колонки сложатся в одну
+· Семантическая разметка - правильные HTML-теги для доступности
+· Bulma CSS framework обеспечивает современный внешний вид
+
+Эта страница полностью готова к использованию и будет корректно отображаться во всех современных браузерах!
